@@ -1,0 +1,97 @@
+/* 東方智慧 · 自訂樣式 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700;900&family=Noto+Sans+TC:wght@300;400;500&display=swap');
+
+:root {
+  --sl-font: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  --sl-font-mono: 'Noto Serif TC', serif;
+  
+  /* 主色調：深墨綠 + 古銅金 */
+  --sl-color-accent-low: #1a3a2a;
+  --sl-color-accent: #2d6a4f;
+  --sl-color-accent-high: #c9a84c;
+  
+  /* 暗色主題調整 */
+  --sl-color-bg: #0f1a14;
+  --sl-color-bg-nav: #0a1209;
+  --sl-color-bg-sidebar: #0d1610;
+  --sl-color-hairline: #1e3a28;
+}
+
+/* 標題使用宋體風格 */
+h1, h2, h3, h4 {
+  font-family: 'Noto Serif TC', 'STSong', 'SimSun', serif !important;
+  letter-spacing: 0.05em;
+}
+
+/* 主標題裝飾 */
+.hero h1 {
+  font-size: 3rem;
+  background: linear-gradient(135deg, #c9a84c, #e8d08a, #c9a84c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 道德經原文區塊 */
+.original-text {
+  background: linear-gradient(135deg, rgba(45, 106, 79, 0.15), rgba(201, 168, 76, 0.08));
+  border-left: 4px solid #c9a84c;
+  border-radius: 0 8px 8px 0;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.1rem;
+  line-height: 2.2;
+  letter-spacing: 0.12em;
+  color: #e8d5a3;
+}
+
+/* 帛書文字 */
+.boshu-text {
+  background: linear-gradient(135deg, rgba(139, 90, 43, 0.15), rgba(201, 168, 76, 0.08));
+  border-left: 4px solid #8b5a2b;
+  border-radius: 0 8px 8px 0;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.1rem;
+  line-height: 2.2;
+  letter-spacing: 0.12em;
+  color: #d4a97a;
+}
+
+/* 白話文區塊 */
+.vernacular {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  padding: 1.25rem 1.75rem;
+  margin: 1rem 0;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  line-height: 1.9;
+}
+
+/* 字詞注解表格 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  background: rgba(45, 106, 79, 0.3);
+  color: #c9a84c;
+}
+
+/* 頁面過渡動畫 */
+main {
+  animation: fadeIn 0.4s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Logo 標題字 */
+.site-title {
+  font-family: 'Noto Serif TC', serif !important;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
