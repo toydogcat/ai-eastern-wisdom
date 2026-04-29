@@ -1,0 +1,108 @@
+---
+// VisitorCounter.astro
+// 不蒜子訪客計數器 + 圖示顯示
+---
+
+<div class="visitor-counter" id="visitor-counter">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+  <div class="counter-inner">
+    <!-- 總瀏覽次數 -->
+    <span class="counter-item" id="busuanzi_container_site_pv" style="display:none">
+      <svg class="counter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+        <circle cx="12" cy="12" r="3"/>
+      </svg>
+      <span class="counter-label">瀏覽</span>
+      <span class="counter-value" id="busuanzi_value_site_pv">...</span>
+      <span class="counter-unit">次</span>
+    </span>
+
+    <span class="counter-divider">｜</span>
+
+    <!-- 獨立訪客數 -->
+    <span class="counter-item" id="busuanzi_container_site_uv" style="display:none">
+      <svg class="counter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+      <span class="counter-label">訪客</span>
+      <span class="counter-value" id="busuanzi_value_site_uv">...</span>
+      <span class="counter-unit">人</span>
+    </span>
+  </div>
+</div>
+
+<style>
+  .visitor-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem 1.2rem;
+    margin: 1rem auto;
+    max-width: fit-content;
+    background: linear-gradient(135deg, rgba(45, 106, 79, 0.15), rgba(201, 168, 76, 0.1));
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    color: #c9a84c;
+    backdrop-filter: blur(4px);
+  }
+
+  .counter-inner {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .counter-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .counter-icon {
+    width: 1rem;
+    height: 1rem;
+    stroke: #c9a84c;
+    flex-shrink: 0;
+  }
+
+  .counter-label {
+    color: rgba(201, 168, 76, 0.8);
+    font-size: 0.8rem;
+  }
+
+  .counter-value {
+    font-weight: 700;
+    color: #e8d08a;
+    font-size: 1rem;
+    font-family: 'Noto Serif TC', serif;
+    min-width: 2rem;
+    text-align: center;
+  }
+
+  .counter-unit {
+    color: rgba(201, 168, 76, 0.7);
+    font-size: 0.75rem;
+  }
+
+  .counter-divider {
+    color: rgba(201, 168, 76, 0.4);
+    font-size: 0.9rem;
+  }
+
+  /* 載入動畫 */
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  #busuanzi_container_site_pv[style="display:none"],
+  #busuanzi_container_site_uv[style="display:none"] {
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+</style>
