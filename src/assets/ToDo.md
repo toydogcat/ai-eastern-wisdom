@@ -1,1109 +1,696 @@
-# 東方智慧・圖文生圖提示詞建議
+1. 核心底層架構：從二進位到六十四卦
+《易經》的數學邏輯非常嚴密，甚至啟發了萊布尼茲（Gottfried Wilhelm Leibniz）的二進位系統。
 
-每一篇文章建議搭配一張主題插圖，風格統一為「**水墨丹青・數位復刻**」。
-生圖格式建議：16:9（首圖橫幅）或 1:1（章節卡片圖）。
+Bit (位元)： 最基本的單位是「爻」（音同姚）。分為「陽爻」（—，可視為 1）與「陰爻」（--，可視為 0）。
 
----
-
-## 🖼 通用風格設定（每張圖都帶上這段）
-
-```
-Traditional Chinese ink painting style, digital art, dark background (#0f1a14),
-gold and jade color accents, misty atmosphere, ancient philosophy aesthetic,
-high detail, cinematic lighting, 4K, no text
-```
-
----
-
-## 📖 道德經・流傳版（王弼本）
-
-### 第1章・道可道 Done
-
-> 核心意象：無形之道、宇宙起源、虛空
-
-```
-A swirling cosmic void transforming into heaven and earth, ancient Taoist symbols,
-ink wash painting, deep teal and gold hues, misty nebula, no beginning no end,
-philosophical, Chinese calligraphy brushstroke texture, dark mystical background
-```
-
----
-
-### 第2章・天下皆知 Done
-
-> 核心意象：陰陽對立、相生相成、太極
-
-```
-Yin and yang duality in nature, light and shadow interplay, ancient Chinese landscape,
-ink painting, mountains and valleys mirroring each other, philosophical harmony,
-black and gold palette, misty atmosphere
-```
-
----
-
-### 第3章・不尚賢 Done
-
-> 核心意象：樸素、無欲、自然民風
-
-```
-Simple ancient Chinese village life, humble farmers under bamboo trees, peaceful rural scene,
-no conflict no desire, ink wash painting style, muted earth tones, golden evening light,
-serene tranquility
-```
-
----
-
-### 第4章・道沖 Done
-
-> 核心意象：空洞的器物、道如淵深
-
-```
-An ancient bronze vessel with infinite void within, glowing from inside, dark cosmic background,
-Taoist emptiness concept, Chinese ink art, gold rim, deep teal glow, mysterious depth
-```
-
----
-
-### 第5章・天地不仁 Done
-
-> 核心意象：天地無私、芻狗、自然規律
-
-```
-Heaven and earth as indifferent forces, storm and calm in Chinese landscape,
-straw dogs offering on ancient altar, ink painting, dramatic sky, neutral cosmos,
-philosophical indifference, dark ink and gold
-```
-
----
-
-### 第6章・谷神不死 Done
-
-> 核心意象：空谷、玄牝之門、永恆生命
-
-```
-A mystical mountain valley with infinite depth, ethereal mist rising from the gorge,
-ancient feminine spirit of the valley, Taoist immortality, ink painting, deep jade greens,
-moonlight filtering through mist
-```
-
----
-
-### 第7章・天長地久 Done
-
-> 核心意象：天長地久、無私成其私、日月永恆
-
-```
-Sun and moon coexisting in eternal Chinese sky, ancient mountains unchanged through millennia,
-timeless landscape, ink wash painting, gold sun gold moon, dark sky, endless perspective
-```
-
----
-
-### 第8章・上善若水 Done
-
-> 核心意象：水、柔弱勝剛強、低窪之處
-
-```
-Water flowing around rocks in a serene Chinese mountain stream, waterfall in mist,
-water bending around obstacles effortlessly, ink painting, blue-jade palette,
-the virtue of water, philosophical, tranquil
-```
-
----
-
-### 第9章・持而盈之 Done
-
-> 核心意象：滿溢之杯、功成身退、月圓則虧
-
-```
-A jade cup overflowing with moonlight water, full moon above ancient Chinese landscape,
-concept of knowing when to stop, ink painting, soft gold glow, mist on water,
-restraint and wisdom
-```
-
----
-
-### 第10章・載營魄抱一 Done
-
-> 核心意象：抱一、嬰兒、形神合一
-
-```
-Ancient Taoist sage meditating under starry sky, infant and sage merged as one being,
-spiritual unity, ink painting, cosmic energy swirling, jade and gold aura,
-Chinese philosophy, transcendence
-```
-
----
-
-### 第11章・三十輻 Done
-
-> 核心意象：車輪、器皿、空室、虛用之理
-
-```
-Ancient Chinese wooden cart wheel, hollow hub at center glowing with significance,
-clay vessel with empty void inside, room with open windows, ink painting concept art,
-the usefulness of emptiness, gold and teal
-```
-
----
-
-### 第12章・五色令人目盲 Done
-
-> 核心意象：五色、感官迷亂、樸素
-
-```
-Vibrant chaotic colors overwhelming the senses vs. simple ink painting serenity,
-ancient Chinese contrast art, sensory overload on left, peaceful emptiness on right,
-split composition, ink wash style
-```
-
----
-
-### 第13章・寵辱若驚 Done
-
-> 核心意象：寵辱、自我超越、無我
-
-```
-An ancient Chinese official receiving honor and disgrace with same equanimity,
-philosophical detachment, classical robes, ink painting portrait, muted golds,
-inner stillness amid external chaos
-```
-
----
-
-### 第14章・視之不見 Done
-
-> 核心意象：夷希微、惚恍之道、無形之象
-
-```
-The Tao as an invisible presence in misty landscape, looking but not seeing,
-listening but not hearing, touching but not feeling, ink painting, abstract philosophy,
-dark void with subtle jade glow, mysterious
-```
-
----
+3-bit 系統 (八卦)： 將三個爻疊加，會產生 8 種組合（2 的 3 次方），這就是「八卦」（單卦 / 經卦）。它們分別代表自然界的八種基本元素與力量：
 
-### 第15章・古之善為士 Done
+乾 (天)、坤 (地)、震 (雷)、巽 (風)
 
-> 核心意象：古代賢士、謹慎如冬涉川、混若濁水
+坎 (水)、離 (火)、艮 (山)、兌 (澤)
 
-```
-Ancient Chinese sage crossing frozen river with extreme care, winter landscape,
-ink painting portrait, wise elderly man in simple robes, mist and snow,
-cautious and humble wisdom, gold and grey tones
-```
+6-bit 系統 (六十四卦)： 將八卦兩兩相疊（上下各一個單卦），就會產生 8 × 8 = 64 種組合（2 的 6 次方），這就是「六十四卦」（複卦 / 別卦）。
 
----
+2. 結構拆解：如何「讀」一個卦
+研究六十四卦時，不需要死背，而是要看懂它的「系統架構」。每一個卦都可以拆成三個維度來理解：
 
-### 第16章・致虛極 Done
+卦象（空間與自然）： 上卦（外卦）與下卦（內卦）的互動。例如：上卦是「水」（坎），下卦是「火」（離），水在火上，這就是「水火既濟」卦，代表陰陽調和、事情完成。
 
-> 核心意象：虛極靜篤、萬物歸根、復命
+爻位（時間與階級）： 一個卦有六個爻，從下往上數（初、二、三、四、五、上）。這六個位置代表一件事從發生、發展、高潮到衰退的六個時間節點，也代表從基層到高層的社會階級。
 
-```
-All of nature returning to their roots simultaneously, trees dissolving into earth,
-rivers returning to source, ancient Chinese cosmic cycle, ink painting,
-profound emptiness at the center, gold dust particles, philosophical stillness
-```
+卦辭與爻辭（文本與解釋）： 周文王寫了「卦辭」（解釋整個卦的總體狀態），周公寫了「爻辭」（解釋每一個特定階段的狀態與吉凶）。這是《易經》的文字資料庫。
 
----
+3. 哲學與歷史意涵：變動與平衡
+《易經》的「易」有三個層次的含義：
 
-### 第17章・太上 Done
+變易： 世界上唯一不變的就是「改變」。六十四卦代表了宇宙與人事運作的 64 種情境，而且這些情境會互相轉化（透過「動爻」改變 0 與 1 的狀態，就會變成另一個卦）。
 
-> 核心意象：無為而治、百姓自然
+不易： 在所有變動的背後，有著永恆不變的規律（例如陰陽的消長、物極必反）。
 
-```
-Invisible ancient Chinese ruler governing through non-action, citizens living freely
-under vast sky, no visible authority, ink landscape, people working in harmony,
-natural governance, mist and mountains
-```
+簡易： 掌握了這些規律，複雜的宇宙萬物都能用最簡單的陰陽邏輯來推演。
 
 ---
-
-### 第18章・大道廢 Done
-
-> 核心意象：道廢仁義出、自然vs人為規範
-
-```
-Ancient Chinese civilization turning from natural simplicity to complex rituals,
-the moment when virtue became a label, ink painting split scene,
-natural harmony on left, structured society on right, philosophical contrast
-```
 
----
+第 1 卦：乾為天（乾卦）
+卦象結構： 上天（乾） ＋ 下天（乾） ＝ 純陽之卦
 
-### 第19章・絕聖棄智 Done
+符號概念： 陽氣到了極點，充滿無窮的創造力與動能。
 
-> 核心意象：見素抱樸、少私寡欲、回歸本真
+白話大意：【開創與動力】
+這是六十四卦的第一卦，代表一切的起源。就像是宇宙大爆炸，或是你腦中突然冒出一個改變世界的絕佳點子。它充滿能量、剛強、永不停息。著名的「飛龍在天」就是出自此卦。
 
-```
-Shedding robes of complexity returning to simple homespun cloth, 
-uncarved jade stone glowing with natural beauty, ancient Chinese simplicity,
-ink painting, removing artifice to reveal truth, warm golden earthy tones
-```
+給現代人的啟示： 自強不息。這是一個適合發起行動、擔任領導者、主動出擊的狀態，但也要注意不要太過剛愎自用（亢龍有悔）。
 
----
+第 2 卦：坤為地（坤卦）
+卦象結構： 上地（坤） ＋ 下地（坤） ＝ 純陰之卦
 
-### 第20章・絕學無憂 Done
+符號概念： 陰氣到了極點，代表極致的包容、承載與孕育。
 
-> 核心意象：我獨昏昏、食母（道）、與衆不同的孤獨
+白話大意：【包容與執行】
+有了天（乾）的點子，就需要地（坤）來把它具象化。坤卦代表厚實的大地，它不主動爭搶，而是默默承擔、滋養萬物。如果乾卦是發號施令的老闆，坤卦就是使命必達、默默耕耘的最強團隊。著名的「厚德載物」即源於此。
 
-```
-A solitary Taoist sage walking opposite direction from busy crowd, alone but content,
-nourished by the mother Tao, ink painting, lone figure in vast misty landscape,
-gold and teal palette, peaceful solitude
-```
+給現代人的啟示： 柔順與配合。這時候不適合出風頭，而是要像大地一樣包容，做一個好的傾聽者與執行者，跟隨正確的領導。
 
----
+第 3 卦：水雷屯（屯卦，音同「豚」）
+卦象結構： 上水（坎） ＋ 下雷（震）
 
-### 第21章・孔德之容 Done
+符號概念： 烏雲（水）密佈，底下有雷聲轟鳴，即將下雨但還沒下。
 
-> 核心意象：孔德、恍惚中有象、精氣信驗
+白話大意：【萬事起頭難】
+天地交合後，生命開始萌芽。想像一顆種子被壓在沉重堅硬的泥土（還有積水）下，它正在努力向上鑽，過程非常艱辛。「屯」就是駐紮、停頓、艱難的意思。這是一個充滿生命力，但環境很險惡的初期階段。
 
-```
-Nebula of cosmic energy containing all forms within formlessness, Taoist philosophy art,
-essence and truth within apparent chaos, ink painting meets digital cosmos,
-deep space with jade and gold energies, philosophical visualization
-```
+給現代人的啟示： 創業維艱。當你剛開始一個新計畫、換新工作時，感到處處碰壁是正常的。此時不宜輕舉妄動，應該先穩紮穩打，尋求前輩或資源的幫助。
 
----
+第 4 卦：山水蒙（蒙卦）
+卦象結構： 上山（艮） ＋ 下水（坎）
 
-### 第22章・曲則全 Done
+符號概念： 山下有泉水湧出，或是山下起了大霧，看不清前方的路。
 
-> 核心意象：曲則全、抱一、謙讓勝強
+白話大意：【啟蒙與學習】
+生命熬過艱難誕生後，就像一個剛出生的小孩，對這個世界一無所知，處於蒙昧不明的狀態。這時候最需要的就是「教育」和「啟蒙」。這是一個尋找老師、解開困惑的階段。
 
-```
-Bent bamboo in storm surviving while rigid tree breaks, ancient Chinese wisdom,
-the power of yielding, ink painting, stormy landscape, bamboo grove, philosophy of flexibility,
-gold and teal colors, dramatic contrast
-```
+給現代人的啟示： 承認無知，虛心求教。當你對現況感到迷惘、看不清未來時，不要瞎子摸象，去請教專業人士或有經驗的人。同時，學習的態度必須誠懇。
 
----
+第 5 卦：水天需（需卦）
+卦象結構： 上水（坎） ＋ 下天（乾）
 
-### 第23章・希言自然 Done
+符號概念： 水（雲）在天上，代表烏雲密佈，但雨還沒降下來。
 
-> 核心意象：飄風不終朝、驟雨不終日、自然短暫
+白話大意：【等待與積累】
+學習長大後，要開始做事了，卻發現時機還沒到。天上雖然有雲，但雨就是不下，大地萬物只能「等待」。但在等待的過程中不是乾著急，而是要趁機吃飽喝足、養精蓄銳。
 
-```
-Brief intense storm over ancient Chinese mountains passing quickly, nature's transience,
-ink painting landscape, dramatic clouds clearing revealing blue sky, impermanence,
-philosophical atmosphere, ink wash technique
-```
+給現代人的啟示： 耐心等候時機。客觀條件還不成熟（例如市場還沒準備好、資金還沒到位），這時候硬衝只會頭破血流。好好充實自己，保持輕鬆的心情，等待那個「東風」。
 
----
+第 6 卦：天水訟（訟卦）
+卦象結構： 上天（乾） ＋ 下水（坎）
 
-### 第24章・企者不立 Done
+符號概念： 天的性質是往上升，水的性質是往下降，兩者背道而馳，無法交集。
 
-> 核心意象：踮腳、跨步、自見自伐的虛妄
+白話大意：【衝突與訴訟】
+人在等待和爭奪資源（如食物、利益）的過程中，難免會發生意見不合，這時候就產生了「衝突」甚至「打官司」。雙方各執己見，就像天上下的水，完全尿不到一個壺裡。
 
-```
-A figure standing on tiptoes reaching for something unattainable, ancient Chinese setting,
-the futility of overstretch, ink painting portrait, unstable posture,
-contrast with grounded sage watching quietly, philosophical lesson
-```
+給現代人的啟示： 退一步海闊天空。陷入爭執對雙方都是消耗，即使你覺得自己百分之百佔理，把局面搞僵也沒有好處。尋求公正的第三方來調解，或者適時妥協，才是明智之舉。
 
----
+第 7 卦：地水師（師卦）
+卦象結構： 上地（坤） ＋ 下水（坎）
 
-### 第25章・有物混成 Done
+符號概念： 大地之下隱藏著水。水聚集起來力量龐大，平時藏於民（地），戰時聚為兵（水）。
 
-> 核心意象：道先天地生、人法地地法天天法道道法自然
+白話大意：【組織與戰爭】
+當小衝突（訟）無法解決，升級成了大規模的武力對抗，就必須組織「軍隊」（師）。這是一個強調紀律、戰略、領導統御以及群眾力量的狀態。出師必須「有名」（正當性），否則會帶來災難。
 
-```
-The Tao as primordial cosmic entity before creation, ancient Chinese cosmology,
-four great forces: Tao, Heaven, Earth, Human in hierarchical circle,
-ink meets cosmos digital art, dark void, gold light, eternal pre-existence
-```
+給現代人的啟示： 紀律與團隊管理。這代表你現在面臨一場硬仗（可能是商場上的競爭、一個高壓專案）。你需要嚴格的紀律、明確的目標，以及選對一位能夠服眾的領導者來帶領團隊。
 
----
+第 8 卦：水地比（比卦）
+卦象結構： 上水（坎） ＋ 下地（坤）
 
-### 第26章・重為輕根 Done
+符號概念： 水滲透進大地，泥水交融，密不可分。
 
-> 核心意象：重靜為根、君子輜重、不輕天下
+白話大意：【結盟與親近】
+打完仗（師）之後，大家發現一直打下去不是辦法，於是開始尋求和平、結盟與合作。「比」就是排排站、互相親近、比鄰而居的意思。這是一個建立人際網路、互相扶持、尋求雙贏的階段。
 
-```
-Ancient Chinese army traveling with supply wagons, steady and grounded general,
-concept of weightiness as foundation, ink painting military scene,
-calm at the center of action, dark mountains, gold equipment glint
-```
+給現代人的啟示： 團隊合作與建立人脈。這是一個非常吉利的狀態，告訴你單打獨鬥的時代過去了。去尋找志同道合的夥伴，真誠地與人合作，就能水乳交融，共同創造更大的價值。
 
 ---
-
-### 第27章・善行無轍迹 Done
-
-> 核心意象：無痕之善、善人為師、承習光明
 
-```
-A master craftsman whose work shows no trace of effort, effortless perfection,
-ancient Chinese artisan, ink painting, no footprints in snow but path still clear,
-natural mastery, philosophical art, subtle gold light
-```
+第 9 卦：風天小畜（小畜卦）
+卦象結構： 上風（巽） ＋ 下天（乾）
 
----
+符號概念： 風在天上吹，雖然有雲，但力量還不夠大，雨還是下不下來（密雲不雨）。
 
-### 第28章・知其雄守其雌 Done
+白話大意：【微小的累積】
+大家結盟（比）之後，日子穩定下來，開始有一點小小的積蓄了。「畜」有積累、畜養的意思。這時候能量還不夠強大，只能做一些小範圍的準備和累積，還不到大展身手的時候。
 
-> 核心意象：雌雄、谷、嬰兒、歸樸
+給現代人的啟示： 點滴累積，不急於求成。這是一個適合「存錢」、「練功」、「累積資源」的階段。大環境或時機還不允許你做出突破性的舉動，保持現狀、溫和地推進才是上策。
 
-```
-Yin and yang in balance as mountain valley, strong peaks and gentle valleys,
-returning to infant innocence, ancient Chinese landscape ink painting,
-masculine mountains embracing feminine river, jade tones, philosophical harmony
-```
+第 10 卦：天澤履（履卦）
+卦象結構： 上天（乾） ＋ 下澤（兌）
 
----
+符號概念： 天在上，沼澤在下，象徵上下階級分明。也像是一個人踩在老虎尾巴上（履虎尾）。
 
-### 第29章・將欲取天下 Done
+白話大意：【實踐與禮節】
+有了一點積蓄（小畜），人際關係和社會階級開始複雜起來。這時需要建立規矩和「禮節」來規範行為，大家才能和平相處。「履」就是鞋子，引申為走路、實踐、守規矩。伴君如伴虎，做事必須謹慎。
 
-> 核心意象：天下神器、不可為、聖人去甚
+給現代人的啟示： 步步為營，遵守規則。你在處理事情或人際關係時（尤其是面對長輩、主管或強勢的一方），必須非常小心謹慎，注重禮貌與程序，只要按部就班、不逾矩，即使遇到危險也能平安度過。
 
-```
-An emperor trying to grasp the entire world in his hands but it slips through,
-ancient Chinese philosophical scene, ink painting, futility of force,
-world as sacred vessel, dark background, gold earth slipping like water
-```
+第 11 卦：地天泰（泰卦）
+卦象結構： 上地（坤） ＋ 下天（乾）
 
----
+符號概念： 天本來要往上飛，地本來要往下沉。現在地在上、天在下，兩股力量互相交集、融合。
 
-### 第30章・以道佐人主 Done
+白話大意：【通達與安泰】
+因為守規矩（履），社會迎來了和諧。「泰」就是泰平、通達。這是一個陰陽交融、上下溝通順暢的完美狀態。付出小的努力，就能獲得大的回報（小往大來）。「三陽開泰」這個吉祥話就是出自這裡。
 
-> 核心意象：物壯則老、兵戈後荊棘、不道早已
+給現代人的啟示： 順風順水，但要居安思危。這是運勢極佳的時刻，無論是事業、感情還是人際溝通都非常順利。但《易經》的邏輯是物極必反，在最安逸的時候，反而要提醒自己保持謙虛，預防未來的衰退。
 
-```
-After ancient battle, wasteland where only thorns grow, ink painting war aftermath,
-the folly of military force, abandoned weapons rusting, philosophical warning,
-dark desolate landscape, gold thorns, mist of regret
-```
+第 12 卦：天地否（否卦，音同「痞」）
+卦象結構： 上天（乾） ＋ 下地（坤）
 
----
+符號概念： 天往上升，地往下降，兩股力量背道而馳，完全沒有交集。
 
-### 第31章・夫佳兵者 Done
+白話大意：【閉塞與阻礙】
+安逸過了頭（泰），就會開始出問題。上下之間停止了溝通，就像老闆不聽員工的，員工不理老闆的。「否」就是不通、閉塞、糟糕的狀態。這是一個付出多而收穫少，小人得志，君子退避的時期。
 
-> 核心意象：佳兵不祥、以喪禮處之、戰勝哀泣
+給現代人的啟示： 韜光養晦，明哲保身。當你發現大環境很糟，溝通無效，努力也得不到回報時，不要硬碰硬。最好的策略是收斂鋒芒，保護好自己，等待這個糟糕的週期過去。
 
-```
-Ancient Chinese warrior laying down weapons in solemn ceremony, funeral rites for fallen,
-ink painting, swords transformed to mourning offerings, anti-war philosophy,
-grey and gold palette, solemn atmosphere, philosophical pacifism
-```
+第 13 卦：天火同人（同人卦）
+卦象結構： 上天（乾） ＋ 下火（離）
 
----
+符號概念： 熊熊烈火在天下燃燒，光明普照，大家在空曠的原野上聚集。
 
-### 第32章・道常無名 Done
-> 核心意象：道樸無名、川谷歸江海、侯王守道
+白話大意：【求同與大同】
+經歷了閉塞不通（否）的痛苦，大家痛定思痛，決定打破隔閡，重新尋找志同道合的人。「同人」就是與人相同、和睦相處。這是在廣闊的胸襟下，不分你我，為了共同的遠大目標而團結一致。
 
-```
-All rivers and streams flowing inevitably into vast ocean, Taoist inevitability,
-ancient Chinese landscape ink painting, countless tributaries joining the great sea,
-gold sunlight on water, the nameless Tao as the great receiving ocean
-```
+給現代人的啟示： 擴大格局，尋求共識。突破僵局的方法是走出舒適圈，去結交更廣泛的盟友。這時候不能只顧私利，必須基於「公共利益」或「共同理念」來做事，才能獲得廣泛的支持。
 
----
+第 14 卦：火天大有（大有卦）
+卦象結構： 上火（離） ＋ 下天（乾）
 
-### 第33章・知人者智 Done
+符號概念： 太陽（火）高掛在天上，光明普照大地，象徵著如日中天。
 
-> 核心意象：自知者明、自勝者強、死而不亡
+白話大意：【豐收與富有】
+大家團結一心（同人）之後，創造了極大的財富與盛世。「大有」就是大獲所有、非常富有。這是一個物質與精神都極度豐收的鼎盛時期，不僅有錢，而且光明正大。
 
-```
-Ancient Chinese sage looking into still water reflection, self-knowledge,
-inner strength vs external strength, ink painting portrait, philosophical mirror,
-eternal spirit beyond death, jade aura, dark background, gold calligraphy brush strokes
-```
+給現代人的啟示： 滿載而歸，但不驕不躁。這是事業或計畫大成功、收穫豐碩的時刻。但擁有龐大資源的同時，更需要具備智慧（離火的明辨）來管理這些財富，並保持謙虛，才不會惹來嫉妒與災禍。
 
----
+第 15 卦：地山謙（謙卦）
+卦象結構： 上地（坤） ＋ 下山（艮）
 
-### 第34章・大道氾兮 Done
+符號概念： 高山不把自己擺在高處，反而隱藏在平坦的大地之下。
 
-> 核心意象：大道遍及、成功不自有、以不自大成其大
+白話大意：【謙虛與退讓】
+擁有巨大的財富（大有）之後，最容易引來災禍，所以必須要懂得「謙虛」。「謙」就是內心充實高尚（山），外表卻平易近人（地）。在六十四卦中，謙卦是唯一一個六個爻全都是吉利的卦（非吉則利），可見古人多麼看重謙虛的美德。
 
-```
-The great Tao flowing through all things simultaneously, nourishing without claiming,
-ancient Chinese cosmos ink painting, golden light permeating mountain valley city and river,
-omnipresent but invisible, vast and humble at once
-```
+給現代人的啟示： 滿招損，謙受益。當你獲得成功、身居高位時，絕對不要傲慢。把功勞歸給團隊，放低姿態，這不僅是修養，更是一種高級的生存策略，能幫你擋掉無數的暗箭。
 
----
+第 16 卦：雷地豫（豫卦）
+卦象結構： 上雷（震） ＋ 下地（坤）
 
-### 第35章・執大象 Done
+符號概念： 春雷在大地上響起，驚醒了冬眠的萬物，大地充滿了歡樂與生機。
 
-> 核心意象：大象（道）、天下歸往、淡乎無味的道
+白話大意：【歡樂與預備】
+因為懂得謙虛（謙），社會和諧穩定，大家終於可以放鬆下來慶祝了。「豫」有歡樂、安逸的意思，也有預備、未雨綢繆的意思。這是一個順應時勢、大家開開心心做事的狀態。
 
-```
-An invisible great image drawing all people toward it like invisible gravity,
-ancient Chinese scene of people naturally gathering, ink painting, subtle gold presence,
-the tasteless Tao more satisfying than music and food, philosophical magnetism
-```
+給現代人的啟示： 享受當下，但不忘預備。在順境中，你可以享受努力得來的歡樂果實，也能藉此凝聚團隊士氣（例如辦個慶功宴）。但在歡樂之餘，也要對未來可能發生的變化有所「預備」，不能徹底沉淪在享樂之中。
 
 ---
 
-### 第36章・將欲歙之 Done
+第 17 卦：澤雷隨（隨卦）
+卦象結構： 上澤（兌） ＋ 下雷（震）
 
-> 核心意象：物極必反、柔弱勝剛強、魚不脫淵
+符號概念： 沼澤（水）的下方有雷（震動），雷躲在沼澤底下順應著水的波動。
 
-```
-A great fish powerful in deep water but helpless on land, ancient Chinese wisdom art,
-the secret of Taoist strategy revealed, ink painting, deep jade water,
-the lesson of staying in one's depth, gold fish in dark water, philosophical metaphor
-```
+白話大意：【順應與跟隨】
+在經歷了前一個卦（豫卦）的歡樂與安逸後，人們會開始互相「跟隨」主流或強者。「隨」就是順從、跟著趨勢走。在一個穩定的環境中，放下自我的堅持，去適應環境或跟隨優秀的領導，是維持現狀的好方法。
 
----
+給現代人的啟示： 順勢而為。當你進入一個新環境或面對不可逆的大趨勢時，與其死磕，不如先當一個好隊友，順應大局的節奏，這能幫你省下很多不必要的阻力。
 
-### 第37章・道常無為 Done
+第 18 卦：山風蠱（蠱卦，音同「古」）
+卦象結構： 上山（艮） ＋ 下風（巽）
 
-> 核心意象：無為而無不為、萬物自化、無名之樸
+符號概念： 風被高山擋住吹不過去，空氣不再流通，山谷裡沉悶發霉，生出了蟲子（蠱）。
 
-```
-The universe spontaneously flourishing with no visible governing hand,
-ancient Chinese landscape teeming with natural life, ink painting,
-ten thousand things transforming on their own, the invisible Tao sustaining all,
-peaceful cosmic abundance, jade and gold harmony
-```
+白話大意：【腐敗與除蟲】
+安逸與盲目跟隨（隨）久了，組織內部就會開始僵化、腐敗，就像程式碼裡累積了太多未處理的「技術債」，開始出現 Bug（蠱）。「蠱」代表著長久累積下來的弊病，這是一個必須面對問題、動手清理陳年宿弊的時刻。
 
----
+給現代人的啟示： 面對問題，大膽重構。不要害怕系統裡的 Bug，發現問題反而是建立新秩序的契機。這時候需要有魄力去打破舊有僵化的流程，把隱藏在底層的毒瘤挖出來清理乾淨。
 
-## 📜 帛書德道經
+第 19 卦：地澤臨（臨卦）
+卦象結構： 上地（坤） ＋ 下澤（兌）
 
-### 帛書德經・第1章（流傳第38章）・上德不德 Done
+符號概念： 大地居高臨下，看著下方的沼澤。也象徵長官親自走到基層視察。
 
-> 核心意象：最高之德無為、禮為亂之首
+白話大意：【親臨與治理】
+要清理上一卦的腐敗（蠱），管理者不能只在辦公室看報表，必須「親臨」現場。「臨」有視察、逼近、治理的意思。這代表一股陽剛的正面力量正在增長，親自介入去解決問題，帶來希望。
 
-```
-A virtuous ancient Chinese sage radiating invisible light without knowing it,
-versus a ceremonial official performing elaborate empty ritual,
-ink painting contrast, authentic virtue vs performed virtue, 
-quiet gold glow of true Tao, ostentatious red of ceremony
-```
+給現代人的啟示： 掌握實權，親上前線。當專案或組織出現危機時，作為負責人必須取得最高權限（Root Access），親自下場了解最底層的運作邏輯與痛點，才能對症下藥。
 
----
+第 20 卦：風地觀（觀卦）
+卦象結構： 上風（巽） ＋ 下地（坤）
 
-### 帛書德經・第2章（流傳第39章）・昔之得一者 Done
+符號概念： 風吹過廣闊的大地，無所不在；也像是一座高塔立在平原上，可以將四方景物盡收眼底。
 
-> 核心意象：天地神谷萬物得一、高以下為基
+白話大意：【觀察與展示】
+親自介入處理完問題（臨）之後，不能一直陷入微觀的細節裡，必須抽身退後一步，建立起宏觀的「觀測機制」。「觀」一方面是仔細觀察大數據與整體趨勢；另一方面，也代表上位者要展示出良好的風範，讓底下的人觀察與效仿。
 
-```
-Heaven earth spirit and all things connected by single golden thread of Tao,
-ancient Chinese cosmological diagram as ink painting, unity of all things,
-the number one as cosmic principle, jade and gold geometric harmony,
-king standing on humble foundation
-```
+給現代人的啟示： 建立儀表板，宏觀洞察。在埋頭寫 code 或處理瑣事之餘，你需要為自己或專案建立一套客觀的觀測指標。透過觀察整體的數據流向與環境變化，來調整下一步的戰略。
 
----
+第 21 卦：火雷噬嗑（噬嗑卦，音同「是客」）
+卦象結構： 上火（離） ＋ 下雷（震）
 
-### 帛書德經・第3章（流傳第40章）・反者道之動
+符號概念： 上下嘴唇之間咬著一塊硬骨頭，必須用力咬碎它（噬嗑），才能順利合攏嘴巴。雷電交加，象徵威武與光明。
 
-> 核心意象：返回、弱用、有生於無
+白話大意：【咬合與刑罰】
+在宏觀觀察（觀）時，往往會發現阻礙系統運作的「硬骨頭」（可能是惡意破壞規則的人，或是極難突破的技術瓶頸）。這時候不能心軟，必須像咬碎骨頭一樣，動用「刑罰」或強制手段來排除障礙，維護系統的公正與順暢。
 
-```
-Creation emerging from void, ancient Chinese creation philosophy,
-the return and reversal as cosmic law, ink painting abstract,
-something beautiful arising from absolute nothingness,
-dark void with gold emergence, philosophical birth
-```
+給現代人的啟示： 殺伐果斷，排除阻礙。面對踩到底線的人事物，或者嚴重卡住流程的瓶頸，你必須態度強硬。設定好明確的防護機制與規則，該中斷就中斷，該懲處就懲處，絕不妥協。
 
----
+第 22 卦：山火賁（賁卦，音同「必」）
+卦象結構： 上山（艮） ＋ 下火（離）
 
-### 帛書德經・第4章（流傳第41章）・上士聞道
+符號概念： 太陽（火）快下山了，晚霞的餘暉將山景照映得五彩繽紛，非常美麗，但這光芒只停留在表面，且即將消散。
 
-> 核心意象：三種士聞道、大器晚成、大音希聲
+白話大意：【裝飾與包裝】
+動用完強硬手段（噬嗑）後，氣氛太肅殺了，需要用柔和的文化、藝術或禮儀來「裝飾」與潤滑。「賁」就是文飾、包裝、美化的意思。它讓事物看起來優雅得體，但這只是表面的修飾，並非核心的本質。
 
-```
-Three ancient Chinese scholars hearing the same truth and reacting differently,
-one practices earnestly, one doubts, one laughs, ink painting triptych,
-great sounds silent great forms invisible, jade and gold, philosophical humor
-```
+給現代人的啟示： 注重前端介面，但不忘後端本質。好的包裝、流暢的 UI/UX 設計能讓你的心血更容易被外界接受。但《易經》在此提醒：過度追求表面的華麗，而忽略底層的資料庫與邏輯架構，最終將流於華而不實。
 
----
+第 23 卦：山地剝（剝卦）
+卦象結構： 上山（艮） ＋ 下地（坤）
 
-### 帛書德經・第5章（流傳第42章）・道生一
+符號概念： 高山長期受到風化侵蝕，地基鬆動，山體正在崩塌剝落。
 
-> 核心意象：道生一一生二二生三三生萬物
+白話大意：【剝落與衰退】
+過度重視表面包裝（賁），底層基礎就會開始流失。「剝」代表剝落、侵蝕。這是一個陰氣極盛、陽氣即將被完全消耗殆盡的危機時刻。小人當道，資源枯竭，舊有的系統架構正在不可逆地瓦解。
 
-```
-Ancient Chinese cosmological art, Tao as origin splitting into yin yang,
-then three principles then ten thousand things, ink painting mandala of creation,
-gold center radiating jade and black creation outward, mystical genesis,
-traditional Chinese philosophy visual
-```
+給現代人的啟示： 斷尾求生，保留核心。這是運勢的谷底，也是系統即將崩潰的邊緣。這時候不要再試圖擴張或做表面功夫，必須果斷停損，把所有不必要的模組都砍掉，全力保護最核心的命脈，撐過這個冬天。
 
----
+第 24 卦：地雷復（復卦）
+卦象結構： 上地（坤） ＋ 下雷（震）
 
-### 帛書道經・第1章（流傳第1章）・道可道也
+符號概念： 寒冬的大地之下，有一股微弱但純粹的陽氣（雷）正在悄悄萌芽。
 
-> 核心意象：帛書版、恆道、恆名、兩者同出
+白話大意：【復甦與重啟】
+當一切剝落到極點（剝），物極必反，新的生命力就會在最底層重新誕生。「復」就是回歸、復甦、重新開始。這象徵著系統的「重啟」，雖然剛起步時力量微弱，但方向是正確的，充滿了無限的生機與未來。
 
-```
-Ancient silk scroll with original Taoist text glowing gold, the primordial Tao concept,
-pre-Han dynasty aesthetic, ink on silk texture, cosmic void and named things emerging,
-scholarly excavation of ancient truth, dark background, warm lamp light on silk
-```
+給現代人的啟示： 觸底反彈，回歸初心。當你跌到谷底，或是徹底結束掉一個失敗的專案後，這正是你重新出發的最佳時機。找回你最初的核心理念，把握住那一絲靈感與動力，穩紮穩打地開啟下一個全新的迴圈。
 
 ---
 
-## 🌿 通用裝飾圖建議
+第 25 卦：天雷無妄（無妄卦）
+卦象結構： 上天（乾） ＋ 下雷（震）
 
-### 首頁 Hero 圖
+符號概念： 天下打雷，這是大自然最原始、最真實的現象，沒有任何虛假或人為做作。
 
-```
-Ancient Chinese philosophical landscape panorama, mountains mist rivers pine trees,
-Laozi riding an ox through mountain pass, dawn light, ink painting meets digital art,
-jade and gold color scheme, epic wide angle, Eastern wisdom aesthetic, cinematic
-```
+白話大意：【真實與不妄動】
+系統剛重啟（復），這時候一切都回歸最純粹的狀態。「無妄」就是沒有虛假、沒有非分之想、不胡作非為。這個階段強調遵循客觀規律，不要夾帶私心，順其自然地發展。
 
-### 關於頁面
+給現代人的啟示： 保持真實，拒絕過度設計。在重啟一個專案或人生階段時，最忌諱自作聰明或急功近利。照著規矩和本心來做（Keep it simple and real），只要你沒做錯事，外來的挫折都只是短暫的雷雨，很快就會過去。
 
-```
-Ancient library with silk scrolls and bamboo books, warm candlelight, scholarly atmosphere,
-Chinese ink painting style, wisdom being preserved across millennia, detailed interior,
-jade and gold accent colors, intimate and scholarly
-```
+第 26 卦：山天大畜（大畜卦，音同「觸」）
+卦象結構： 上山（艮） ＋ 下天（乾）
 
-### 404 Error 頁面
+符號概念： 高山把廣大的天空（或巨大的能量）包含在裡面。象徵著極強大的儲備與容納能力。
 
-```
-Ancient Chinese scholar looking confused at an empty bamboo scroll, philosophical humor,
-ink painting cartoon style, "the page you seek is like the unnameable Tao",
-gentle humor meets Taoist wisdom, warm earth tones
-```
+白話大意：【大規模的蓄積】
+因為做事腳踏實地、不虛假（無妄），所以能累積巨大的信任與資源。「大畜」相對於第 9 卦的「小畜」，這裡是宏觀層面的大豐收與大儲備。代表你累積了深厚的學問、龐大的資金或頂尖的人才庫。
 
----
-
-## 📝 生圖使用建議
+給現代人的啟示： 擴充量能，準備大展身手。這是一個極佳的「擴展期」。你現在擁有了足夠的資料庫和資源（Data Lake），不要讓它們閒置。大膽地去吸收新知、結交賢達，把你底層的實力積蓄到最滿。
 
-| 類型      | 比例 | 建議解析度 | 存放位置                   |
-| --------- | ---- | ---------- | -------------------------- |
-| 章節主圖  | 16:9 | 1920×1080 | `src/assets/chapters/`   |
-| 卡片縮圖  | 1:1  | 512×512   | `src/assets/thumbnails/` |
-| Hero 橫幅 | 21:9 | 2560×1080 | `src/assets/`            |
+第 27 卦：山雷頤（頤卦）
+卦象結構： 上山（艮） ＋ 下雷（震）
 
-## 🎨 生圖工具建議
-
-- **Midjourney**：效果最佳，水墨風格極好
-- **DALL-E 3**：文字理解強，概念抽象圖佳
-- **Stable Diffusion**（本地）：可用 `inkpunk diffusion` 或 `GuoFeng3` 模型
-
----
+符號概念： 這個卦的形狀（上下兩根實線，中間四根虛線）看起來就像一個張開的「嘴巴」。
 
-### 第38章・上德不德 Done
+白話大意：【頤養與吞吐】
+有了龐大的資源（大畜），接下來要懂得如何「消化」與「滋養」。「頤」就是下巴，引申為吃東西、保養。這個卦強調「病從口入，禍從口出」，關注系統的輸入（Input）與輸出（Output）。
 
-> 核心意象：上德如春風化雨、下德繁文縟節
+給現代人的啟示： 注意輸入與輸出的品質 (GIGO 邏輯)。在電腦科學中有一句話叫 "Garbage in, garbage out"（垃圾進，垃圾出）。這階段你要嚴格控管你吸收的資訊（吃進去的東西）以及你發表的言論（吐出來的話），好好保養自己的身心與系統的健康。
 
-```
-An ancient sage radiating invisible virtue like gentle spring rain, contrasting with
-officials performing elaborate but empty ceremonies, ink painting style,
-authentic natural virtue vs artificial rules, dark background, gold accents,
-philosophical depth, cinematic lighting
-```
+第 28 卦：澤風大過（大過卦）
+卦象結構： 上澤（兌） ＋ 下風（巽）
 
----
+符號概念： 沼澤的水淹沒了樹木（風代表木）。卦象上，中間四根實線太重，上下兩根虛線太弱，就像一根房屋的棟樑承受不住重量，快要彎折斷裂了。
 
-### 第39章・昔之得一者 Done
+白話大意：【超載與極限】
+吃得太多、資源擴充太快（頤），導致系統「超載」了。「大過」就是極度過分、壓力爆表。這是一個非常極端的狀態，常規的方法已經無法解決問題，必須採取非常手段才能度過難關。
 
-> 核心意象：天得一以清、萬物得一以生、侯王以賤為本
+給現代人的啟示： 系統超載，必須採取極端對策。你現在可能背負了過多的責任、技術債或超乎常理的壓力，隨時會崩潰（Burnout）。這時不能再用常規的SOP，必須有魄力地做出大膽的重構、切割或轉型，非常時期要有非常之舉。
 
-```
-The cosmos united by a single golden thread, heaven clear and earth stable,
-a humble king standing on low ground supporting the realm, ink wash painting,
-unity of the universe, jade and gold palette, mystical Taoist concept
-```
+第 29 卦：坎為水（坎卦）
+卦象結構： 上水（坎） ＋ 下水（坎）
 
----
+符號概念： 水上加水，坑中有坑。水流陷入深淵，環境極度險惡。
 
-### 第40章・反者道之動 Done
+白話大意：【深淵與危機】
+因為超載（大過）而導致系統崩潰，跌入了最危險的深淵。「坎」代表危險、低谷、重重考驗。這是《易經》四大難卦之一。但水的特性是「即使跌入坑洞，只要水繼續流，終究會溢出來並繼續前進」。
 
-> 核心意象：循環往復、有生於無、太極生化
+給現代人的啟示： 保持流動，在危機中尋找生機。你可能正面臨人生或事業的至暗時刻。這時候慌張沒有用，必須像水一樣保持彈性與流動，不要失去信心。專注於眼前的一小步，把每一個坑洞填滿，總會熬出峽谷的。
 
-```
-A massive cosmic spiral returning to its origin, something beautiful emerging
-from absolute dark nothingness, ancient Chinese philosophy art, ink painting,
-reversal as the movement of Tao, deep teal and gold, ethereal mist
-```
+第 30 卦：離為火（離卦）
+卦象結構： 上火（離） ＋ 下火（離）
 
----
+符號概念： 兩把火疊加，光明璀璨。但火不能憑空燃燒，它必須「附著」在木柴或燃料上。
 
-### 第41章・上士聞道 Done
+白話大意：【附著與光明】
+熬過了黑暗的深淵（坎），終於迎來了光明。「離」有光明、美麗的意思，但它更深層的含義是「附著、依賴」。代表輝煌的成就不能憑空存在，必須有堅實的平台或核心價值作為燃料。
 
-> 核心意象：大器晚成、大音希聲、大象無形
+給現代人的啟示： 找到你的燃料與平台。這是豁然開朗、大放異彩的時刻（可能是專案成功發布，獲得市場矚目）。但你要清醒地知道，你的成功是建立在什麼基礎上？是你的團隊？還是某個核心技術？緊緊依附並保護好你的「燃料」，光明才能持久。
 
-```
-A massive invisible bell emitting silent cosmic waves, a great square with no corners,
-the concept of formlessness, ancient Chinese abstract ink art, 
-sage listening to the silence, dark mysterious atmosphere, gold particles
-```
+(從這裡開始，進入《易經》下經，焦點轉向人際、家庭與社會組織的建構)
 
----
+第 31 卦：澤山咸（咸卦）
+卦象結構： 上澤（兌） ＋ 下山（艮）
 
-### 第42章・道生一 Done
+符號概念： 高山上方有清澈的沼澤。山把中心空出來，容納水的滋潤；水向下滲透，滋養著山。兩者完美契合。
 
-> 核心意象：道生萬物、萬物負陰抱陽、沖氣以為和
+白話大意：【感應與交集】
+有了光明（離）之後，事物之間開始產生互相吸引的力量。「咸」就是感應、無心的觸動。這像是兩個人初次見面的心電交瘁，或是兩個系統之間完美無瑕的 API 對接。沒有強迫，全是自然的共鳴。
 
-```
-The primordial Tao splitting into yin and yang, then into three forces creating
-the ten thousand things, a cosmic mandala of creation, ink painting,
-dynamic harmony of opposites, jade and gold energies swirling
-```
+給現代人的啟示： 放空自我，建立真誠的連結。如果你想發揮影響力或談成合作，靠強硬推銷是沒用的。你必須像這座山一樣「虛心」（倒空自己的成見），去感受並接納對方的需求，建立起雙方真誠的「感應」與共鳴。
 
----
+第 32 卦：雷風恆（恆卦）
+卦象結構： 上雷（震） ＋ 下風（巽）
 
-### 第43章・天下之至柔 Done
+符號概念： 打雷與刮風，兩者總是相伴而生，大自然的運作日復一日，永不停止。
 
-> 核心意象：至柔馳騁至堅、無有入無間、水穿石
+白話大意：【恆久與常態】
+短暫的感應和激情（咸）是不夠的，必須把它轉化為長期的穩定狀態。「恆」就是持久、常態。但這種恆久不是死水一灘，而是在變動（雷與風）中保持核心方向的不變，是一種「動態的平衡」。
 
-```
-Gentle water effortlessly carving through the hardest mountain rock,
-invisible wind passing through solid barriers, ancient Chinese landscape,
-the power of softness, ink painting, deep blue and gold, philosophical art
-```
+給現代人的啟示： 建立可持續的長期常態。激情退去後，考驗的是你的續航力。無論是維持一段關係，還是維運一個系統，你都需要建立一套可持續的 SOP 或商業模式（Sustainable Model）。在適應外部變化的同時，堅守你的核心價值觀。
 
 ---
 
-### 第44章・名與身孰親 Done
+第 33 卦：天山遯（遯卦，音同「頓」）
+卦象結構： 上天（乾） ＋ 下山（艮）
 
-> 核心意象：知足不辱、名利與生命之取捨
+符號概念： 天空無限高遠，山再怎麼高也碰不到天。象徵著力量的遠離與退避。
 
-```
-A sage turning away from a pile of gold and official seals to embrace a simple life,
-the contrast of worldly wealth vs inner peace, ink wash portrait,
-knowing when enough is enough, muted earth tones, serene expression
-```
+白話大意：【退避與隱退】
+恆久（恆）的狀態不可能永遠維持，當大環境變差、陰暗的力量（小人、負面趨勢）開始滋長時，與其硬碰硬，不如選擇「遯」。遯就是退避、隱藏、急流勇退。這不是懦弱，而是一種主動的戰略撤退，保存實力。
 
----
-
-### 第45章・大成若缺 Done
+給現代人的啟示： 完美退場，保存算力。當一個專案已經成為拖累，或是你發現所處的環境變得有毒（Toxic），不要眷戀過去的常態。懂得「優雅降級」（Graceful degradation）、果斷結束掉舊服務，把你珍貴的精力與資源抽離出來，才是大智慧。
 
-> 核心意象：大直若屈、大巧若拙、清靜為天下正
-
-```
-A masterful but seemingly clumsy piece of ancient pottery, a perfectly straight path
-that appears winding, the perfection of imperfection, Chinese ink art,
-wabi-sabi aesthetic before its time, quiet and pure atmosphere
-```
-
----
+第 34 卦：雷天大壯（大壯卦）
+卦象結構： 上雷（震） ＋ 下天（乾）
 
-### 第46章・天下有道 Done
+符號概念： 天上打著震耳欲聾的響雷，能量極度強大，聲勢浩大。
 
-> 核心意象：卻走馬以糞、知足之足、和平與戰亂
+白話大意：【強盛與克制】
+退避（遯）休養之後，陽剛的力量重新聚集，達到了極度強盛的狀態。「大壯」就是非常強壯、充滿動能。這是一個資源充足、實力雄厚的時期。但《易經》提醒，力量越強，越容易因為衝動而失控（像是公羊用角去撞籬笆，結果角卡住拔不出來）。
 
-```
-Warhorses being used to plow peaceful farm fields, swords turned into plowshares,
-ancient Chinese rural peace, ink painting, golden harvest light,
-the tragedy of endless desire vs the peace of contentment
-```
+給現代人的啟示： 擁抱強大算力，但嚴控輸出。你現在可能手握強大的資源（例如充沛的資金、先進的技術堆疊），覺得自己無所不能。但切記「非禮勿履」，越是強大，越要踩好煞車，按照規矩來，避免因為過度擴張而讓系統翻車。
 
----
+第 35 卦：火地晉（晉卦）
+卦象結構： 上火（離） ＋ 下地（坤）
 
-### 第47章・不出戶知天下 Done
+符號概念： 太陽（火）從地平線升起，光芒逐漸照耀大地。
 
-> 核心意象：不行而知、不見而明、內觀宇宙
+白話大意：【晉升與展露】
+力量強大且懂得克制（大壯），就會迎來上升的機會。「晉」就是前進、晉升、像日出一樣展露光芒。這是一個受到上級賞識、獲得資源傾斜、事業蒸蒸日上的黃金時期。
 
-```
-A sage sitting perfectly still in a dark room, yet the entire cosmos revolves around him,
-knowing the world without looking out the window, inner vision, ink painting,
-mystical Taoist meditation, dark void with starry gold elements
-```
+給現代人的啟示： 大膽上線，擴大影響力。這是非常適合「發布」與「展現」的階段。把你打磨好的產品推向前端介面，或者在職場上大方展現你的才華。此時運勢如日中天，是獲取成就與名聲的最好時機。
 
----
+第 36 卦：地火明夷（明夷卦）
+卦象結構： 上地（坤） ＋ 下火（離）
 
-### 第48章・為學日益 Done
+符號概念： 太陽（火）沉入地平線之下，光明被大地掩蓋，進入了黑夜。
 
-> 核心意象：為學日益、為道日損、無為而無不為
+白話大意：【黑暗與受挫】
+日出（晉）之後必然有日落。當光明太過耀眼，引來了嫉妒與打壓，就會陷入「明夷」。明代表光明，夷代表受傷。這是一個大環境極度惡劣、正義與才華被掩蓋的至暗時刻。
 
-```
-A scholar burdened with towers of books versus a Taoist sage floating lightly,
-the contrast of adding knowledge vs subtracting desires, ink wash painting,
-process of letting go, dark background, subtle gold light of enlightenment
-```
+給現代人的啟示： 轉入後端，啟動暗黑模式。當你發現外在環境對你不友善，甚至有人刻意打壓時，千萬不要強出頭。把你的聰明才智隱藏起來，轉向內部或底層的建構（例如默默完善你的本地知識庫與資料庫），在黑暗中保護好自己心中的火種，等待下一次黎明。
 
----
+第 37 卦：風火家人（家人卦）
+卦象結構： 上風（巽） ＋ 下火（離）
 
-### 第49章・聖人無常心 Done
+符號概念： 火燃燒產生熱氣，熱氣上升形成了風。火在內燃燒，風在外吹動，象徵著由內而外的影響力。
 
-> 核心意象：以百姓心為心、善者吾善之、皆孩之
+白話大意：【家庭與內部秩序】
+在外部受挫（明夷）時，人會退回到最安全的避風港——「家」。「家人」卦講述的是內部的組織架構。一個家庭（或團隊）要和諧，必須每個人都扮演好自己的角色（父父、子子、兄兄、弟弟），內部秩序穩固，才能抵禦外在的風雨。
 
-```
-A sage embracing all types of people like a mother holding infants,
-no personal prejudice, ancient Chinese scene of harmony, ink painting,
-warm golden aura surrounding the sage, dark misty background, compassionate philosophy
-```
+給現代人的啟示： 鞏固內部網路，確立角色職責。在向外擴張之前，先確保你的「內部系統」是健康的。不論是整理你混亂的個人檔案、確立團隊成員的權責劃分，還是確保你私有資料庫的安全架構，把「家」安頓好，是一切的基石。
 
----
+第 38 卦：火澤睽（睽卦，音同「奎」）
+卦象結構： 上火（離） ＋ 下澤（兌）
 
-### 第50章・出生入死 Done
+符號概念： 火的性質是向上燒，水的性質是向下流。兩者方向完全相反，無法交集。
 
-> 核心意象：善攝生者、無死地、兕無所投其角
+白話大意：【背離與求同存異】
+當內部網路（家人）發展久了，成員之間一定會產生個體差異，導致意見不合。「睽」就是眼睛看不同方向，代表分離、矛盾、不相容。但這並不完全是壞事，天下萬物本就各不相同，如何在差異中找到共同點才是關鍵。
 
-```
-A calm sage walking safely past a fierce tiger and a charging rhinoceros,
-an aura of invulnerability through non-contention, ancient Chinese ink art,
-mystical protection of the Tao, deep greens and gold, tense yet peaceful
-```
+給現代人的啟示： 處理不相容的 API，尋求異質整合。你可能會遇到與同事意見相左，或是兩個技術堆疊完全不合（Data Mismatch）的狀況。不要試圖消滅差異，而是要去尋找兩者之間微小的共同點。在異質系統中建立橋接，求同存異，就能化解對立。
 
----
+第 39 卦：水山蹇（蹇卦，音同「簡」）
+卦象結構： 上水（坎） ＋ 下山（艮）
 
-### 第51章・道生之 Done
+符號概念： 前面有深水（坎）阻擋，後面有高山（艮）逼退，進退維谷。
 
-> 核心意象：道生德畜、生而不有、長而不宰（玄德）
+白話大意：【險阻與停滯】
+矛盾（睽）如果沒有處理好，就會演變成實質的阻礙。「蹇」就是跋涉艱難、跛腳難行。這是一個前方遇到巨大瓶頸、走不通的狀態。此時硬闖只會溺水，最好的方法是停下腳步，反求諸己。
 
-```
-A giant invisible hand gently nurturing a forest but not claiming ownership,
-the profound virtue of giving without possessing, ink painting landscape,
-mystical nature, jade green leaves, golden morning mist, philosophical metaphor
-```
+給現代人的啟示： 遇到死胡同，停機除錯找外援。當你遇到無法突破的技術瓶頸或人生難關時，不要鑽牛角尖（不要強行 Compile 那些報錯的 Code）。停下來，轉個彎，去尋求外部的協助（大人），或者重新檢視自己的底層邏輯，這才是破局之道。
 
----
+第 40 卦：雷水解（解卦，音同「姐」）
+卦象結構： 上雷（震） ＋ 下水（坎）
 
-### 第52章・天下有始 Done
+符號概念： 春雷大作，接著下起了陣雨，將冬天的冰雪融化，旱象解除。
 
-> 核心意象：守其母、塞兌閉門、復歸其明
+白話大意：【舒緩與解除】
+面對險阻（蹇）懂得反省與求援，最終就能解除危機。「解」就是解開、釋放、危機解除。緊繃的神經終於可以放鬆，問題被梳理開來，一切又恢復了生機。
 
-```
-A person closing their eyes and ears to external chaos, finding a brilliant
-inner light within, returning to the cosmic mother, ink painting portrait,
-meditative state, dark void with bright glowing gold center, profound peace
-```
+給現代人的啟示： 解開死結，輕裝上陣。瓶頸突破了，Bug 解出來了。這時候最重要的是「赦免」與「寬容」——清空那些不必要的歷史包袱（清理 Cache），不要去追究過去的錯誤，讓系統與心靈都回到輕鬆、高效的運轉狀態。
 
 ---
-
-### 第53章・使我介然有知 Done
 
-> 核心意象：大道甚夷、人好徑、盜夸
-
-```
-A wide straight golden path of the Tao ignored by people walking into dark thorny
-shortcuts, ancient Chinese philosophical landscape, ink wash painting,
-the tragedy of human nature, contrast of light and dark
-```
-
----
+第 41 卦：山澤損（損卦）
+卦象結構： 上山（艮） ＋ 下澤（兌）
 
-### 第54章・善建者不拔 Done
+符號概念： 山下的沼澤水氣蒸發，往上滋潤了高山。這是一種「損下益上」（減少底層，增加高層）的狀態。
 
-> 核心意象：善建不拔、修之於身、以身觀身
+白話大意：【減少與減損】
+危機解除後，我們發現系統裡塞滿了過去累積的雜物與過時的架構。「損」就是減少、戒除、優化。這不是壞事，就像修剪樹枝一樣，把底下不必要的消耗砍掉，才能將養分集中到最高層的核心目標上。
 
-```
-A deeply rooted ancient pine tree standing firm on a cliff against strong winds,
-the foundation of true virtue spreading from self to the world, ink painting,
-resilience and strength, jade and gold, majestic nature
-```
+給現代人的啟示： 系統瘦身，少即是多。你現在可能需要做減法。與其維持一套臃腫、難以維護的舊框架，不如果斷捨棄，轉換成更輕量、精簡的混合式架構。戒除過度複雜的設計，讓運算資源集中在最重要的地方。
 
----
+第 42 卦：風雷益（益卦）
+卦象結構： 上風（巽） ＋ 下雷（震）
 
-### 第55章・含德之厚 Done
+符號概念： 風和雷互相激盪，聲勢越來越大。卦象的邏輯是「損上益下」，也就是上位者釋放資源，去滋養底層。
 
-> 核心意象：比於赤子、和之至、物壯則老
+白話大意：【增加與擴充】
+把不必要的東西減去（損）之後，就能騰出空間來進行實質的擴充。「益」就是增加、受益。這是一個充滿動能的階段，資源從高處往下流動，讓基層充滿活力，整體的效能得到了指數級的增長。
 
-```
-A pure glowing infant untouched by surrounding venomous snakes and fierce beasts,
-the ultimate harmony and vital energy of innocence, ancient Chinese ink art,
-magical realism, golden protective aura, deep dark background
-```
+給現代人的啟示： 擴充功能，賦能終端。這是一個適合做「加法」與「升級」的時刻。例如，原本只有單向發送通知的功能，現在可以投資資源，將其升級為具備雙向互動機制的完整流程。給予底層（或使用者端）更多能力，整個系統的價值就會大幅提升。
 
----
+第 43 卦：澤天夬（夬卦，音同「怪」）
+卦象結構： 上澤（兌） ＋ 下天（乾）
 
-### 第56章・知者不言 Done
+符號概念： 沼澤的水位已經高到天上了，隨時會潰堤。從卦象看，下面五個陽爻正要把最上面唯一的一個陰爻給推翻掉。
 
-> 核心意象：知者不言、和光同塵、玄同
+白話大意：【決斷與突破】
+資源擴充（益）到極點後，一定會面臨最後一道關卡或是長久未清的歷史遺毒。「夬」有決斷、切斷、潰堤的意思。這是一股勢如破竹的力量，必須當機立斷，把最後的障礙或技術債徹底清除。
 
-```
-A wise master remaining silent with eyes closed, blending perfectly into the dusty
-mundane world without losing his inner light, ink wash painting,
-softened glare, harmonious existence, mystical unity, muted earthy tones
-```
+給現代人的啟示： 推送上線，解決最終痛點。你已經做好了充足的準備，現在是 Push to Production 的時刻。面對系統裡最後一個卡關的 Bug 或是拖累效能的模組，不要猶豫，下定決心將其徹底重構或移除。
 
----
+第 44 卦：天風姤（姤卦，音同「垢」）
+卦象結構： 上天（乾） ＋ 下風（巽）
 
-### 第57章・以正治國 Done
+符號概念： 天下颳起一陣風，無孔不入。從卦象看，最底層突然鑽進了一個陰爻（代表意外的變數或小人），與上面的五個陽爻相遇。
 
-> 核心意象：以無事取天下、法物滋彰盜賊多有
+白話大意：【相遇與意外】
+剛用強硬手段解決完問題（夬），以為天下太平了，沒想到卻在最意想不到的地方，遇見了突發狀況。「姤」就是邂逅、不期而遇。通常代表著某種具有破壞力的微小變數正在悄悄滲透。
 
-```
-A kingdom flourishing naturally without visible laws or soldiers, 
-people living simply and prosperously, ancient Chinese village, ink painting,
-the paradox of non-interference, peaceful daily life, warm sunlight
-```
+給現代人的啟示： 處理邊緣案例（Edge Cases）。系統上線後，總會遇到你設計時完全沒想到的極端數據或異常輸入。對於這些突然冒出來的異常行為或「雜訊」，必須保持警覺，及早防堵，不要讓這個小漏洞擴大成災難。
 
----
+第 45 卦：澤地萃（萃卦，音同「翠」）
+卦象結構： 上澤（兌） ＋ 下地（坤）
 
-### 第58章・其政悶悶 Done
+符號概念： 水流匯聚在大地之上的低窪處，形成湖泊。
 
-> 核心意象：禍福相倚、光而不耀
+白話大意：【匯聚與精華】
+經歷了意外的變數（姤），系統學會了防禦，開始進入穩定收集資源的階段。「萃」就是聚集、萃取精華。這是一個物以類聚、人才與財富大量匯集的繁榮狀態，大家為了一個共同的信仰或目標而凝聚在一起。
 
-```
-A Taijitu (Yin-Yang symbol) made of interwoven fortune and disaster,
-a sage glowing with a soft non-blinding light, ancient philosophical art,
-ink painting, fluid transition between light and dark, golden subtle glow
-```
+給現代人的啟示： 打造知識庫，聚合價值。這是進行資料收集與特徵萃取（Feature Extraction）的最佳時機。把四散的數據、碎片化的知識，有系統地匯聚起來（例如寫入向量資料庫中），建立起一套高濃度的中央大腦或資源池。
 
----
+第 46 卦：地風升（升卦）
+卦象結構： 上地（坤） ＋ 下風（巽）
 
-### 第59章・治人事天 Done
+符號概念： 風（代表樹木）生長在大地之下，正一步步破土而出，向上生長。
 
-> 核心意象：莫若嗇、深根固柢、長生久視
+白話大意：【上升與積累】
+資源聚合（萃）之後，量變產生質變，事物開始向上發展。「升」就是上升、晉升。與前面突飛猛進的「晉卦」不同，升卦強調的是像樹木生長一樣，腳踏實地、循序漸進的穩定攀升。
 
-```
-An ancient giant tree with incredibly deep glowing roots reaching into the earth,
-the concept of extreme conservation of energy, ink painting landscape,
-longevity and groundedness, deep greens and earthy golds
-```
+給現代人的啟示： 迭代升級，持續交付。你的架構或專案已經穩定了，現在要做的就是持續整合與交付（CI/CD）。不要急於一步登天，按照既定的藍圖，一個版本一個版本地升級，這種累積起來的成長是最扎實的。
 
----
+第 47 卦：澤水困（困卦）
+卦象結構： 上澤（兌） ＋ 下水（坎）
 
-### 第60章・治大國 Done
+符號概念： 沼澤底下破了洞，水全漏光了。上面是乾涸的湖底，下面是深陷的危險。
 
-> 核心意象：若烹小鮮、鬼神不傷人
+白話大意：【困乏與受限】
+無止盡的攀升（升）最終會觸及天花板，導致資源耗盡。「困」就是困頓、窮困、被限制住。這是《易經》四大難卦之一，代表你陷入了無路可走、彈盡援絕的窘境，外部的支援完全斷絕。
 
-```
-A skilled ancient chef delicately cooking a small fish without breaking it,
-metaphor for gentle governance, peaceful realm where spirits rest quietly,
-ink painting, subtle action, warm firelight, philosophical wisdom
-```
+給現代人的啟示： 遭遇死鎖，堅守核心邏輯。這就像是系統遇到了 OOM（Out of Memory）錯誤或 API 請求被限流（Rate Limit）。外在環境已經把你逼到死角，此時向外求援是無效的。你必須安靜下來，在極其受限的條件下，確保核心進程（致命部位）不崩潰，等待系統資源釋放。這也是考驗一個工程師或領導者底氣的時候。
 
----
+第 48 卦：水風井（井卦）
+卦象結構： 上水（坎） ＋ 下風（巽）
 
-### 第61章・大國者下流 Done
+符號概念： 風（代表木製的水桶）深入地下，把水給打上來。這就是一口「井」。
 
-> 核心意象：天下之交、大國下流、牝常以靜勝牡
+白話大意：【源泉與不變】
+在困境（困）中痛定思痛，我們發現必須建立一套不依賴外部環境、能自己產生資源的基礎設施。「井」象徵著生命之源。村莊可以遷移，但井的位置永遠不變；井水被汲取也不會枯竭，不汲取也不會滿溢，它始終靜靜地提供價值。
 
-```
-A massive majestic river resting in the lowest valley, receiving all streams,
-the power of female stillness and humility, ancient Chinese landscape ink painting,
-vast waters, peaceful dominance through yielding, silver and gold reflections
-```
+給現代人的啟示： 建構自託管的底層服務。經歷了資源受限的痛，你應該打造一口屬於自己的「井」。這可能是一台穩定運行的地端伺服器、一個自動化的排程代理，或是一套完善的底層 API。它不需要多麽華麗的介面，只要能穩穩地、源源不絕地提供資料與服務，就是整個架構中最偉大的存在。
 
 ---
-
-### 第62章・道者萬物之奧 Done
-
-> 核心意象：萬物之奧、不如坐進此道
-
-```
-A grand ceremony offering jade and horses, while a humble sage sits quietly
-offering nothing but the invisible Tao, ink painting, true value vs material wealth,
-mystical presence outshining physical gold, dark atmospheric background
-```
 
----
+第 49 卦：澤火革（革卦）
+卦象結構： 上澤（兌） ＋ 下火（離）
 
-### 第63章・為無為 Done
+符號概念： 水在火上。水能滅火，火能把水燒乾。這兩股力量水火不容，必然有一方要被徹底消滅，產生質變。
 
-> 核心意象：圖難於其易、天下大事必作於細
+白話大意：【變革與革命】
+舊有的系統或常態已經到了非改不可的地步。「革」就是皮革，引申為蛻變、革命、徹底翻新。這不是微調，而是一次破釜沉舟的 Paradigm Shift（典範轉移），徹底推翻舊有的邏輯與制度。
 
-```
-A tiny sprout beginning to crack a massive stone, the start of a thousand-mile journey,
-solving huge problems through tiny actions, ink wash painting,
-macro perspective, dramatic lighting, jade green sprout, gold cracks in stone
-```
+給現代人的啟示： 打掉重練，架構重構。當你發現原有的工作流或技術堆疊已經嚴重落後（例如還在用純手工刻板，而不是用自動化 Agent 協作），不要再猶豫。勇敢拋棄歷史包袱，進行一次大版本更新（Major Update），雖然陣痛期很長，但這是涅槃重生的必經之路。
 
----
+第 50 卦：火風鼎（鼎卦）
+卦象結構： 上火（離） ＋ 下風（巽）
 
-### 第64章・其安易持 Done
+符號概念： 風（木柴）在底下燃燒，火在上面煮著東西。這是一個「鼎」（古代用來煮肉、祭祀、象徵國家政權的重器）。
 
-> 核心意象：合抱之木生於毫末、慎終如始
+白話大意：【建立新秩序與養賢】
+革命（革）破壞了舊體制，接下來必須馬上建立新體制，這就是「鼎」。鼎代表著全新的權力核心、核心資料庫或是神聖的願景。它不僅是用來穩固江山，更是用來烹煮食物、「滋養賢才」的容器。
 
-```
-A massive ancient tree superimposed with its original tiny seed,
-a traveler taking the first careful step of a long journey, ink painting,
-mindfulness from beginning to end, philosophical persistence, dark and gold
-```
+給現代人的啟示： 部署全新核心，培養核心團隊。革命成功後，你必須立刻把新的基礎設施架設起來（例如建構一套全新的 RAG 知識庫與向量資料庫）。這套新系統是用來裝載最有價值的資源，並藉此吸引、培養出能與你一起運作新架構的頂尖夥伴。
 
----
+第 51 卦：震為雷（震卦）
+卦象結構： 上雷（震） ＋ 下雷（震）
 
-### 第65章・古之善為道者 Done
+符號概念： 兩道落雷接連劈下，震耳欲聾，讓人感到無比的恐懼與震撼。
 
-> 核心意象：將以愚之、不以智治國、大順
+白話大意：【震動與覺醒】
+新秩序剛建立，往往會伴隨著巨大的變動與考驗。「震」就是震動、驚嚇。這像是一場突如其來的壓力測試，大環境的劇變讓人恐慌。但在驚嚇過後，人會變得更加清醒、敬畏，從而學會謹慎行事。
 
-```
-An ancient ruler choosing a simple unadorned staff over a complex golden scepter,
-people living in innocent simplicity without cunning or deceit, ink painting,
-the wisdom of appearing foolish, returning to authentic nature, subtle gold accents
-```
+給現代人的啟示： 承受壓力測試，保持核心不當機。這就像系統突然湧入極大的流量，或是遭遇到未知的 Exception（例外錯誤），警報器大作。此時身為開發者或決策者，內心要穩。只要你的核心架構（鼎）夠堅固，讓這波衝擊過去，系統的抗壓性反而會因此提升。
 
----
+第 52 卦：艮為山（艮卦）
+卦象結構： 上山（艮） ＋ 下山（艮）
 
-### 第66章・江海所以能為百谷王 Done
+符號概念： 兩座大山重疊在一起，穩如泰山，完全沒有任何動靜。
 
-> 核心意象：善下之、欲上民必以言下之、莫能與之爭
+白話大意：【靜止與停頓】
+經歷了雷霆般的震撼（震），事物必須要能停下來休息。「艮」就是停止、靜止。但這不是死寂，而是一種「知道何時該停下」的智慧（知止）。在該停的時候停，不被外界的誘惑或恐慌帶著走。
 
-```
-A vast majestic ocean resting patiently at the lowest point, receiving countless rivers,
-a great leader bowing humbly to his people, ancient Chinese landscape ink art,
-the invincible power of humility, deep blue-black waters, shimmering gold sunlight
-```
+給現代人的啟示： 凍結狀態，停止無效操作。當系統正在經歷巨大的震盪，或者你自己的思緒極度混亂時，最好的 Debug 方式就是「不做任何事」。凍結程式碼（Code Freeze），停止所有不必要的 API 呼叫。把注意力拉回當下，讓心境像山一樣沉穩，答案自然會浮現。
 
----
+第 53 卦：風山漸（漸卦）
+卦象結構： 上風（巽） ＋ 下山（艮）
 
-### 第67章・天下皆謂我道大 Done
+符號概念： 高山上長著樹木（風代表木）。山上的樹木生長環境嚴苛，長得非常緩慢，但它的根基扎得極深。
 
-> 核心意象：三寶：慈、儉、不敢為天下先
+白話大意：【循序漸進】
+停止與沉澱（艮）之後，重新開始推進，但這次不再急躁。「漸」就是緩慢、按部就班。就像大雁南飛，有一定的隊形和節奏。這是一個強調順應自然規律、扎實前進的狀態。
 
-```
-A sage holding three glowing golden orbs representing compassion, frugality, and humility,
-standing safely behind others while offering protection, ancient Taoist art,
-ink painting portrait, deep mystical background, philosophical triad
-```
+給現代人的啟示： 階段性交付，穩健推進。面對龐大且複雜的新專案，不要想著一步到位。採用漸進式（Incremental）的開發策略，將大任務拆解成小模組，一步一個腳印地部署。這種不疾不徐的節奏，反而能走得最遠。
 
----
+第 54 卦：雷澤歸妹（歸妹卦）
+卦象結構： 上雷（震） ＋ 下澤（兌）
 
-### 第68章・善為士者 Done
+符號概念： 震代表長男，兌代表少女。長男在上，少女在下，而且少女主動跟隨，這在古代禮法中是不合常規的婚配（歸妹，意指嫁出年輕妹妹）。
 
-> 核心意象：不武、不怒、不與、用人之力
+白話大意：【失序與委曲求全】
+在漸進發展（漸）的過程中，有時會遇到不合常規的狀況，或是為了急於求成而打破了規矩。「歸妹」代表著名不正、言不順的結合，雖然達成了目的，但過程中帶有委屈、妥協與隱患。
 
-```
-A master warrior standing completely relaxed with sword sheathed, inner calm
-defeating an angry aggressive opponent without striking, ink painting martial arts,
-the virtue of non-contention, kinetic energy vs absolute stillness, dark background
-```
+給現代人的啟示： 接受 Hack 做法，妥協與過渡。在現實的專案開發中，為了趕上 Deadline 或是為了串接一個很難搞的第三方工具，你可能不得不寫一些很醜的 Code（Dirty Hack），或是接受一個不完美的架構妥協。知道這不是長久之計，但在當下，你必須接受這種不完美的組合。
 
----
+第 55 卦：雷火豐（豐卦）
+卦象結構： 上雷（震） ＋ 下火（離）
 
-### 第69章・用兵有言 Done
+符號概念： 打雷閃電交加，光明與聲勢同時達到了頂點。
 
-> 核心意象：哀者勝矣、退尺、無敵
+白話大意：【豐盛與巔峰】
+無論經歷了多少妥協，只要持續推進，終究會迎來大爆發的時刻。「豐」就是盛大、極致的豐富。這是一個光芒萬丈、運算力全開、成果極度豐碩的巔峰狀態。但太陽到了正午就會開始偏西，巔峰也意味著轉折點即將到來。
 
-```
-An ancient general weeping tears of gold for the fallen before a necessary battle,
-reluctant warriors holding defensive positions, ink painting warfare,
-the sorrow of conflict, philosophical anti-war sentiment, misty grey battlefield
-```
+給現代人的啟示： 迎接巔峰，做好離場準備。這是你的產品流量最高、專案最受矚目、系統負載達到峰值的時刻。盡情享受這個成果，但同時要在心裡敲響警鐘。準備好彈性擴容（Auto-scaling）來應付這波熱潮，並且清楚知道，這種極限狀態是無法永遠維持的。
 
----
+第 56 卦：火山旅（旅卦）
+卦象結構： 上火（離） ＋ 下山（艮）
 
-### 第70章・吾言甚易知 Done
+符號概念： 山上的火。火在山上燃燒，燒完這片草木就會蔓延到下一片，不會停留在一個地方。
 
-> 核心意象：被褐懷玉、言有宗、知我者希
+白話大意：【漂泊與探索】
+盛極必衰（豐），巔峰過後，原有的資源被消耗殆盡，或是你不再滿足於現狀，於是選擇離開舒適圈。「旅」就是旅行、客居他鄉。這是一個失去固定根基，在陌生領域不斷移動、探索的狀態，內心難免感到孤獨與不安。
 
-```
-An ancient sage dressed in rough tattered brown robes, but his chest glowing
-with the brilliant light of a priceless jade, ink wash portrait,
-hidden wisdom in a superficial world, dramatic contrast of humble and precious
-```
+給現代人的啟示： 進入無狀態（Stateless）模式，探索未知邊界。當現有專案進入尾聲，你可能會成為一個「技術遊牧民族」，開始研究全新的領域或工具。在這段過渡期，保持輕量化（就像 Serverless 服務一樣，不綁定固定基礎設施），保持開放的心態，在各個不同的技術棧或社群中遊走取經。
 
 ---
-
-### 第71章・知不知 Done
-
-> 核心意象：不知知是病、以其病病是以不病
 
-```
-A scholar staring into a dark void acknowledging the limits of his knowledge,
-true wisdom as recognizing ignorance, ancient Chinese philosophical art,
-ink painting, mind opening to the infinite unknown, subtle starlight
-```
+第 57 卦：巽為風（巽卦，音同「遜」）
+卦象結構： 上風（巽） ＋ 下風（巽）
 
----
-
-### 第72章・民不畏威 Done
+符號概念： 兩陣風接連吹來。風沒有固定的形狀，但它無孔不入，能夠深深地滲透進萬物之中。
 
-> 核心意象：自知不自見、自愛不自貴
+白話大意：【滲透與順從】
+在流浪探索（旅）的過程中，我們學會了放下身段，像風一樣柔軟。「巽」就是順從、進入、無聲無息地滲透。這是一種不靠暴力，而是靠持續不斷的微小力量，最終改變全局的狀態。
 
-```
-A ruler stepping down from a high intimidating throne to walk among the people,
-abandoning oppressive authority for true respect, ink painting narrative,
-the danger of excessive control, harmony restored, warm earthy tones
-```
+給現代人的啟示： 底層滲透，無縫整合。此時不適合做大張旗鼓的宣傳或暴力的系統遷移。你應該像背景程式（Background Process）一樣，默默地執行任務，將你的影響力或新技術，無縫且平滑地滲透到現有的架構中。
 
----
+第 58 卦：兌為澤（兌卦）
+卦象結構： 上澤（兌） ＋ 下澤（兌）
 
-### 第73章・勇於敢則殺
+符號概念： 兩個湖泊相連，水脈互通，滋潤著彼此。兌卦也象徵著嘴巴與開心的笑臉。
 
-> 核心意象：勇於不敢、天網恢恢疏而不失
+白話大意：【喜悅與溝通】
+因為無縫地滲透與順應（巽），事物之間達成了完美的交流，產生了真心的喜悅。「兌」就是喜悅、溝通、言語的交流。這是一個毫無阻礙、資訊流動極度順暢，大家都感到心服口服的雙贏狀態。
 
-```
-An invisible but omnipresent cosmic net stretching across the sky, catching those
-who force their will, a sage safely passing through by yielding, ink painting,
-divine justice, natural law, gold threads in dark cosmos
-```
+給現代人的啟示： 順暢的 API 溝通與極致的 UX。系統內部模組之間達成了完美的握手（Handshake），外部則提供了讓使用者感到愉悅的介面體驗。這是一個充滿正向回饋的時期，良好的溝通能幫你解決絕大部分的阻力。
 
----
+第 59 卦：風水渙（渙卦）
+卦象結構： 上風（巽） ＋ 下水（坎）
 
-### 第74章・民不畏死
+符號概念： 風吹過水面，把水吹得四散激盪；也像春風吹化了河面上的堅冰。
 
-> 核心意象：代大匠斲、司殺者
+白話大意：【渙散與消解】
+過度的喜悅與交流（兌）久了，人的心智或組織的紀律就會開始渙散。「渙」有分散、消解、解除硬結的意思。它既代表著組織結構面臨解體的危機，也代表著化解了長久以來的僵局或心理防線。
 
-```
-A foolish man cutting his own hand while trying to use the Master Carpenter's axe,
-metaphor for humans trying to control life and death, ancient Chinese art,
-ink painting, the danger of overstepping bounds, dramatic shadows
-```
+給現代人的啟示： 去中心化與釋放資源。如果這是一個負面狀態，代表你的團隊或專案正在失去焦點，注意力被嚴重分散。但如果從正面來看，這是一個打破資訊孤島（Silo）、清除快取（Cache Clearance），將集中式架構轉向「去中心化（Decentralization）」的好時機。
 
----
+第 60 卦：水澤節（節卦）
+卦象結構： 上水（坎） ＋ 下澤（兌）
 
-### 第75章・民之饑
+符號概念： 水流入沼澤。沼澤的容量是有限的，水流進來必須要有節制，否則就會氾濫成災。
 
-> 核心意象：無以生為者、賢於貴生
+白話大意：【節制與邊界】
+為了解決渙散（渙），必須重新建立規矩與限制。「節」就是節制、節奏、竹子的節。這代表為事物畫下明確的界線，定義好什麼可以做、什麼不能做，讓一切回歸可控的節奏。
 
-```
-A contrast between a bloated greedy official surrounded by wealth and
-starving peasants, the tragic result of excessive taxation and interference,
-ink painting social commentary, somber tones, historical realism
-```
+給現代人的啟示： 設定流量限制與資源配額。在分散式的系統中，如果沒有限制就會導致崩潰。你必須設定明確的 Rate Limit（API 速率限制）、Memory Quota（記憶體配額）或是專案的邊界（Bounded Context）。有節制，系統才能長治久安。
 
----
+第 61 卦：風澤中孚（中孚卦）
+卦象結構： 上風（巽） ＋ 下澤（兌）
 
-### 第76章・人之生也柔弱
+符號概念： 卦象的最上和最下是實線（陽爻），中間是虛線（陰爻），看起來像一隻船，也像是一個外表堅實、內心虛心誠懇的人。
 
-> 核心意象：柔弱生之徒、堅強死之徒、兵強滅木強折
+白話大意：【誠信與共鳴】
+有了合理的節制（節），雙方就能建立起最深層的信任。「中孚」就是內心充滿誠信，甚至能感動豬魚等無知之物。這是一種超越了言語和契約，直達事物底層核心的絕對信任與共識。
 
-```
-A stiff dead tree snapping in a storm while a soft living willow branch bends safely,
-the life-giving nature of flexibility vs the death in rigidity, ink landscape,
-philosophical nature observation, dynamic weather, jade green and dark grey
-```
+給現代人的啟示： 建立 Ground Truth 與零信任架構的終極信任。在系統層面，這代表你的資料庫裡存放的是絕對可靠的「真相（Ground Truth）」，或者雙方透過密碼學達成了完美的共識機制。在人際層面，這代表你以最純粹的誠意去推動專案，贏得了無可撼動的信譽。
 
----
+第 62 卦：雷山小過（小過卦）
+卦象結構： 上雷（震） ＋ 下山（艮）
 
-### 第77章・天之道
+符號概念： 高山上有雷聲，但傳得不遠。卦象看起來像一隻飛鳥（中間兩根實線是身體，上下四根虛線是翅膀），鳥不宜飛得太高。
 
-> 核心意象：損有餘而補不足、為而不恃
+白話大意：【微小的過度與謹慎】
+在極度互信（中孚）之後，人往往容易過度自信而在細節上犯錯。「小過」就是小小的過度、超越常理一點點。這時候做大事會失敗，只能處理微小的細節。必須保持極度的低調與謹慎，就像鳥兒只能往下飛，不能往上衝。
 
-```
-A divine cosmic bow being drawn, lowering the high and raising the low,
-the Tao redistributing energy to create perfect balance, ancient Chinese cosmology,
-ink painting with gold geometry, abstract philosophical harmony
-```
+給現代人的啟示： 微型修補，避免大版本更新。這是一個「只能發布小更新（Minor Patch），絕對不能做破壞性升級」的時刻。把焦點放在修正微小的 Bug、優化細節，保持低調，不要試圖在這個階段推動什麼偉大的架構變革。
 
----
+第 63 卦：水火既濟（既濟卦）
+卦象結構： 上水（坎） ＋ 下火（離）
 
-### 第78章・天下莫柔弱於水
+符號概念： 水在火之上，水可以被煮沸來使用。從卦象的排列來看，每一個陽爻都在奇數位，每一個陰爻都在偶數位，所有的位置都「絕對正確」，這是六十四卦中唯一一個完美排列的卦。
 
-> 核心意象：柔弱於水、攻堅強者莫之能勝、受國之垢
+白話大意：【完成與完美的巔峰】
+謹慎處理完所有細節（小過），我們終於來到了終點。「既濟」就是事情已經完成、成功渡過河流。這是一個 100% 完美的狀態，所有的模組都在正確的位置上運行。但是，完美的下一秒，就是崩壞的開始。
 
-```
-A single drop of water wearing away the hardest jade stone over millennia,
-a king taking upon himself the sins of his nation, ink painting diptych,
-the ultimate power of yielding, deep blue and gold, profound wisdom
-```
+給現代人的啟示： 完美部署，但熵增已然開始。恭喜你，你的專案成功上線，測試覆蓋率 100%，毫無錯誤。但身為工程師你一定知道，當一個系統「完美完成」的那一刻起，隨著時間流逝與環境變化，它就注定會開始老化、產生 Bug。既濟卦最大的警告就是：在最完美的時候，要防備即將到來的衰退。
 
----
+第 64 卦：火水未濟（未濟卦）
+卦象結構： 上火（離） ＋ 下水（坎）
 
-### 第79章・和大怨
+符號概念： 火往上燒，水往下流，兩者背道而馳，完全無法產生作用。每一個爻的位置都是「錯的」（陰陽錯位）。
 
-> 核心意象：執左契而不責於人、天道無親常與善人
+白話大意：【未完成與無窮的未來】
+《易經》最令人震撼的哲學就在這裡：六十四卦的最後一卦，不是「完成（既濟）」，而是「未完成（未濟）」。一切似乎又回到了混亂與錯位，事情還沒結束，渡河渡到一半。但正是因為「未完成」，宇宙才不會走向死寂，系統才有了繼續運轉、演化與升級的無限可能。
 
-```
-A compassionate sage holding a debt contract but tearing it up instead of collecting,
-forgiving grievances completely to restore harmony, ancient Chinese scene,
-ink painting, the generosity of the Tao, warm golden light of forgiveness
-```
+給現代人的啟示： 永遠的 Beta 版（The Eternal Beta）。沒有一個系統是真正寫完的，沒有一個演算法是不需要迭代的。未濟卦告訴我們，生命與系統的本質就是一個無限的迴圈（Infinite Loop）。結束只是一個新版本的開始。準備好面對新的錯位與混亂，開啟下一個 Sprint 吧！
 
----
 
-### 第80章・小國寡民
 
-> 核心意象：小國寡民、甘食美服、安居樂俗
 
-```
-An idyllic isolated ancient Chinese village, people perfectly content with simple food
-and clothes, no weapons or travel, peaceful coexistence, ink painting utopia,
-Peach Blossom Spring aesthetic, misty mountains, warm sunlight, harmony
-```
 
----
 
-### 第81章・信言不美
 
-> 核心意象：為而不爭、利而不害、既以為人己愈有
 
-```
-A sage emptying his bag to give everything to others, but the bag miraculously
-refills with golden light, the more he gives the more he has, ink painting,
-ultimate Taoist principle of serving without contending, beautiful spiritual conclusion
-```

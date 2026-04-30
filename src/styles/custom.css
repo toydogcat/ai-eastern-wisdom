@@ -124,3 +124,27 @@ main {
   text-align: center;
   border-top: 1px solid rgba(201, 168, 76, 0.2);
 }
+
+/* 易經專區樣式 */
+.hexagram-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: rgba(201, 168, 76, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.hexagram-symbol {
+  font-size: 4rem;
+  color: #c9a84c;
+  line-height: 1;
+}
+
+.hexagram-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--sl-color-white);
+}

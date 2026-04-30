@@ -100,6 +100,11 @@ export default defineConfig({
 						},
 					],
 				},
+				{
+					label: '☯️ 易經：數位底層邏輯',
+					collapsed: true,
+					autogenerate: { directory: 'i-ching' },
+				},
 			],
 		}),
 	],
