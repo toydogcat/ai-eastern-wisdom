@@ -858,7 +858,7 @@ ink painting, subtle action, warm firelight, philosophical wisdom
 
 ---
 
-### 第61章・大國者下流
+### 第61章・大國者下流 Done
 
 > 核心意象：天下之交、大國下流、牝常以靜勝牡
 
@@ -870,7 +870,7 @@ vast waters, peaceful dominance through yielding, silver and gold reflections
 
 ---
 
-### 第62章・道者萬物之奧
+### 第62章・道者萬物之奧 Done
 
 > 核心意象：萬物之奧、不如坐進此道
 
@@ -882,7 +882,7 @@ mystical presence outshining physical gold, dark atmospheric background
 
 ---
 
-### 第63章・為無為
+### 第63章・為無為 Done
 
 > 核心意象：圖難於其易、天下大事必作於細
 
@@ -894,7 +894,7 @@ macro perspective, dramatic lighting, jade green sprout, gold cracks in stone
 
 ---
 
-### 第64章・其安易持
+### 第64章・其安易持 Done
 
 > 核心意象：合抱之木生於毫末、慎終如始
 
@@ -906,7 +906,7 @@ mindfulness from beginning to end, philosophical persistence, dark and gold
 
 ---
 
-### 第65章・古之善為道者
+### 第65章・古之善為道者 Done
 
 > 核心意象：將以愚之、不以智治國、大順
 
@@ -918,7 +918,7 @@ the wisdom of appearing foolish, returning to authentic nature, subtle gold acce
 
 ---
 
-### 第66章・江海所以能為百谷王
+### 第66章・江海所以能為百谷王 Done
 
 > 核心意象：善下之、欲上民必以言下之、莫能與之爭
 
@@ -930,7 +930,7 @@ the invincible power of humility, deep blue-black waters, shimmering gold sunlig
 
 ---
 
-### 第67章・天下皆謂我道大
+### 第67章・天下皆謂我道大 Done
 
 > 核心意象：三寶：慈、儉、不敢為天下先
 
@@ -942,7 +942,7 @@ ink painting portrait, deep mystical background, philosophical triad
 
 ---
 
-### 第68章・善為士者
+### 第68章・善為士者 Done
 
 > 核心意象：不武、不怒、不與、用人之力
 
@@ -954,7 +954,7 @@ the virtue of non-contention, kinetic energy vs absolute stillness, dark backgro
 
 ---
 
-### 第69章・用兵有言
+### 第69章・用兵有言 Done
 
 > 核心意象：哀者勝矣、退尺、無敵
 
@@ -966,7 +966,7 @@ the sorrow of conflict, philosophical anti-war sentiment, misty grey battlefield
 
 ---
 
-### 第70章・吾言甚易知
+### 第70章・吾言甚易知 Done
 
 > 核心意象：被褐懷玉、言有宗、知我者希
 
@@ -978,7 +978,7 @@ hidden wisdom in a superficial world, dramatic contrast of humble and precious
 
 ---
 
-### 第71章・知不知
+### 第71章・知不知 Done
 
 > 核心意象：不知知是病、以其病病是以不病
 
@@ -990,7 +990,7 @@ ink painting, mind opening to the infinite unknown, subtle starlight
 
 ---
 
-### 第72章・民不畏威
+### 第72章・民不畏威 Done
 
 > 核心意象：自知不自見、自愛不自貴
 
