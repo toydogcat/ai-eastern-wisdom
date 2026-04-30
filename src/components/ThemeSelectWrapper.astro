@@ -1,0 +1,34 @@
+---
+import DefaultThemeSelect from '../../node_modules/@astrojs/starlight/components/ThemeSelect.astro';
+import FontSizeSelect from './FontSizeSelect.astro';
+---
+
+<div class="header-controls">
+  <FontSizeSelect />
+  <div class="divider"></div>
+  <DefaultThemeSelect {...Astro.props} />
+</div>
+
+<style>
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .divider {
+    width: 1px;
+    height: 1.5rem;
+    background-color: var(--sl-color-gray-5);
+  }
+
+  /* 針對行動版隱藏分割線或調整間距 */
+  @media (max-width: 50rem) {
+    .divider {
+      display: none;
+    }
+    .header-controls {
+      gap: 0.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,95 @@
+---
+import Icon from '../../node_modules/@astrojs/starlight/user-components/Icon.astro';
+---
+
+<div class="font-size-select-container">
+  <label for="font-size-select">
+    <Icon name="bars" size="1.2rem" />
+    <span class="sr-only">調整字體大小</span>
+  </label>
+  <select id="font-size-select" class="font-size-select">
+    <option value="xs">極小</option>
+    <option value="sm">更小</option>
+    <option value="base" selected>一般</option>
+    <option value="lg">更大</option>
+    <option value="xl">極大</option>
+  </select>
+  <Icon name="down-caret" class="caret" size="1rem" />
+</div>
+
+<style>
+  .font-size-select-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    color: var(--sl-color-gray-3);
+  }
+
+  .font-size-select-container:hover {
+    color: var(--sl-color-white);
+  }
+
+  .font-size-select {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font-size: var(--sl-text-xs);
+    padding: 0.25rem 1.5rem 0.25rem 0.5rem;
+    line-height: 1.5;
+    outline: none;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+  }
+
+  .caret {
+    position: absolute;
+    right: 0.4rem;
+    pointer-events: none;
+    color: var(--sl-color-gray-4);
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+</style>
+
+<script>
+  const STORAGE_KEY = 'starlight-font-size';
+  const fontSizeSelect = document.getElementById('font-size-select') as HTMLSelectElement;
+
+  const fontSizes = {
+    xs: '14px',
+    sm: '16px',
+    base: '18px',
+    lg: '24px',
+    xl: '32px'
+  };
+
+  function setFontSize(size: keyof typeof fontSizes) {
+    const root = document.documentElement;
+    // Starlight uses --sl-text-base for main body text
+    root.style.setProperty('--sl-text-base', fontSizes[size]);
+    localStorage.setItem(STORAGE_KEY, size);
+    if (fontSizeSelect) fontSizeSelect.value = size;
+  }
+
+  // Load initial size
+  const savedSize = localStorage.getItem(STORAGE_KEY) as keyof typeof fontSizes || 'base';
+  setFontSize(savedSize);
+
+  fontSizeSelect?.addEventListener('change', (e) => {
+    const target = e.target as HTMLSelectElement;
+    setFontSize(target.value as keyof typeof fontSizes);
+  });
+</script>

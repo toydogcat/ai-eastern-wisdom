@@ -40,7 +40,7 @@ h1, h2, h3, h4 {
   padding: 1.5rem 2rem;
   margin: 1.5rem 0;
   font-family: 'Noto Serif TC', serif;
-  font-size: 1.1rem;
+  font-size: calc(var(--sl-text-base) * 1.1);
   line-height: 2.2;
   letter-spacing: 0.12em;
   color: #e8d5a3;
@@ -54,7 +54,7 @@ h1, h2, h3, h4 {
   padding: 1.5rem 2rem;
   margin: 1.5rem 0;
   font-family: 'Noto Serif TC', serif;
-  font-size: 1.1rem;
+  font-size: calc(var(--sl-text-base) * 1.1);
   line-height: 2.2;
   letter-spacing: 0.12em;
   color: #d4a97a;
