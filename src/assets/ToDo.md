@@ -291,7 +291,7 @@ philosophical atmosphere, ink wash technique
 
 ---
 
-### 第24章・企者不立
+### 第24章・企者不立 Done
 
 > 核心意象：踮腳、跨步、自見自伐的虛妄
 
@@ -303,7 +303,7 @@ contrast with grounded sage watching quietly, philosophical lesson
 
 ---
 
-### 第25章・有物混成
+### 第25章・有物混成 Done
 
 > 核心意象：道先天地生、人法地地法天天法道道法自然
 
@@ -315,7 +315,7 @@ ink meets cosmos digital art, dark void, gold light, eternal pre-existence
 
 ---
 
-### 第26章・重為輕根
+### 第26章・重為輕根 Done
 
 > 核心意象：重靜為根、君子輜重、不輕天下
 
@@ -327,7 +327,7 @@ calm at the center of action, dark mountains, gold equipment glint
 
 ---
 
-### 第27章・善行無轍迹
+### 第27章・善行無轍迹 Done
 
 > 核心意象：無痕之善、善人為師、承習光明
 
@@ -339,7 +339,7 @@ natural mastery, philosophical art, subtle gold light
 
 ---
 
-### 第28章・知其雄守其雌
+### 第28章・知其雄守其雌 Done
 
 > 核心意象：雌雄、谷、嬰兒、歸樸
 
@@ -351,7 +351,7 @@ masculine mountains embracing feminine river, jade tones, philosophical harmony
 
 ---
 
-### 第29章・將欲取天下
+### 第29章・將欲取天下 Done
 
 > 核心意象：天下神器、不可為、聖人去甚
 
@@ -363,7 +363,7 @@ world as sacred vessel, dark background, gold earth slipping like water
 
 ---
 
-### 第30章・以道佐人主
+### 第30章・以道佐人主 Done
 
 > 核心意象：物壯則老、兵戈後荊棘、不道早已
 
@@ -375,7 +375,7 @@ dark desolate landscape, gold thorns, mist of regret
 
 ---
 
-### 第31章・夫佳兵者
+### 第31章・夫佳兵者 Done
 
 > 核心意象：佳兵不祥、以喪禮處之、戰勝哀泣
 
@@ -387,8 +387,7 @@ grey and gold palette, solemn atmosphere, philosophical pacifism
 
 ---
 
-### 第32章・道常無名
-
+### 第32章・道常無名 Done
 > 核心意象：道樸無名、川谷歸江海、侯王守道
 
 ```
@@ -399,7 +398,7 @@ gold sunlight on water, the nameless Tao as the great receiving ocean
 
 ---
 
-### 第33章・知人者智
+### 第33章・知人者智 Done
 
 > 核心意象：自知者明、自勝者強、死而不亡
 
@@ -411,7 +410,7 @@ eternal spirit beyond death, jade aura, dark background, gold calligraphy brush 
 
 ---
 
-### 第34章・大道氾兮
+### 第34章・大道氾兮 Done
 
 > 核心意象：大道遍及、成功不自有、以不自大成其大
 
@@ -423,7 +422,7 @@ omnipresent but invisible, vast and humble at once
 
 ---
 
-### 第35章・執大象
+### 第35章・執大象 Done
 
 > 核心意象：大象（道）、天下歸往、淡乎無味的道
 
@@ -435,7 +434,7 @@ the tasteless Tao more satisfying than music and food, philosophical magnetism
 
 ---
 
-### 第36章・將欲歙之
+### 第36章・將欲歙之 Done
 
 > 核心意象：物極必反、柔弱勝剛強、魚不脫淵
 
@@ -447,7 +446,7 @@ the lesson of staying in one's depth, gold fish in dark water, philosophical met
 
 ---
 
-### 第37章・道常無為
+### 第37章・道常無為 Done
 
 > 核心意象：無為而無不為、萬物自化、無名之樸
 
