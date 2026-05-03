@@ -1107,3 +1107,790 @@ A sage emptying his bag to give everything to others, but the bag miraculously
 refills with golden light, the more he gives the more he has, ink painting,
 ultimate Taoist principle of serving without contending, beautiful spiritual conclusion
 ```
+
+---
+
+## ☯️ 易經・六十四卦
+
+每一卦建議搭配一張主題插圖，風格統一為「**水墨丹青・數位復刻**」。
+生圖格式建議：16:9（首圖橫幅）或 1:1（章節卡片圖）。
+
+### 易經首頁 Hero
+
+> 核心意象：太極、八卦、二進位數位矩陣與古老智慧
+
+```
+A dynamic Taijitu (Yin-Yang symbol) rotating at the center of a cosmic void,
+surrounded by the Eight Trigrams (Bagua) glowing in gold, intricate digital binary code matrix
+intertwining with ancient Chinese ink wash painting brushstrokes, mist, deep teal and black background,
+epic wide angle, philosophical and premium digital art style
+```
+
+---
+
+### 第1卦・乾為天
+
+> 核心意象：純陽之氣、天、龍、創造力與動能
+
+```
+A magnificent majestic golden dragon soaring high through layers of ethereal mist and clouds,
+infinite blue and gold skies, pure masculine energy, traditional Chinese ink painting,
+dynamic movement, dramatic cinematic lighting, ancient Eastern cosmology
+```
+
+---
+
+### 第2卦・坤為地
+
+> 核心意象：純陰之卦、地、包容、滋養萬物
+
+```
+Vast fertile earth and ancient mountains seen from high angle, gentle golden light bathing
+the tranquil terrain, deep jade greens and earth tones, serene and silent,
+a glowing seed of life within the soil, traditional Chinese ink wash painting,
+peaceful and harmonious, immense depth
+```
+
+---
+
+### 第3卦・水雷屯
+
+> 核心意象：草創艱難、萌芽、水與雷交加
+
+```
+A small glowing jade sprout bursting through cracked earth during a dramatic storm,
+bolts of gold lightning in heavy ink clouds, rain falling, the tension of birth and beginning,
+ink painting style, dynamic contrast, dark mystical background
+```
+
+---
+
+### 第4卦・山水蒙
+
+> 核心意象：啟蒙、迷霧中的泉水、智慧
+
+```
+A pure clear freshwater spring flowing from the base of a massive misty mountain,
+ancient Chinese scholar teaching a young student by the stream, soft morning light filtering
+through pine trees and mist, ink wash painting, mysterious and philosophical, serene atmosphere
+```
+
+---
+
+### 第5卦・水天需
+
+> 核心意象：等待時機、水在天上、雲行雨施
+
+```
+Ancient traveler sitting patiently under a grand pine tree, looking at massive clouds gathering
+in the sky, anticipation of rain, calm stillness before the action, traditional Chinese ink painting,
+golden horizon, misty atmosphere, profound patience
+```
+
+---
+
+### 第6卦・天水訟
+
+> 核心意象：爭執、天與水相違、自我克制
+
+```
+A great river flowing opposite direction from the movement of high sky clouds,
+two ancient Chinese figures standing apart in a misty canyon debating calmly,
+philosophical conflict, ink wash painting, muted blue and grey tones, high tension yet static stillness
+```
+
+---
+
+### 第7卦・地水師
+
+> 核心意象：軍隊、容民畜眾、紀律與正義
+
+```
+An ancient well-organized Chinese army standing in perfect silent formation across misty plains,
+commanded by a wise calm general, ink painting, muted silver and jade colors,
+noble purpose and strict order, dramatic lighting, historic epic feel
+```
+
+---
+
+### 第8卦・水地比
+
+> 核心意象：親密、水在地上、團結相依
+
+```
+Countless streams and small rivers converging into a serene glowing lake on vast plains,
+interconnected waters in harmony, ancient Chinese landscape, ink wash painting style,
+golden sunlight reflecting on water, sense of community and alignment
+```
+
+---
+
+### 第9卦・風天小畜
+
+> 核心意象：小有蓄積、密雲不雨、柔順蓄勢
+
+```
+Dense swirling clouds filling the sky above ancient Chinese village and fields,
+waiting for the storm but rain has not fallen yet, gathering potential energy,
+ink painting, soft ambient light, jade green fields, dark clouds with gold accents
+```
+
+---
+
+### 第10卦・天澤履
+
+> 核心意象：禮儀、踩虎尾、步步為營
+
+```
+A wise traveler walking carefully on a path beside a tranquil lake, his shadow merging
+with the shape of a calm tiger, the art of stepping cautiously with decorum,
+Chinese ink painting style, high contrast of light and shadow, tense yet balanced
+```
+
+---
+
+### 第11卦・地天泰
+
+> 核心意象：通泰、天地交泰、陰陽和合
+
+```
+Heaven and earth merging in ultimate harmony, clouds and mountains blending into a golden flow,
+ancient Chinese paradise where everything flows effortlessly, balance of the cosmos,
+traditional ink painting, radiant and warm palette, peace and prosperity
+```
+
+---
+
+### 第12卦・天地否
+
+> 核心意象：閉塞、天地不交、萬物不通
+
+```
+A stark split scene between heavy dark earth and an empty cold sky, no connection,
+barren rocky landscape covered in thick static fog, sense of disconnection,
+ink painting, cold dark blues and muted grey, solitary leafless tree, isolation
+```
+
+---
+
+### 第13卦・天火同人
+
+> 核心意象：同心協力、大同世界、火在天之下
+
+```
+A large circle of ancient scholars gathered around a bright campfire on high plateau at dusk,
+pointing to the stars together, unity in purpose, ink wash painting,
+warm golden firelight illuminating faces against dark blue sky, harmony and brotherhood
+```
+
+---
+
+### 第14卦・火天大有
+
+> 核心意象：大有收穫、順天依時、光明普照
+
+```
+Brilliant sun at the center of sky shining down on ancient golden harvest fields,
+wealth and abundance, traditional Chinese landscape ink painting, rich gold and orange hues,
+radiant prosperity, joyful balance, cinematic atmosphere
+```
+
+---
+
+### 第15卦・地山謙
+
+> 核心意象：謙虛、山在地下、高山仰止
+
+```
+A majestic mountain hidden entirely inside a vast, quiet and deep valley,
+the concept of hidden greatness, ancient Chinese landscape ink painting,
+misty atmosphere, subtle gold glint on the hidden peaks, profound humility
+```
+
+---
+
+### 第16卦・雷地豫
+
+> 核心意象：歡愉、和順發起、春雷響動
+
+```
+First spring thunderstorm awakening nature from sleep, vibrant life starting to stir
+in ancient Chinese forest, joyous release of energy, ink painting, jade green and gold sparks,
+dynamic and uplifting, refreshing and optimistic mood
+```
+
+---
+
+### 第17卦・澤雷隨
+
+> 核心意象：順從、隨和、夜幕降臨
+
+```
+A traveler walking down a moonlit forest path, natural world resting,
+the art of following the rhythms of nature, traditional Chinese ink painting,
+silver moonlight on a calm lake, serene night sky, peaceful surrender
+```
+
+---
+
+### 第18卦・山風蠱
+
+> 核心意象：革新、整治、山下有風
+
+```
+Clearing away dead leaves and thick overgrowth from the base of a grand mountain,
+fresh wind sweeping through the valley, restoration after stagnation, ink painting,
+dynamic movement of leaves and wind, morning light breaking through fog
+```
+
+---
+
+### 第19卦・地澤臨
+
+> 核心意象：君臨、親臨、水澤上升
+
+```
+Spring waters rising to nourish the green plains below misty mountains,
+a wise ruler overlooking the flourishing land with care, traditional Chinese ink painting,
+vibrant renewal, warm and soft golden light, profound vision
+```
+
+---
+
+### 第20卦・風地觀
+
+> 核心意象：觀察、仰望、風行地上
+
+```
+Ancient Chinese observer standing atop a high cliff watching the wind bend a massive field
+of reeds below, contemplation of nature's laws, ink painting,
+spacious and airy perspective, deep teal and grey tones, deep insight
+```
+
+---
+
+### 第21卦・火雷噬嗑
+
+> 核心意象：咬合、消除障礙、雷電交加
+
+```
+Bolts of golden lightning striking a dense obstacle in a dark forest,
+breaking it apart to restore order, the power of justice, Chinese ink painting style,
+dramatic dynamic energy, vivid golden sparks, high contrast against dark void
+```
+
+---
+
+### 第22卦・山火賁
+
+> 核心意象：文飾、修飾、山下有火
+
+```
+Gentle golden firelight reflecting off the sheer rock face of a majestic mountain at night,
+subtle glowing aura, beauty through understated refinement, ink painting,
+elegant and premium aesthetic, deep indigo and soft gold tones
+```
+
+---
+
+### 第23卦・山地剝
+
+> 核心意象：剝落、衰退、碩果不食
+
+```
+Autumn leaves falling from an ancient tree leaving a single vibrant golden fruit
+at the very top, survival amid decay, ancient Chinese landscape ink painting,
+solemn yet promising, dark and gold palette, resilience and renewal
+```
+
+---
+
+### 第24卦・地雷復
+
+> 核心意象：復甦、一陽復始、冬至
+
+```
+A tiny glowing golden shoot emerging from frozen winter earth in a quiet forest,
+the return of life and warmth, traditional Chinese ink wash painting,
+soft light breaking through snow and mist, infinite hope and rebirth
+```
+
+---
+
+### 第25卦・天雷無妄
+
+> 核心意象：真實、不做作、順應天道
+
+```
+A lone pine tree standing naturally in the path of a sudden rain and thunderstorm,
+unshaken and pure, simple authenticity, ink painting,
+dramatic sky with subtle thunder, no artifice, ancient Eastern philosophy
+```
+
+---
+
+### 第26卦・山天大畜
+
+> 核心意象：大有積蓄、蓄德、山容天之大
+
+```
+A grand ancient library with thousands of books, tucked away inside a massive mountain,
+preserving knowledge for the future, ink painting style, warm candle light,
+deep jade and gold hues, the wealth of wisdom, monumental atmosphere
+```
+
+---
+
+### 第27卦・山雷頤
+
+> 核心意象：頤養、修養、觀其所養
+
+```
+A quiet ancient Chinese courtyard where a family shares a simple and healthy meal,
+harmony in nutrition and speech, traditional ink painting, soft amber light,
+peaceful and grounded, balance in lifestyle
+```
+
+---
+
+### 第28卦・澤風大過
+
+> 核心意象：過度、棟樑之重、轉機
+
+```
+A massive ancient pine tree leaning but not breaking under the weight of swirling snow and heavy mist,
+extraordinary strength in adversity, Chinese ink art, dark background,
+a single beam of golden light illuminating the core of the tree
+```
+
+---
+
+### 第29卦・坎為水
+
+> 核心意象：重重險難、水流不盈、誠信不失
+
+```
+A powerful turbulent river rushing through a deep rocky canyon, waves crashing,
+navigating the dangerous water with absolute focus, ink painting style,
+deep blue-black and white foam, dynamic motion, dramatic tension
+```
+
+---
+
+### 第30卦・離為火
+
+> 核心意象：附麗、明亮、重明
+
+```
+A double flame glowing intensely inside an ancient bronze lantern, illuminating
+the dark cosmic void around it, clarity and awareness, Chinese ink painting,
+radiant fire and gold colors, high contrast against black, profound enlightenment
+```
+
+---
+
+### 第31卦・澤山咸
+
+> 核心意象：感應、心心相印、山上有澤
+
+```
+A beautiful misty lake resting perfectly on top of a grand mountain peak,
+their energies merging in silent resonance, ancient Chinese landscape, ink wash painting,
+harmonious blue and gold palette, poetic and serene atmosphere
+```
+
+---
+
+### 第32卦・雷風恆
+
+> 核心意象：恆久、不變、雷動風行
+
+```
+An ancient bronze compass pointing steadily in the same direction amidst a swirling wind
+and storm over Chinese mountains, steadfastness and continuity, ink painting,
+balanced gold and dark teal tones, philosophical consistency
+```
+
+---
+
+### 第33卦・天山遁
+
+> 核心意象：隱退、避其鋒芒、山高天遠
+
+```
+An ancient Chinese sage walking up into high misty mountain paths, fading into the distance,
+strategic withdrawal, ink painting, vast landscape, subtle morning mist,
+deep teal and pale gold hues, peaceful and majestic
+```
+
+---
+
+### 第34卦・雷天大壯
+
+> 核心意象：強大、正道、雷在天上
+
+```
+Crashing golden thunder across a vast open sky above a sturdy stone fortress,
+righteous power and immense strength, traditional Chinese ink painting,
+dynamic movement of clouds and energy, dramatic lighting, awe-inspiring
+```
+
+---
+
+### 第35卦・火地晉
+
+> 核心意象：前進、光明普照、日出東方
+
+```
+Golden morning sun rising above the misty horizon of a peaceful plain,
+lighting up the world, progress and clear path ahead, traditional Chinese landscape ink painting,
+rich sunrise colors, optimism and growth, epic scale
+```
+
+---
+
+### 第36卦・地火明夷
+
+> 核心意象：內明、隱藏光芒、日入地中
+
+```
+The sun setting behind deep dark mountains, while a small glowing jewel shines
+from within the deep earth, hidden light in times of darkness, ink wash painting,
+indigo and warm gold accents, inner stillness and resilience
+```
+
+---
+
+### 第37卦・風火家人
+
+> 核心意象：治家、長幼有序、內在穩固
+
+```
+A warm glowing hearth inside a traditional ancient Chinese home, family gathering around,
+peaceful harmony in personal life, traditional ink painting style,
+soft golden light, domestic comfort, gentle colors, serene and heartwarming
+```
+
+---
+
+### 第38卦・火澤睽
+
+> 核心意象：乖離、異中求同、水火不容
+
+```
+A landscape divided by a hot steaming geyser and a cold crystal lake,
+divergent forces existing in the same terrain, finding unity in diversity, ink painting,
+contrasting blue and orange-gold hues, dynamic yet balanced
+```
+
+---
+
+### 第39卦・水山蹇
+
+> 核心意象：艱難、止於險、山上有水
+
+```
+A traveler stopping at the foot of a frozen misty mountain, a turbulent river blocking the path,
+wise patience in the face of obstacles, Chinese ink wash painting,
+cool grey, white snow, and deep teal tones, quiet and profound
+```
+
+---
+
+### 第40卦・雷水解
+
+> 核心意象：解除、解脫、春雷化雨
+
+```
+Spring rain and thunder washing over a melting snow-covered ancient Chinese mountain,
+the release of tension and clearing of difficulties, ink painting,
+fresh and rejuvenating, morning light shining through mist, hope and renewal
+```
+
+---
+
+### 第41卦・山澤損
+
+> 核心意象：減損、節制、損下益上
+
+```
+A humble traveler placing a small stone on an ancient mountain altar,
+the virtue of sacrifice and letting go of excess, traditional Chinese landscape ink painting,
+muted earth tones with gold glow, serene spiritual connection
+```
+
+---
+
+### 第42卦・風雷益
+
+> 核心意象：增益、進步、風雷交作
+
+```
+Strong winds driving the movement of refreshing rain over fertile green fields,
+natural growth and expansion, ancient Chinese landscape ink painting,
+vibrant jade greens and warm gold sunrise rays, optimistic and dynamic
+```
+
+---
+
+### 第43卦・澤天夬
+
+> 核心意象：決斷、決堤、健而說
+
+```
+A powerful dam breaking open to release trapped water, clearing the obstacle once and for all,
+decisiveness and liberation, Chinese ink painting style,
+dynamic white water rapids, dark rock faces, bold gold highlights, high contrast
+```
+
+---
+
+### 第44卦・天風姤
+
+> 核心意象：相遇、突如其來、天下有風
+
+```
+Wind sweeping across high plains under a wide sky, rustling a field of golden wheat,
+unexpected encounter and new influence, traditional Chinese ink painting,
+fluid and airy movement, light teal and pale gold hues
+```
+
+---
+
+### 第45卦・澤地萃
+
+> 核心意象：匯聚、團結、地上有澤
+
+```
+Doves and animals gathering by a calm oasis in the middle of lush misty plains,
+unity and gathering of resources, traditional Chinese ink painting,
+warm sunlight rays, sense of peace, prosperity, and harmony
+```
+
+---
+
+### 第46卦・地風升
+
+> 核心意象：上升、順勢而上、木生地上
+
+```
+A young bamboo shoot growing tall from rich dark earth toward the golden sun,
+continuous steady growth, ancient Chinese landscape ink painting,
+vibrant jade green and soft amber hues, serene and hopeful
+```
+
+---
+
+### 第47卦・澤水困
+
+> 核心意象：困頓、水在澤下、窮通之變
+
+```
+A dry rocky lakebed with a tiny pure spring flowing quietly underneath,
+retaining inner character during times of exhaustion, ink painting,
+stark and desolate grey-blues, single glowing gold thread in the dark ground
+```
+
+---
+
+### 第48卦・水風井
+
+> 核心意象：源泉不竭、井德、改邑不改井
+
+```
+An ancient stone well in the center of a misty Chinese village, pure glowing water within,
+source of eternal nourishment, ink wash painting,
+golden light reflecting from the depth of the well, peaceful and steady
+```
+
+---
+
+### 第49卦・澤火革
+
+> 核心意象：變革、革新、水火交融
+
+```
+A bright dynamic flame turning a piece of raw iron into a beautiful golden sword,
+transformation and radical change, traditional Chinese art, ink painting,
+vibrant glowing fire against dark background, high energy and clarity
+```
+
+---
+
+### 第50卦・火風鼎
+
+> 核心意象：重整、確立、木上有火
+
+```
+A majestic three-legged bronze vessel (Ding) glowing with warm spiritual fire,
+stability and new foundation, traditional Chinese ink painting,
+rich gold and dark teal hues, monumental and sacred atmosphere
+```
+
+---
+
+### 第51卦・震為雷
+
+> 核心意象：驚動、自省、重雷
+
+```
+Two golden bolts of lightning striking high above dark ancient Chinese peaks,
+powerful awakening of the mind, traditional ink painting meets digital cosmos,
+dynamic energy, intense light and dark contrast, awe-inspiring
+```
+
+---
+
+### 第52卦・艮為山
+
+> 核心意象：止、靜止、重山
+
+```
+Two majestic silent mountain ranges standing firm against a dark starry sky,
+perfect stillness and inner focus, ancient Chinese landscape ink painting,
+deep blue, jade green, and subtle gold starlight, meditative peace
+```
+
+---
+
+### 第53卦・風山漸
+
+> 核心意象：漸進、循序漸進、木在山上
+
+```
+A flock of geese flying in perfect formation up into high misty mountain paths,
+orderly progress toward the summit, traditional Chinese ink painting,
+calm, gentle gold and grey hues, timeless journey
+```
+
+---
+
+### 第54卦・雷澤歸妹 Done
+
+> 核心意象：回歸、非正道、雷上有澤
+
+```
+An ancient elegant Chinese wedding procession passing through a misty autumn forest,
+subtle melancholy amid celebration, ink wash painting,
+delicate reds and soft gold hues, atmospheric and poetic
+```
+
+---
+
+### 第55卦・雷火豐 Done
+
+> 核心意象：豐盛、全盛、日中則昃
+
+```
+A grand ancient Chinese imperial banquet overflowing with wealth, illuminated by
+thousands of lanterns, the peak of abundance, traditional ink painting,
+rich gold, orange, and crimson palette, majestic yet fleeting
+```
+
+---
+
+### 第56卦・火山旅 Done
+
+> 核心意象：旅居、變動、山上有火
+
+```
+A lone traveler walking along a mountain ridge at dusk, carrying a glowing lantern,
+journeying through temporary surroundings, ink painting,
+deep indigo night sky, warm golden spark, poetic and solitary
+```
+
+---
+
+### 第57卦・巽為風 Done
+
+> 核心意象：柔順、風行、重風
+
+```
+Wind swirling gently through a dense bamboo forest, the branches bending gracefully,
+subtle yet pervasive power, ancient Chinese landscape ink painting,
+jade green tones, fluid kinetic brushstrokes, soft atmosphere
+```
+
+---
+
+### 第58卦・兌為澤 Done
+
+> 核心意象：喜悅、交流、重澤
+
+```
+Two beautifully serene crystal lakes reflecting the golden afternoon sun,
+joyful harmony in nature, traditional Chinese ink painting,
+radiant light, sparkling water, lighthearted and peaceful mood
+```
+
+---
+
+### 第59卦・風水渙 Done
+
+> 核心意象：渙散、化解危機、風行水上
+
+```
+Warm spring wind sweeping across a partially frozen river, the ice melting and breaking apart,
+releasing trapped energy, traditional Chinese ink painting,
+vibrant renewal, fluid brushstrokes, teal and soft gold hues
+```
+
+---
+
+### 第60卦・水澤節 Done
+
+> 核心意象：節制、制度、水在澤上
+
+```
+An ancient stone aqueduct channeling a turbulent river into a calm reservoir,
+the wisdom of regulation and limit, Chinese ink painting,
+balanced and structured composition, deep blue-green and gold accents
+```
+
+---
+
+### 第61卦・風澤中孚 Done
+
+> 核心意象：信實、感化、澤上有風
+
+```
+A crane flying serenely over a completely still lake, its reflection perfect,
+deep trust and inner truth, ancient Chinese landscape ink painting,
+silver and gold morning light, minimalist and ethereal aesthetic
+```
+
+---
+
+### 第62卦・雷山小過 Done
+
+> 核心意象：小過、低調、雷在山上
+
+```
+A small bird flying close to the ground along a high misty mountain ridge,
+humility and careful actions in minor matters, traditional Chinese ink painting,
+soft earth tones, calm yet cautious mood, subtle gold glow
+```
+
+---
+
+### 第63卦・水火既濟 Done
+
+> 核心意象：完成、秩序、水火相濟
+
+```
+Water and fire in perfect balance within a mystical ancient bronze cauldron,
+system functioning at peak stability, completed cycle, Chinese ink painting,
+deep teal and glowing gold, profound harmony and absolute order
+```
+
+---
+
+### 第64卦・火水未濟 Done
+
+> 核心意象：未完成、希望、火在水上
+
+```
+Flames dancing across the surface of a frozen misty river at dawn, the ice ready to crack,
+the promise of a new cycle and endless potential, ink painting,
+dynamic balance of ice and fire, warm sunrise rays, ultimate potential
+```

@@ -17,6 +17,22 @@ export default defineConfig({
 					lang: 'zh-TW',
 				},
 			},
+			head: [
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'manifest',
+						href: '/ai-eastern-wisdom/manifest.json',
+					},
+				},
+				{
+					tag: 'script',
+					attrs: {
+						src: '/ai-eastern-wisdom/register-sw.js',
+						defer: 'true',
+					},
+				},
+			],
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/toydogcat/ai-eastern-wisdom' },
 			],

@@ -5,6 +5,14 @@ sidebar:
   order: 4
 ---
 
+import { Image } from 'astro:assets';
+import chapterImg from '../../../assets/chapters/yi-04-meng.webp';
+
+<div class="chapter-hero">
+  <Image src={chapterImg} alt="山水蒙——啟蒙水墨意境" width={1200} loading="eager" />
+  <p class="chapter-hero-caption">山水蒙</p>
+</div>
+
 <div class="hexagram-header">
   <span class="hexagram-symbol">䷃</span>
   <span class="hexagram-name">山水蒙（蒙卦）</span>

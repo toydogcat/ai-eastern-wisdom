@@ -1,0 +1,31 @@
+{
+  "name": "東方智慧｜道法自然",
+  "short_name": "東方智慧",
+  "description": "探索道德經、帛書德道經的智慧，附白話文解析，以現代眼光品讀古典哲學。",
+  "start_url": "/ai-eastern-wisdom/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#333333",
+  "icons": [
+    {
+      "src": "/ai-eastern-wisdom/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/ai-eastern-wisdom/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/ai-eastern-wisdom/icon-192.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
+    {
+      "src": "/ai-eastern-wisdom/icon-512.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}

@@ -5,6 +5,14 @@ sidebar:
   order: 1
 ---
 
+import { Image } from 'astro:assets';
+import chapterImg from '../../../assets/chapters/yi-01-qian.webp';
+
+<div class="chapter-hero">
+  <Image src={chapterImg} alt="乾為天——純陽水墨意境" width={1200} loading="eager" />
+  <p class="chapter-hero-caption">乾為天</p>
+</div>
+
 <div class="hexagram-header">
   <span class="hexagram-symbol">䷀</span>
   <span class="hexagram-name">乾為天（乾卦）</span>
