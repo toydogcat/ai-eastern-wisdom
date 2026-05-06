@@ -51,6 +51,10 @@ export default defineConfig({
 					slug: 'daily-draw',
 				},
 				{
+					label: '📜 諸葛神數・孔明神算',
+					slug: 'zhuge-shenshu',
+				},
+				{
 					label: '📖 道德經（流傳版）',
 					items: [
 						{ label: '簡介', slug: 'dao-de-jing' },
