@@ -7,16 +7,19 @@ hero:
   image:
     file: ../../assets/houston.webp
   actions:
+    - text: 🔮 每日抽卡・隨機閱讀
+      link: /ai-eastern-wisdom/daily-draw/
+      icon: star
+      variant: primary
     - text: 開始閱讀道德經
       link: /ai-eastern-wisdom/dao-de-jing/
       icon: open-book
-      variant: primary
-    - text: 帛書德道經
-      link: /ai-eastern-wisdom/boshu/
-      icon: document
     - text: 易經・數位邏輯
       link: /ai-eastern-wisdom/i-ching/
       icon: rocket
+    - text: 帛書德道經
+      link: /ai-eastern-wisdom/boshu/
+      icon: document
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
@@ -24,6 +27,9 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 ## 本站收錄
 
 <CardGrid stagger>
+  <Card title="🔮 每日抽卡・隨機閱讀" icon="star">
+    點擊進入隨機智慧編譯器。抽取今日專屬的系統指引與老子「程式禪」，作為今日開發決策與成長思維的啟迪。[點此開始抽卡](/ai-eastern-wisdom/daily-draw/)
+  </Card>
   <Card title="📖 道德經（流傳版）" icon="open-book">
     王弼本《道德經》全八十一章，保存最完整、流傳最廣的版本。分道經（1-37章）與德經（38-81章），附白話文解析。
   </Card>
