@@ -1,0 +1,505 @@
+---
+title: 🔮 每日抽卡・隨機閱讀
+description: 隨機抽取今日的東方智慧卡，作為你今日開發、設計或個人成長的「程式禪」與思維啟示。
+sidebar:
+  order: 1
+---
+
+<div class="draw-page-wrapper">
+  <div class="draw-intro">
+    <h3>☯️ 今日份的東方智慧編譯器</h3>
+    <p>古老的東方哲學，是數位時代的底層邏輯。點擊下方卡牌，抽取屬於你今天的系統指引與開發思維啟示。</p>
+  </div>
+
+  {/* 分類篩選 */}
+  <div class="filter-group">
+    <button class="filter-btn active" data-type="all">🔮 隨機全抽</button>
+    <button class="filter-btn" data-type="iching">☯️ 只抽易經</button>
+    <button class="filter-btn" data-type="laozi">📖 只抽老子</button>
+  </div>
+
+  {/* 3D 卡牌區域 */}
+  <div class="card-scene">
+    <div class="wisdom-card" id="wisdomCard">
+      {/* 卡牌正面 */}
+      <div class="card-face card-front">
+        <div class="card-front-design">
+          <div class="yin-yang-logo">☯️</div>
+          <div class="gold-seal">東方智慧</div>
+          <div class="click-prompt">點擊卡牌・開啟啟示</div>
+        </div>
+      </div>
+      {/* 卡牌背面 */}
+      <div class="card-face card-back">
+        <div class="card-back-content">
+          <div class="card-tag" id="cardTag">易經・六十四卦</div>
+          <div class="card-symbol" id="cardSymbol">䷿</div>
+          <h2 class="card-title" id="cardTitle">火水未濟</h2>
+          <p class="card-quote" id="cardQuote">永遠的 Beta 版，迭代與無窮的未來。</p>
+          <a href="#" class="read-more-btn" id="readMoreLink">進入頁面深度品讀 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="action-area">
+    <button class="draw-btn" id="drawBtn">🎯 抽取今日智慧</button>
+  </div>
+</div>
+
+<style>{`
+  /* 頁面整體包裝 */
+  .draw-page-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .draw-intro {
+    margin-bottom: 2rem;
+  }
+  .draw-intro h3 {
+    color: #c9a84c !important;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .draw-intro p {
+    color: var(--sl-color-gray-2);
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  /* 篩選按鈕 */
+  .filter-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .filter-btn {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--sl-color-gray-2);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .filter-btn:hover {
+    border-color: #c9a84c;
+    color: #c9a84c;
+    background: rgba(201, 168, 76, 0.05);
+    transform: translateY(-1px);
+  }
+  .filter-btn.active {
+    background: linear-gradient(135deg, #2d6a4f, #1a3a2a);
+    color: #e8d5a3;
+    border-color: #c9a84c;
+    box-shadow: 0 4px 15px rgba(45, 106, 79, 0.3);
+  }
+
+  /* 3D 卡牌場景 */
+  .card-scene {
+    width: 320px;
+    height: 480px;
+    perspective: 1200px;
+    margin: 0 auto 2.5rem auto;
+  }
+
+  .wisdom-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+  }
+
+  .wisdom-card.flipped {
+    transform: rotateY(180deg);
+  }
+
+  /* 卡牌兩面共用樣式 */
+  .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    border: 2px solid #c9a84c;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 0 20px rgba(201, 168, 76, 0.15);
+    overflow: hidden;
+  }
+
+  /* 卡牌正面 */
+  .card-front {
+    background: linear-gradient(135deg, #091209 0%, #0d1610 50%, #15241b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-front-design {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 24px);
+    height: calc(100% - 24px);
+    border: 1px dashed rgba(201, 168, 76, 0.4);
+    border-radius: 12px;
+    position: relative;
+  }
+
+  .card-front-design::before {
+    content: '';
+    position: absolute;
+    top: 5px; left: 5px; right: 5px; bottom: 5px;
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    border-radius: 8px;
+    pointer-events: none;
+  }
+
+  .yin-yang-logo {
+    font-size: 5rem;
+    color: #c9a84c;
+    filter: drop-shadow(0 0 15px rgba(201, 168, 76, 0.4));
+    margin-bottom: 1.5rem;
+    animation: pulse 3s infinite ease-in-out;
+  }
+
+  .gold-seal {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 1.5rem;
+    color: #e8d5a3;
+    letter-spacing: 0.3em;
+    padding-left: 0.3em;
+    margin-bottom: 2rem;
+  }
+
+  .click-prompt {
+    font-size: 0.9rem;
+    color: rgba(201, 168, 76, 0.7);
+    letter-spacing: 0.1em;
+    animation: flash 2s infinite ease-in-out;
+  }
+
+  /* 卡牌背面 */
+  .card-back {
+    background: linear-gradient(135deg, #0a1209 0%, #112015 100%);
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-back-content {
+    width: calc(100% - 24px);
+    height: calc(100% - 24px);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .card-tag {
+    font-size: 0.8rem;
+    color: #c9a84c;
+    background: rgba(201, 168, 76, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    letter-spacing: 0.1em;
+  }
+
+  .card-symbol {
+    font-size: 4.5rem;
+    color: #e8d5a3;
+    line-height: 1;
+    margin: 1rem 0;
+    text-shadow: 0 0 10px rgba(201, 168, 76, 0.3);
+  }
+
+  .card-title {
+    font-size: 1.6rem !important;
+    font-family: 'Noto Serif TC', serif !important;
+    color: #ffffff !important;
+    margin: 0 0 0.5rem 0 !important;
+    letter-spacing: 0.05em;
+  }
+
+  .card-quote {
+    font-size: 0.95rem;
+    color: var(--sl-color-gray-2);
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 240px;
+    font-family: 'Noto Serif TC', serif;
+    height: 4.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .read-more-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #2d6a4f, #1a3a2a);
+    color: #e8d5a3 !important;
+    border: 1px solid #c9a84c;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none !important;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+
+  .read-more-btn:hover {
+    background: linear-gradient(135deg, #3f8e6b, #204c35);
+    box-shadow: 0 6px 15px rgba(45, 106, 79, 0.4);
+    transform: translateY(-2px);
+  }
+
+  /* 操作區按鈕 */
+  .draw-btn {
+    background: linear-gradient(135deg, #c9a84c, #b3923b);
+    color: #0f1a14;
+    border: none;
+    font-weight: bold;
+    padding: 0.85rem 2.2rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(201, 168, 76, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+  .draw-btn:hover {
+    background: linear-gradient(135deg, #e8d08a, #c9a84c);
+    box-shadow: 0 8px 25px rgba(201, 168, 76, 0.5);
+    transform: translateY(-3px);
+  }
+  .draw-btn:active {
+    transform: translateY(-1px);
+  }
+
+  /* 動畫效果 */
+  @keyframes pulse {
+    0% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(201, 168, 76, 0.3)); }
+    50% { transform: scale(1.05); filter: drop-shadow(0 0 20px rgba(201, 168, 76, 0.5)); }
+    100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(201, 168, 76, 0.3)); }
+  }
+
+  @keyframes flash {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+`}</style>
+
+<script>{`
+  // 易經六十四卦符號與資料
+  const hexSymbols = "䷀䷁䷂䷃䷄䷅䷆䷇䷈䷉䷊䷋䷌䷍䷎䷏䷐䷑䷒䷓䷔䷕䷖䷗䷘䷙䷚䷛䷜䷝䷞䷟䷠䷡䷢䷣䷤䷥䷦䷧䷨䷩䷪䷫䷬䷭䷮䷯䷰䷱䷲䷳䷴䷵䷶䷷䷸䷹䷺䷻䷼䷽䷾䷿";
+  const hexagrams = [
+    { slug: "01-qian", name: "乾為天", key: "大勢剛健、天道酬勤。今日適合積極出擊，引領專案開展。" },
+    { slug: "02-kun", name: "坤為地", key: "厚德載物、順其自然。今日適合穩健前行，做好基礎資料儲存與優化。" },
+    { slug: "03-tun", name: "水雷屯", key: "草創維艱、種子生根。萬事起頭難，耐心除錯與迭代是今日的解法。" },
+    { slug: "04-meng", name: "山水蒙", key: "啟蒙教育、求知解惑。保持謙遜心態，今日非常適合排除系統中的盲點。" },
+    { slug: "05-xu", name: "水天需", key: "沉著等待、蓄勢待發。今日不宜強行發布，先做好非同步快取與壓力測試。" },
+    { slug: "06-song", name: "天水訟", key: "慎防爭端、重置共識。今日開發請注意溝通合規，避免盲目修改共用代碼。" },
+    { slug: "07-shi", name: "地水師", key: "組織協調、紀律執行。團結力量大，今日適合梳理架構與優化團隊分工。" },
+    { slug: "08-bi", name: "水地比", key: "親密結盟、模組整合。今日極其適合 API 對接與系統開源共建。" },
+    { slug: "09-xiao-chu", name: "風天小畜", key: "局部微調、積蓄小成。今日適合實施微幅優化，完成一個小 Sprint 的交付。" },
+    { slug: "10-lv", name: "天澤履", key: "如履薄冰、小心求證。今日請特別留意資安防範與敏感權限管理。" },
+    { slug: "11-tai", name: "地天泰", key: "通暢和諧、高效協同。系統運作極度流暢，正是大幅推進進度的好時機。" },
+    { slug: "12-pi", name: "天地否", key: "溝通阻塞、重啟連接。今日若遇網路或系統塞車，請深呼吸重構排程。" },
+    { slug: "13-tong-ren", name: "天火同人", key: "開放協作、群策群力。今日與夥伴開展協同開發，共創開源大局。" },
+    { slug: "14-da-you", name: "火天大有", key: "資源豐沛、算力飽滿。大數據或系統效能高峰期，保持感恩與分享。" },
+    { slug: "15-qian", name: "地山謙", key: "低調內斂、負回饋優化。隱藏在底層默默奉獻，今日適合重整冗餘負載。" },
+    { slug: "16-yu", name: "雷地豫", key: "預備就緒、愉悅協作。超前部署完成，今日開發進度順滑如絲。" },
+    { slug: "17-sui", name: "澤雷隨", key: "因時制宜、跟隨市場。靈活應對用戶需求，做好敏捷回饋與調整。" },
+    { slug: "18-gu", name: "山風蠱", key: "系統重組、修復不良。正視歷史遺留代碼，今日是進行大除錯（Bug-fixing）之日。" },
+    { slug: "19-lin", name: "地澤臨", key: "親臨前線、高位檢視。專案即將落地，今日請到現場細心推進。" },
+    { slug: "20-guan", name: "風地觀", key: "架構觀測、全局洞察。此時不急於寫代碼，多觀察大局分析與監控日誌。" },
+    { slug: "21-shi-he", name: "火雷噬嗑", key: "果斷裁決、清除障礙。今日適合重拳出擊，強制修復核心阻塞斷點。" },
+    { slug: "22-bi", name: "山火賁", key: "前端包裝、UI美化。今日就來專注在優化 UX 互動與視覺微動畫吧！" },
+    { slug: "23-bo", name: "山地剝", key: "資源裁撤、精簡瘦身。今日請大膽進行架構剪枝，剔除無用冗餘代碼。" },
+    { slug: "24-fu", name: "地雷復", key: "生機復甦、系統重啟。歷經低谷後，今日是絕佳的熱插拔或服務重啟點。" },
+    { slug: "25-wu-wang", name: "天雷無妄", key: "順應天理、守成合規。不要做多餘越權的嘗試，守住當前安全範圍。" },
+    { slug: "26-da-chu", name: "山天大畜", key: "大規模儲存、知識沉澱。今日最適合撰寫技術文檔、進行知識產出備份。" },
+    { slug: "27-yi", name: "山雷頤", key: "自我充實、吸收養分。今日給自己一點研讀新技術、聽技術講座的充能時間。" },
+    { slug: "28-da-guo", name: "負荷過重、極限抗壓。面臨壓力測試，今日請務必做好防呆與降級機制。" },
+    { slug: "29-kan", name: "坎為水", key: "重重險阻、佇列阻塞。身處瓶頸期，沉著冷靜、專心在當下才是唯一解。" },
+    { slug: "30-li", name: "離為火", key: "光明指引、精彩發布。前端卓越展現之時，向世界大膽分享你的成果。" },
+    { slug: "31-xian", name: "澤山咸", key: "感應契合、介面友善。做好前後端 API 握手與絕佳的人機互動設計。" },
+    { slug: "32-heng", name: "持之以恆、穩定運行。維護好常駐服務與核心業務邏輯的高可用性。" },
+    { slug: "33-dun", name: "天山遯", key: "安全隔離、防範洩漏。今日適合進行敏感資料脫敏，主動做技術避險。" },
+    { slug: "34-da-zhuang", name: "雷天大壯", key: "剛強充沛、防範死鎖。性能強勁但不可蠻幹，防範線程死鎖與溢位。" },
+    { slug: "35-jin", name: "火地晉", key: "前進突破、發布躍升。大步向前，今天非常適合部署大版本並向用戶展示。" },
+    { slug: "36-ming-yi", name: "地火明夷", key: "隱藏實力、潛伏深耕。外部環境不佳，低調除錯，保留體力與精力。" },
+    { slug: "37-jia-ren", name: "風火家人", key: "內聚封裝、內部優化。先做好模組內的單元測試，高度內聚，做好內功。" },
+    { slug: "38-kui", name: "求同存異、多端適應。今天適合處理多瀏覽器、多解析度的相容性調整。" },
+    { slug: "39-jian", name: "道路險阻、暫時停歇。遇上無法解決的核心 Bug，今天請尋求導師或專家協助。" },
+    { slug: "40-jie", name: "雷水解", key: "冰釋瓦解、解鎖內存。釋放不再使用的系統記憶體，今日適合進行垃圾回收。" },
+    { slug: "41-sun", name: "山澤損", key: "精簡代碼、消除浪費。除去沒必要的調度，完成代碼重構，減輕運行負載。" },
+    { slug: "42-yi", name: "風雷益", key: "全面增強、效能升級。多為系統做擴增與優化，給功能與體驗全面賦能。" },
+    { slug: "43-guai", name: "澤天夬", key: "果斷發布、排除隱患。不要猶豫，今日是發布關鍵安全修正檔的最佳日子。" },
+    { slug: "44-gou", name: "天風姤", key: "防微杜漸、注意漏洞。今日請注意未授權存取威脅與安全認證安全邊界。" },
+    { slug: "45-cui", name: "澤地萃", key: "高度聚集、叢集發力。今日適合多服務叢集架構（Cluster）的最佳化。" },
+    { slug: "46-sheng", name: "地風升", key: "緩步上升、滾動迭代。今日適合溫和推進，採用藍綠發布（Blue-Green）部署。" },
+    { slug: "47-kun", name: "澤水困", key: "遭遇瓶頸、重新補給。算力或靈感可能暫時告罄，停下來休息是最好選擇。" },
+    { slug: "48-jing", name: "水風井", key: "基礎架構、開源不息。公共元件與基礎設施維護之日，源源不絕滋養未來。" },
+    { slug: "49-ge", name: "重大重構、技術革命。今天是推翻老舊架構、引進全新技術框架的絕佳日子！" },
+    { slug: "50-ding", name: "火風鼎", key: "標準確立、核心重組。今日適合與團隊共同定義新的代碼規範與架構標準。" },
+    { slug: "51-zhen", name: "震為雷", key: "警報監控、實時回應。今日請完善日誌報警機制，準備應對不期而至的異常。" },
+    { slug: "52-gen", name: "艮為山", key: "停止運轉、主動防禦。今日適合執行服務熔斷或設定高強度防火牆規則。" },
+    { slug: "53-jian", name: "風山漸", key: "循序漸進、滾動更新。慢即是快，按步就班完成系統與業務功能的推進。" },
+    { slug: "54-gui-mei", name: "秩序易位、注意例外。今日要注意多執行緒中的不對稱競爭與防呆防錯處理。" },
+    { slug: "55-feng", name: "雷火豐", key: "滿載運作、注意溫控。服務高負載流暢運行中，做好伺服器健康狀況監控。" },
+    { slug: "56-lv", name: "火山旅", key: "雲端遷移、輕量適應。今日最適合進行服務雲端遷移或微服務（Microservices）建置。" },
+    { slug: "57-xun", name: "巽為風", key: "精細調教、無微不至。今天最適合鑽研底層演算法，進行深入精密的效能優化。" },
+    { slug: "58-dui", name: "兌為澤", key: "愉悅體驗、人機互動。這一天適合用來收集用戶意見，改善 UX 流暢性。" },
+    { slug: "59-huan", name: "解除耦合、解散瓶頸。今天適合拆分單體架構，實行徹底的去中心化解耦。" },
+    { slug: "60-jie", name: "水澤節", key: "流量限制、自我約束。今天適合引進 API 流量限制（Rate Limiter）防溢流。" },
+    { slug: "61-zhong-fu", name: "風澤中孚", key: "安全校驗、高度信任。今日就來升級加密金鑰，完善全站的身份驗證吧！" },
+    { slug: "62-xiao-guo", name: "雷山小過", key: "微小調整、防錯演練。實施微幅修改，注意增加單元測試的覆蓋率。" },
+    { slug: "63-ji-ji", name: "水火既濟", key: "大功告成、防患未然。當前系統完美平穩，此時正是著手防範未來危機的好時機。" },
+    { slug: "64-wei-ji", name: "火水未濟", key: "永遠的 Beta 版、無限可能。今天的結束正是下一個 Sprint 的起點，前行不息！" }
+  ];
+
+  // 道德經前37章資料
+  const laozi = [
+    { num: "01", name: "第一章・道可道", key: "「道可道，非常道；名可名，非常名。」—— 今日學習跳脫框架，不要被既有的定義限縮了架構的想像力。" },
+    { num: "02", name: "第二章・天下皆知", key: "「有無相生，難易相成，長短相較。」—— 今日適合調和系統對立。效能與簡潔相生，困難與收穫相隨。" },
+    { num: "03", name: "第三章・不尚賢", key: "「為無為，則無不治。」—— 思考如何建立高度自動化的運作架構，減少非必要的人工干預與干擾。" },
+    { num: "04", name: "第四章・道沖", key: "「道沖而用之，或不盈。淵兮似萬物之宗。」—— 保持接口的簡練與擴展性。好程式碼如深水，平淡卻源源不絕。" },
+    { num: "05", name: "第五章・天地不仁", key: "「多言數窮，不如守中。」—— 精簡你的 log 輸出與控制台輸出。說得多不如做得精確，守住最核心的運行邏輯。" },
+    { num: "06", name: "第六章・谷神不死", key: "「谷神不死，是謂玄牝。玄牝之門，是謂天地根。」—— 今日關注底層微服務基建，它默默無聞卻是整個業務生生不息的根源。" },
+    { num: "07", name: "第七章・天長地久", key: "「後其身而身先，外其身而身存。」—— 採用回饋社群的思維。分享、開源你的經驗，往往能為你帶來更好的回報。" },
+    { num: "08", name: "第八章・上善若水", key: "「上善若水。水善利萬物而不爭。」—— 開發高適應性與低耦合的模組，像水一樣流暢穿梭在各個業務層之中。" },
+    { num: "09", name: "第九章・持而盈之", key: "「富貴而驕，自遺其咎。功遂身退，天之道。」—— 適時重構。當程式功能太滿、效能逼近臨界點時，功成身退，進行拆分優化。" },
+    { num: "10", name: "第十章・載營魄抱一", key: "「專氣致柔，能嬰兒乎？」—— 今日排除心中繁雜念頭，心平氣和地專注於最純粹、最柔軟、最直觀的邏輯設計。" },
+    { num: "11", name: "第十一章・三十輻", key: "「當其無，有車之用。故有之以為利，無之以為用。」—— 重視程式設計中的「虛位」與「留白」。資料結構中的 Null 與 Optional 也是用處所在。" },
+    { num: "12", name: "第十二章・五色令人目盲", key: "「五色令人目盲，五音令人耳聾。」—— 精簡 UI 介面，拒絕花哨無用的微動畫與冗餘色彩，專注給用戶提供純粹直接的內容。" },
+    { num: "13", name: "第十三章・寵辱若驚", key: "「寵辱若驚，貴大患若身。」—— 無論專案成功被表揚或上線出錯被責備，皆是一時的。保持平靜，守護代碼本身的品質。" },
+    { num: "14", name: "第十四章・視之不見", key: "「迎之不見其首，隨之不見其後。執古之道，以御今之有。」—— 今日適合閱讀前輩留下的核心老舊架構代碼，用歷經時間考驗的成熟模式解決現代挑戰。" },
+    { num: "15", name: "第十五章・古之善為士", key: "「孰能濁以靜之徐清？孰能安以久動之徐生？」—— 面對一片混亂的代碼堆，靜下心來梳理它。安靜沉澱，秩序與方案將徐徐浮現。" },
+    { num: "16", name: "第十六章・致虛極", key: "「致虛極，守靜篤。萬物並作，吾以觀復。」—— 今日閉關修復 Bug 之日。讓大腦虛空，讓環境安靜，在安靜中反覆觀察、看穿系統問題本質。" },
+    { num: "17", name: "第十七章・太上", key: "「太上，下知有之...功成事遂，百姓皆謂：我自然。」—— 設計最高超的系統架構，是讓使用者甚至感受不到系統在運作，一切行雲流水。" },
+    { num: "18", name: "第十八章・大道廢", key: "「大道廢，有仁義；國家混亂，有忠臣。」—— 越是複雜龐大的規格書，越預示著基礎代碼的失序。簡化流程與架構，回歸自然運轉。" },
+    { num: "19", name: "第十九章・絕聖棄智", key: "「見素抱樸，少私寡慾，絕學無憂。」—— 今日拒絕過度設計（Over-engineering），以最直接、最質樸、最精簡的代碼解決核心訴求。" },
+    { num: "20", name: "第二十章・絕學無憂", key: "「我獨泊兮其未兆，如嬰兒之未孩。」—— 在繁雜浮躁的技術潮流和概念行銷中，保持自我節奏，專注於你當下最重要的業務推進。" },
+    { num: "21", name: "第二十一章・孔德之容", key: "「孔德之容，惟道是從。道之為物，惟恍惟惚。」—— 擁抱高彈性的動態編程哲學。最底層的真理往往超越了生硬的硬編碼（Hardcoding）。" },
+    { num: "22", name: "第二十二章・曲則全", key: "「曲則全，枉則直，窪則盈，敝則新，少則得，多則惑。」—— 不要試圖一步寫出完美的系統。走一點彎路、進行局部小迭代與重構，是通往極致效能的真諦。" },
+    { num: "23", name: "第二十三章・希言自然", key: "「希言自然。故飄風不終朝，驟雨不終日。」—— 波動與異常不會一直持續。伺服器高負載、異常斷線終將歸於平靜，保持冷靜去排查主因。" },
+    { num: "24", name: "第二十四章・企者不立", key: "「企者不立，跨者不行，自見者不明。」—— 今日切忌急功近利。不宜強行在不穩定的基礎上擴展新功能，先站穩當前基礎腳步。" },
+    { num: "25", name: "第二十五章・有物混成", key: "「人法地，地法天，天法道，道法自然。」—— 今日體悟：大至雲端架構、小至行代碼，最精妙的運作邏輯，本質上都是對大自然與人性的回歸。" },
+    { num: "26", name: "第二十六章・重為輕根", key: "「重為輕根，靜為躁君。輕則失本，躁則失君。」—— 穩固底層基礎資料結構與核心依賴（Core Library）。基礎輕浮，上層前端功能就容易失控。" },
+    { num: "27", name: "第二十七章・善行無轍迹", key: "「善行無轍迹，善言無瑕謫。善閉無關鍵而不可開。」—— 卓越的演算法在執行時無聲無形。好代碼不需要過度複雜的防禦措施，因其架構自足。" },
+    { num: "28", name: "第二十八章・知其雄", key: "「知其雄，守其雌，為天下谿。常德不離，復歸於嬰兒。」—— 兼顧系統的功能擴展力（雄）與極致的健壯、容錯力（雌）。在低調處凝聚最大的算力。" },
+    { num: "29", name: "第二十九章・將欲取天下", key: "「天下神器，不可為也，不可執也。為者敗之，執者失之。」—— 順應開源社群與用戶的使用習慣，避免強行塞入一意孤行的架構設計，以免適得其反。" },
+    { num: "30", name: "第三十章・以道佐人主", key: "「不以兵強天下...師之所處，荊棘生焉。」—— 避免強推大改版或大清洗式的重寫，強制推進容易留下一堆隱蔽 Bug 與歷史包袱。" },
+    { num: "31", name: "第三十一章・夫佳兵者", key: "「夫佳兵者，不祥之器...不得已而用之，恬淡為上。」—— 技術並非越多越好。非必要不引進第三方依賴，用最精簡的內置代碼，恬淡純粹為上策。" },
+    { num: "32", name: "第三十二章・道常無名", key: "「道常無名、樸。雖小，天下莫能臣。」—— 精緻小巧的輕量化微服務或函數模組，雖然看似不顯眼，卻擁有決定全域的巨大威力。" },
+    { num: "33", name: "第三十三章・知人者智", key: "「知人者智，自知者明。勝人者有力，自勝者強。知足者富。」—— 比起超越競品，更重要的是深度重構自己的冗餘邏輯。擊敗昨天的代碼才是真正的強大。" },
+    { num: "34", name: "第三十四章・大道氾兮", key: "「大道氾兮，其可左右。萬物恃之以生而不辭，功成而不名有。」—— 撰寫能相容多端、富有彈性的底層通用框架，默默支撐所有上游業務，事了拂衣去。" },
+    { num: "35", name: "第三十五章・執大象", key: "「執大象，天下往。往而不害，安平太。」—— 堅持最高水準的代碼規範與安全架構。讓系統安全平穩，天下使用者才能用得安寧踏實。" },
+    { num: "36", name: "第三十六章・將欲歙之", key: "「將欲歙之，必固張之...柔弱勝剛強。」—— 當前若遭遇性能死鎖或系統瓶頸，請試試軟性退避、減少頻繁請求（柔弱），往往能克敵制勝。" },
+    { num: "37", name: "第三十七章・道常無為", key: "「道常無為而無不為。侯王若能守之，萬物將自化。」—— 今日體悟：守住極簡的代碼框架，萬千業務邏輯與子功能將在高度標準下自然生成與流動。" }
+  ];
+
+  // 目前選擇的篩選類型
+  let activeType = 'all';
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const card = document.getElementById('wisdomCard');
+    const drawBtn = document.getElementById('drawBtn');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+
+    const cardTag = document.getElementById('cardTag');
+    const cardSymbol = document.getElementById('cardSymbol');
+    const cardTitle = document.getElementById('cardTitle');
+    const cardQuote = document.getElementById('cardQuote');
+    const readMoreLink = document.getElementById('readMoreLink');
+
+    // 處理篩選按鈕切換
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeType = btn.getAttribute('data-type');
+        
+        // 若卡牌已經翻轉，縮回正面方便下次抽取
+        if (card.classList.contains('flipped')) {
+          card.classList.remove('flipped');
+        }
+      });
+    });
+
+    // 隨機抽取智慧
+    function performDraw() {
+      // 判斷抽卡池
+      let pool = [];
+      if (activeType === 'iching') {
+        pool = hexagrams.map(h => ({ ...h, type: 'iching' }));
+      } else if (activeType === 'laozi') {
+        pool = laozi.map(l => ({ ...l, type: 'laozi' }));
+      } else {
+        // 合併兩者
+        pool = [
+          ...hexagrams.map(h => ({ ...h, type: 'iching' })),
+          ...laozi.map(l => ({ ...l, type: 'laozi' }))
+        ];
+      }
+
+      // 隨機抽選一項
+      const randomIndex = Math.floor(Math.random() * pool.length);
+      const drawn = pool[randomIndex];
+
+      // 若卡牌原本就是翻轉狀態，先翻回來再更換內容
+      if (card.classList.contains('flipped')) {
+        card.classList.remove('flipped');
+        setTimeout(() => {
+          updateCardContent(drawn);
+          card.classList.add('flipped');
+        }, 300);
+      } else {
+        updateCardContent(drawn);
+        card.classList.add('flipped');
+      }
+    }
+
+    // 更新背面卡牌內容
+    function updateCardContent(item) {
+      const base = '/ai-eastern-wisdom/';
+      if (item.type === 'iching') {
+        cardTag.textContent = '易經・六十四卦';
+        // 根據 slug 前兩位數字取得 unicode 易經符號
+        const num = parseInt(item.slug.substring(0, 2)) - 1;
+        cardSymbol.textContent = hexSymbols[num] || '☯️';
+        cardSymbol.style.fontSize = '4.5rem';
+        cardTitle.textContent = item.name;
+        cardQuote.textContent = item.key;
+        readMoreLink.href = base + 'i-ching/' + item.slug + '/';
+      } else {
+        cardTag.textContent = '老子・道德經';
+        cardSymbol.textContent = '📖';
+        cardSymbol.style.fontSize = '3.5rem';
+        cardTitle.textContent = item.name;
+        cardQuote.textContent = item.key;
+        readMoreLink.href = base + 'dao-de-jing/dao/' + item.num + '/';
+      }
+    }
+
+    // 點擊事件監聽
+    card.addEventListener('click', performDraw);
+    drawBtn.addEventListener('click', performDraw);
+  });
+`}</script>

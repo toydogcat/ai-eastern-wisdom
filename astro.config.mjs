@@ -47,6 +47,10 @@ export default defineConfig({
 					slug: 'about',
 				},
 				{
+					label: '🔮 每日抽卡 / 隨機閱讀',
+					slug: 'daily-draw',
+				},
+				{
 					label: '📖 道德經（流傳版）',
 					items: [
 						{ label: '簡介', slug: 'dao-de-jing' },
