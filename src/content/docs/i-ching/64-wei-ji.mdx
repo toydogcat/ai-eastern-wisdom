@@ -4,6 +4,13 @@ description: 易經第64卦 火水未濟（未濟卦） 的現代數位解讀與
 sidebar:
   order: 64
 ---
+import { Image } from 'astro:assets';
+import chapterImg from '../../../assets/chapters/yi-64-wei-ji.webp';
+
+<div class="chapter-hero">
+  <Image src={chapterImg} alt="火水未濟——未完成與無窮未來水墨意境" width={1200} loading="eager" />
+  <p class="chapter-hero-caption">火水未濟</p>
+</div>
 
 <div class="hexagram-header">
   <span class="hexagram-symbol">䷿</span>
@@ -33,3 +40,11 @@ sidebar:
 :::tip[🚀 給現代人的啟示]
  永遠的 Beta 版（The Eternal Beta）。沒有一個系統是真正寫完的，沒有一個演算法是不需要迭代的。未濟卦告訴我們，生命與系統的本質就是一個無限的迴圈（Infinite Loop）。結束只是一個新版本的開始。準備好面對新的錯位與混亂，開啟下一個 Sprint 吧！
 :::
+
+:::caution[🖼️ 圖片備忘錄 / Image Note]
+由於生成第 64 卦（未濟卦）原圖時觸發了 AI 圖像生成器的配額上限限制，目前本頁面使用第 59 卦（風水渙）的水墨意境圖作為暫時佔位符（檔案名稱已預先配置為 `yi-64-wei-ji.webp`）。
+
+**替換與升級指引**：
+當配額重置恢復後，可重新生成符合「一隻聰明機靈的小狐狸小心翼翼踩在薄冰上，高警覺性地踏向全新開始（未濟卦）」概念的寫意現代水墨圖，並將生成的圖片直接覆蓋替換 `src/assets/chapters/yi-64-wei-ji.webp` 檔案，本頁面即會自動完成視覺上的無縫更新，無需修改任何網頁代碼。
+:::
+
