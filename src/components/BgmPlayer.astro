@@ -1,0 +1,743 @@
+---
+// BGM Background Music Player for Eastern Wisdom
+---
+
+<div class="bgm-container minimized" id="bgm-widget">
+  <!-- Minimalist Golden Disc Toggle (Trigger) -->
+  <button class="bgm-disc-btn" id="bgm-toggle-btn" aria-label="Toggle music player">
+    <div class="disc-glow"></div>
+    <div class="disc-vinyl">
+      <svg class="music-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M9 18V5l12-2v13"></path>
+        <circle cx="6" cy="18" r="3"></circle>
+        <circle cx="18" cy="16" r="3"></circle>
+      </svg>
+      <!-- Tiny soundwave overlay on the disc when playing -->
+      <div class="mini-wave" id="mini-wave">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </button>
+
+  <!-- Expanded Music Control Panel -->
+  <div class="bgm-panel" id="bgm-panel">
+    <div class="panel-header">
+      <div class="panel-title-area">
+        <span class="bgm-badge">BGM</span>
+        <div class="track-title-container">
+          <div class="track-title" id="track-title">隨機背景音樂</div>
+        </div>
+      </div>
+      <button class="panel-close-btn" id="panel-close-btn" aria-label="Minimize player">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="panel-body">
+      <!-- Animated Sound Wave Visualizer -->
+      <div class="sound-wave" id="sound-wave">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Controls Row -->
+      <div class="controls-row">
+        <!-- Play / Pause Button -->
+        <button class="control-btn play-btn" id="play-pause-btn" aria-label="Play or Pause">
+          <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <svg class="icon-pause hidden" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+          </svg>
+        </button>
+
+        <!-- Next Song Button -->
+        <button class="control-btn next-btn" id="next-btn" aria-label="Next song">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 4 15 12 5 20 5 4"></polygon>
+            <line x1="19" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="3"></line>
+          </svg>
+        </button>
+
+        <!-- Volume Controller -->
+        <div class="volume-container">
+          <button class="volume-btn" id="volume-btn" aria-label="Toggle mute">
+            <svg class="icon-volume" id="volume-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path class="vol-wave-1" d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              <path class="vol-wave-2" d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            </svg>
+          </button>
+          <input type="range" min="0" max="1" step="0.05" value="0.5" class="volume-slider" id="volume-slider" aria-label="Volume slider" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<audio id="bgm-audio" loop></audio>
+
+<style>
+  /* Container Positioning */
+  .bgm-container {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    font-family: 'Noto Sans TC', sans-serif;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  /* --- Minimized Disc Button --- */
+  .bgm-disc-btn {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: 2px solid #c9a84c;
+    background: #0a1209;
+    color: #c9a84c;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 15px rgba(201, 168, 76, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .bgm-disc-btn:hover {
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6), 0 0 25px rgba(201, 168, 76, 0.4);
+  }
+
+  .disc-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.2) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .bgm-container:not(.minimized) .disc-glow {
+    opacity: 1;
+  }
+
+  .disc-vinyl {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .music-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  /* Spin vinyl when playing */
+  .bgm-container.playing .bgm-disc-btn {
+    animation: spin 6s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Mini soundwave inside the disc when playing */
+  .mini-wave {
+    position: absolute;
+    bottom: 6px;
+    display: flex;
+    gap: 2px;
+    align-items: flex-end;
+    height: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .bgm-container.playing .mini-wave {
+    opacity: 0.85;
+  }
+
+  .mini-wave span {
+    width: 2px;
+    background: #c9a84c;
+    border-radius: 1px;
+  }
+  .mini-wave span:nth-child(1) { height: 40%; animation: miniBounce 1s infinite alternate; }
+  .mini-wave span:nth-child(2) { height: 80%; animation: miniBounce 0.8s infinite alternate 0.2s; }
+  .mini-wave span:nth-child(3) { height: 50%; animation: miniBounce 1.2s infinite alternate 0.1s; }
+
+  @keyframes miniBounce {
+    from { height: 20%; }
+    to { height: 100%; }
+  }
+
+  /* --- Expanded Panel --- */
+  .bgm-panel {
+    width: 280px;
+    background: rgba(15, 26, 20, 0.85);
+    backdrop-filter: blur(16px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(120%);
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    padding: 1.25rem;
+    transform: scale(0.9) translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+    transform-origin: bottom right;
+  }
+
+  /* Minimized vs Expanded layout toggling */
+  .bgm-container.minimized .bgm-panel {
+    transform: scale(0.8) translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .bgm-container:not(.minimized) .bgm-panel {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .bgm-container:not(.minimized) .bgm-disc-btn {
+    transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Panel Header styling */
+  .panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+  }
+
+  .panel-title-area {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 0;
+  }
+
+  .bgm-badge {
+    background: rgba(201, 168, 76, 0.2);
+    border: 1px solid rgba(201, 168, 76, 0.4);
+    color: #e8d08a;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+  }
+
+  .track-title-container {
+    overflow: hidden;
+    white-space: nowrap;
+    min-width: 0;
+  }
+
+  .track-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #e8d5a3;
+    letter-spacing: 0.02em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .panel-close-btn {
+    background: none;
+    border: none;
+    color: rgba(201, 168, 76, 0.6);
+    cursor: pointer;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s, transform 0.2s;
+  }
+
+  .panel-close-btn:hover {
+    color: #c9a84c;
+    transform: scale(1.1);
+  }
+
+  .panel-close-btn svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  /* Sound Wave Visualizer component */
+  .sound-wave {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 4px;
+    height: 36px;
+    margin-bottom: 1.25rem;
+    background: rgba(45, 106, 79, 0.1);
+    border-radius: 8px;
+    padding: 0.5rem;
+    border: 1px solid rgba(45, 106, 79, 0.2);
+  }
+
+  .sound-wave span {
+    display: block;
+    width: 6px;
+    height: 15%;
+    background: linear-gradient(to top, #2d6a4f, #c9a84c);
+    border-radius: 3px;
+    transition: height 0.1s ease;
+  }
+
+  /* Sound wave animation keyframes when playing */
+  .bgm-container.playing .sound-wave span:nth-child(1) { animation: bounce 1.1s ease-in-out infinite alternate; }
+  .bgm-container.playing .sound-wave span:nth-child(2) { animation: bounce 0.8s ease-in-out infinite alternate 0.15s; }
+  .bgm-container.playing .sound-wave span:nth-child(3) { animation: bounce 1.3s ease-in-out infinite alternate 0.3s; }
+  .bgm-container.playing .sound-wave span:nth-child(4) { animation: bounce 0.9s ease-in-out infinite alternate 0.05s; }
+  .bgm-container.playing .sound-wave span:nth-child(5) { animation: bounce 1.2s ease-in-out infinite alternate 0.25s; }
+  .bgm-container.playing .sound-wave span:nth-child(6) { animation: bounce 0.7s ease-in-out infinite alternate 0.1s; }
+  .bgm-container.playing .sound-wave span:nth-child(7) { animation: bounce 1.0s ease-in-out infinite alternate 0.2s; }
+  .bgm-container.playing .sound-wave span:nth-child(8) { animation: bounce 1.4s ease-in-out infinite alternate 0.35s; }
+
+  @keyframes bounce {
+    from { height: 15%; }
+    to { height: 100%; }
+  }
+
+  /* Controls Row styling */
+  .controls-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .control-btn {
+    background: rgba(201, 168, 76, 0.1);
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    color: #c9a84c;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+
+  .control-btn:hover {
+    background: rgba(201, 168, 76, 0.25);
+    border-color: #c9a84c;
+    color: #e8d08a;
+    transform: scale(1.05);
+  }
+
+  .play-btn {
+    width: 2.75rem;
+    height: 2.75rem;
+    background: linear-gradient(135deg, #2d6a4f, #1a3a2a);
+    border-color: rgba(201, 168, 76, 0.5);
+    color: #e8d08a;
+  }
+
+  .play-btn:hover {
+    background: linear-gradient(135deg, #378562, #214a36);
+    box-shadow: 0 0 12px rgba(201, 168, 76, 0.3);
+  }
+
+  .play-btn svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .play-btn svg.icon-play {
+    margin-left: 2px; /* Visual centering of play triangle */
+  }
+
+  .next-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .next-btn svg {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+
+  /* Volume slider styles */
+  .volume-container {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-grow: 1;
+    margin-left: auto;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 20px;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid rgba(201, 168, 76, 0.1);
+  }
+
+  .volume-btn {
+    background: none;
+    border: none;
+    color: rgba(201, 168, 76, 0.7);
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+  }
+
+  .volume-btn:hover {
+    color: #c9a84c;
+  }
+
+  .volume-btn svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .volume-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    background: rgba(201, 168, 76, 0.2);
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #c9a84c;
+    cursor: pointer;
+    transition: transform 0.1s;
+  }
+
+  .volume-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.3);
+  }
+
+  .volume-slider::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    background: #c9a84c;
+    cursor: pointer;
+    transition: transform 0.1s;
+  }
+
+  .volume-slider::-moz-range-thumb:hover {
+    transform: scale(1.3);
+  }
+
+  /* Helper class utilities */
+  .hidden {
+    display: none !important;
+  }
+
+  /* Mobile optimization adjustments */
+  @media (max-width: 480px) {
+    .bgm-container {
+      bottom: 1.25rem;
+      right: 1.25rem;
+    }
+    .bgm-panel {
+      width: 250px;
+      padding: 1rem;
+    }
+  }
+</style>
+
+<script>
+  // Songs collection provided in /public/music/
+  const SONGS = [
+    { name: 'Before the Turn', file: 'Before_the_Turn.mp3' },
+    { name: 'Friday Gold', file: 'Friday_Gold.mp3' },
+    { name: 'Melting Into Thursday', file: 'Melting_Into_Thursday.mp3' },
+    { name: 'Stay for a While', file: 'Stay_for_a_While.mp3' },
+    { name: 'Sunday Morning Breath', file: 'Sunday_Morning_Breath.mp3' },
+    { name: 'Sunlight Through the Leaves', file: 'Sunlight_Through_the_Leaves.mp3' },
+    { name: 'Tuesday Ignition', file: 'Tuesday_Ignition.mp3' }
+  ];
+
+  const BASE_URL = '/ai-eastern-wisdom';
+
+  // State elements
+  let playlist: number[] = [];
+  let currentPlaylistIndex = 0;
+  let isMuted = false;
+  let savedVolume = 0.5;
+
+  // DOM Elements
+  const widget = document.getElementById('bgm-widget');
+  const toggleBtn = document.getElementById('bgm-toggle-btn');
+  const closeBtn = document.getElementById('panel-close-btn');
+  const playPauseBtn = document.getElementById('play-pause-btn');
+  const nextBtn = document.getElementById('next-btn');
+  const volumeBtn = document.getElementById('volume-btn');
+  const volumeSlider = document.getElementById('volume-slider') as HTMLInputElement;
+  const audio = document.getElementById('bgm-audio') as HTMLAudioElement;
+  const trackTitle = document.getElementById('track-title');
+  const volumeIcon = document.getElementById('volume-icon');
+
+  // Load and apply persistent settings from storage
+  function initSettings() {
+    // 1. Restore minimized / expanded state
+    const isMinimized = localStorage.getItem('bgm_minimized') !== 'false';
+    if (isMinimized) {
+      widget?.classList.add('minimized');
+    } else {
+      widget?.classList.remove('minimized');
+    }
+
+    // 2. Restore volume settings
+    const storedVolume = localStorage.getItem('bgm_volume');
+    if (storedVolume !== null) {
+      savedVolume = parseFloat(storedVolume);
+      if (volumeSlider) volumeSlider.value = storedVolume;
+      audio.volume = savedVolume;
+    } else {
+      audio.volume = 0.5;
+    }
+
+    isMuted = localStorage.getItem('bgm_muted') === 'true';
+    if (isMuted) {
+      audio.volume = 0;
+      updateVolumeUI(0);
+    }
+
+    // 3. Setup Shuffle Playlist
+    setupPlaylist();
+
+    // 4. Load Current Song details
+    const storedSongIndex = localStorage.getItem('bgm_current_song_idx');
+    if (storedSongIndex !== null) {
+      currentPlaylistIndex = parseInt(storedSongIndex);
+      if (currentPlaylistIndex >= playlist.length) {
+        currentPlaylistIndex = 0;
+      }
+    } else {
+      currentPlaylistIndex = 0;
+    }
+
+    loadTrack(playlist[currentPlaylistIndex]);
+
+    // 5. Restore current time & play state if allowed
+    const storedTime = localStorage.getItem('bgm_current_time');
+    if (storedTime !== null && audio) {
+      audio.currentTime = parseFloat(storedTime);
+    }
+
+    const wasPlaying = localStorage.getItem('bgm_playing') === 'true';
+    if (wasPlaying) {
+      // Browsers generally require human interaction to play audio. 
+      // If we attempt play() and it fails, we handle it gracefully.
+      attemptAutoplay();
+    }
+  }
+
+  // Generate a random shuffled playlist of track indices
+  function setupPlaylist() {
+    const storedPlaylist = sessionStorage.getItem('bgm_playlist_shuffled');
+    if (storedPlaylist) {
+      playlist = JSON.parse(storedPlaylist);
+    } else {
+      playlist = Array.from({ length: SONGS.length }, (_, i) => i);
+      // Fisher-Yates Shuffle
+      for (let i = playlist.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [playlist[i], playlist[j]] = [playlist[j], playlist[i]];
+      }
+      sessionStorage.setItem('bgm_playlist_shuffled', JSON.stringify(playlist));
+    }
+  }
+
+  // Load a track by its index in the master array
+  function loadTrack(index: number) {
+    if (index < 0 || index >= SONGS.length) return;
+    const song = SONGS[index];
+    audio.src = `${BASE_URL}/music/${song.file}`;
+    if (trackTitle) trackTitle.textContent = song.name;
+    localStorage.setItem('bgm_current_song_idx', currentPlaylistIndex.toString());
+  }
+
+  // Try to play audio, fallback to paused if autoplay policy blocks it
+  function attemptAutoplay() {
+    audio.play()
+      .then(() => {
+        setPlayingState(true);
+      })
+      .catch((err) => {
+        console.log('Autoplay blocked or audio failed to load. Awaiting user interaction.');
+        setPlayingState(false);
+      });
+  }
+
+  // Synchronize playing states (classes, icons)
+  function setPlayingState(playing: boolean) {
+    if (playing) {
+      widget?.classList.add('playing');
+      document.getElementById('play-pause-btn')?.querySelector('.icon-play')?.classList.add('hidden');
+      document.getElementById('play-pause-btn')?.querySelector('.icon-pause')?.classList.remove('hidden');
+      localStorage.setItem('bgm_playing', 'true');
+    } else {
+      widget?.classList.remove('playing');
+      document.getElementById('play-pause-btn')?.querySelector('.icon-play')?.classList.remove('hidden');
+      document.getElementById('play-pause-btn')?.querySelector('.icon-pause')?.classList.add('hidden');
+      localStorage.setItem('bgm_playing', 'false');
+    }
+  }
+
+  // Update volume UI icons depending on volume level
+  function updateVolumeUI(volume: number) {
+    if (volumeSlider) volumeSlider.value = volume.toString();
+    if (!volumeIcon) return;
+
+    if (volume === 0) {
+      volumeIcon.innerHTML = `
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+        <line x1="23" y1="9" x2="17" y2="15" stroke="currentColor" stroke-width="2"></line>
+        <line x1="17" y1="9" x2="23" y2="15" stroke="currentColor" stroke-width="2"></line>
+      `;
+    } else if (volume < 0.5) {
+      volumeIcon.innerHTML = `
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+        <path class="vol-wave-1" d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+      `;
+    } else {
+      volumeIcon.innerHTML = `
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+        <path class="vol-wave-1" d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        <path class="vol-wave-2" d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+      `;
+    }
+  }
+
+  // --- Event Listeners ---
+
+  // Collapse/Expand Toggles
+  toggleBtn?.addEventListener('click', () => {
+    widget?.classList.remove('minimized');
+    localStorage.setItem('bgm_minimized', 'false');
+  });
+
+  closeBtn?.addEventListener('click', () => {
+    widget?.classList.add('minimized');
+    localStorage.setItem('bgm_minimized', 'true');
+  });
+
+  // Play / Pause Action
+  playPauseBtn?.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play().then(() => setPlayingState(true)).catch(err => console.error(err));
+    } else {
+      audio.pause();
+      setPlayingState(false);
+    }
+  });
+
+  // Next Track Action
+  nextBtn?.addEventListener('click', () => {
+    currentPlaylistIndex = (currentPlaylistIndex + 1) % playlist.length;
+    const wasPlaying = !audio.paused;
+    loadTrack(playlist[currentPlaylistIndex]);
+    audio.currentTime = 0;
+    if (wasPlaying) {
+      audio.play().then(() => setPlayingState(true)).catch(err => console.error(err));
+    } else {
+      setPlayingState(false);
+    }
+  });
+
+  // Mute / Unmute Toggle Action
+  volumeBtn?.addEventListener('click', () => {
+    if (isMuted) {
+      isMuted = false;
+      audio.volume = savedVolume;
+      updateVolumeUI(savedVolume);
+      localStorage.setItem('bgm_muted', 'false');
+    } else {
+      isMuted = true;
+      audio.volume = 0;
+      updateVolumeUI(0);
+      localStorage.setItem('bgm_muted', 'true');
+    }
+  });
+
+  // Volume Slider Drag Action
+  volumeSlider?.addEventListener('input', (e) => {
+    const val = parseFloat((e.target as HTMLInputElement).value);
+    audio.volume = val;
+    savedVolume = val;
+    isMuted = val === 0;
+    updateVolumeUI(val);
+    localStorage.setItem('bgm_volume', val.toString());
+    localStorage.setItem('bgm_muted', isMuted ? 'true' : 'false');
+  });
+
+  // Automatically load the next track when current ends
+  audio?.addEventListener('ended', () => {
+    currentPlaylistIndex = (currentPlaylistIndex + 1) % playlist.length;
+    loadTrack(playlist[currentPlaylistIndex]);
+    audio.currentTime = 0;
+    audio.play().then(() => setPlayingState(true)).catch(err => console.error(err));
+  });
+
+  // Track playback time periodic save
+  audio?.addEventListener('timeupdate', () => {
+    localStorage.setItem('bgm_current_time', audio.currentTime.toString());
+  });
+
+  // Initialize playback state on page load
+  initSettings();
+
+  // Handle standard document page-swaps (essential for SPA-like Astro frameworks if view transitions are used)
+  document.addEventListener('astro:after-swap', () => {
+    const freshAudio = document.getElementById('bgm-audio') as HTMLAudioElement;
+    if (freshAudio && !freshAudio.src) {
+      initSettings();
+    }
+  });
+</script>
