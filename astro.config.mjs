@@ -129,6 +129,27 @@ export default defineConfig({
 					collapsed: true,
 					autogenerate: { directory: 'i-ching' },
 				},
+				{
+					label: '🦋 莊子：逍遙遊',
+					items: [
+						{ label: '簡介與導讀', slug: 'zhuangzi' },
+						{
+							label: '🌿 內篇（莊子核心）',
+							collapsed: false,
+							autogenerate: { directory: 'zhuangzi/inner' },
+						},
+						{
+							label: '🌊 外篇（思想延伸）',
+							collapsed: true,
+							autogenerate: { directory: 'zhuangzi/outer' },
+						},
+						{
+							label: '☁️ 雜篇（綜合應用）',
+							collapsed: true,
+							autogenerate: { directory: 'zhuangzi/misc' },
+						},
+					],
+				},
 			],
 		}),
 	],
