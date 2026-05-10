@@ -150,6 +150,22 @@ export default defineConfig({
 						},
 					],
 				},
+				{
+					label: '🦢 鬼谷子：縱橫之道',
+					items: [
+						{ label: '簡介與導讀', slug: 'guiguzi' },
+						{
+							label: '⚔️ 核心十二篇',
+							collapsed: false,
+							autogenerate: { directory: 'guiguzi/core' },
+						},
+						{
+							label: '🧘‍♂️ 本經陰符七術',
+							collapsed: true,
+							autogenerate: { directory: 'guiguzi/yinfu' },
+						},
+					],
+				},
 			],
 		}),
 	],
