@@ -166,6 +166,17 @@ export default defineConfig({
 						},
 					],
 				},
+				{
+					label: '⚔️ 孫子兵法：系統決策論',
+					items: [
+						{ label: '簡介與架構', slug: 'sun-tzu' },
+						{
+							label: '📖 核心十三篇',
+							collapsed: false,
+							autogenerate: { directory: 'sun-tzu' },
+						},
+					],
+				},
 			],
 		}),
 	],
