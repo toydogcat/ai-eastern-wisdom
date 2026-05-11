@@ -1,5 +1,5 @@
 ---
-// 覆蓋 Starlight 的 Footer，加入不蒜子訪客計數
+// 覆蓋 Starlight 的 Footer，加入訪客計數
 import type { Props } from '@astrojs/starlight/props';
 import BgmPlayer from './BgmPlayer.astro';
 ---
@@ -7,9 +7,8 @@ import BgmPlayer from './BgmPlayer.astro';
 <footer class="site-footer">
   <div class="footer-inner">
 
-    <!-- 不蒜子訪客計數器 -->
+    <!-- Vercount 訪客計數器 -->
     <div class="visitor-counter" id="visitor-counter">
-      <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
       <div class="counter-inner">
         <span class="counter-item" id="busuanzi_container_site_pv" style="display:none">
           <svg class="counter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

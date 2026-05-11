@@ -32,6 +32,14 @@ export default defineConfig({
 						defer: 'true',
 					},
 				},
+				{
+					tag: 'script',
+					attrs: {
+						src: 'https://www.vercount.one/js',
+						async: 'true',
+						crossorigin: 'anonymous',
+					},
+				},
 			],
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/toydogcat/ai-eastern-wisdom' },
