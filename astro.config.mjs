@@ -200,6 +200,21 @@ export default defineConfig({
 							collapsed: true,
 							autogenerate: { directory: 'bazi/di-tian-sui/01-tong-shen-lun' },
 						},
+						{
+							label: '🌿 十天干（性情論）',
+							collapsed: true,
+							autogenerate: { directory: 'bazi/di-tian-sui/02-tian-gan' },
+						},
+						{
+							label: '🪐 十二地支（動靜論）',
+							collapsed: true,
+							autogenerate: { directory: 'bazi/di-tian-sui/03-di-zhi' },
+						},
+						{
+							label: '💎 形象格局（富貴論）',
+							collapsed: true,
+							autogenerate: { directory: 'bazi/di-tian-sui/04-ge-ju' },
+						},
 					],
 				},
 			],
