@@ -684,59 +684,11 @@
     }
   }
 
-  // --- Event Listeners ---
 
-  // Collapse/Expand Toggles
-  toggleBtn?.addEventListener('click', () => {
-    widget?.classList.remove('minimized');
-    localStorage.setItem('bgm_minimized', 'false');
-  });
+  // --- Initialization & Event Binding ---
 
-  closeBtn?.addEventListener('click', () => {
-    widget?.classList.add('minimized');
-    localStorage.setItem('bgm_minimized', 'true');
-  });
+  // --- Initialization & Event Binding ---
 
-  // Play / Pause Action
-  playPauseBtn?.addEventListener('click', () => {
-    if (audio.paused) {
-      audio.play().then(() => setPlayingState(true)).catch(err => console.error(err));
-    } else {
-      audio.pause();
-      setPlayingState(false);
-    }
-  });
-
-  // Next Track Action
-  nextBtn?.addEventListener('click', () => {
-    currentPlaylistIndex = (currentPlaylistIndex + 1) % playlist.length;
-    const wasPlaying = !audio.paused;
-    loadTrack(playlist[currentPlaylistIndex]);
-    audio.currentTime = 0;
-    if (wasPlaying) {
-      audio.play().then(() => setPlayingState(true)).catch(err => console.error(err));
-    } else {
-      setPlayingState(false);
-    }
-  });
-
-  // Mute / Unmute Toggle Action
-  volumeBtn?.addEventListener('click', () => {
-    if (isMuted) {
-      isMuted = false;
-      audio.volume = savedVolume;
-      updateVolumeUI(savedVolume);
-      localStorage.setItem('bgm_muted', 'false');
-    } else {
-      isMuted = true;
-      audio.volume = 0;
-      updateVolumeUI(0);
-      localStorage.setItem('bgm_muted', 'true');
-    }
-  });
-
-  // Volume Slider Drag Action
-  volumeSlider?.addEventListener('input', (e) => {
   // Main Initialization
   function setup() {
     queryElements();
