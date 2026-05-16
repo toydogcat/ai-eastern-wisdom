@@ -613,8 +613,15 @@
     if (index < 0 || index >= SONGS.length) return;
     const song = SONGS[index];
     const audioUrl = `${BASE_URL}/music/${song.file}`;
-    console.log(`[BGM] Loading track: ${song.name} from ${audioUrl}`);
-    audio.src = audioUrl;
+    
+    // Check if the source is already the same to avoid restarting the track
+    // (Crucial for persistence when view transitions are enabled or during fast navigation)
+    const absoluteAudioUrl = new URL(audioUrl, window.location.href).href;
+    if (audio.src !== absoluteAudioUrl) {
+      console.log(`[BGM] Loading track: ${song.name} from ${audioUrl}`);
+      audio.src = audioUrl;
+    }
+    
     if (trackTitle) trackTitle.textContent = song.name;
     localStorage.setItem('bgm_current_song_idx', currentPlaylistIndex.toString());
   }
