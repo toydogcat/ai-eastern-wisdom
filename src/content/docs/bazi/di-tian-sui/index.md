@@ -5,6 +5,14 @@ sidebar:
   order: 1
 ---
 
+import { Image } from 'astro:assets';
+import heroImage from '../../../../assets/chapters/bazi/di-tian-sui/main.webp';
+
+<div class="hero-container">
+  <Image src={heroImage} alt="滴天髓 總綱" class="hero-image" />
+  <div class="hero-overlay"></div>
+</div>
+
 # 滴天髓：八字命理之聖經
 
 《滴天髓》被譽為中國命理學的「聖經」，是一部探討八字五行生剋制化、理氣源流的巔峰之作。相傳為宋代京圖撰、明代劉伯溫註，後經清代任鐵樵加入大量命例進行詳盡註解（即《滴天髓闡微》），使其成為當今命理研究者必讀的最高典籍。
