@@ -2,7 +2,7 @@
 // BGM Background Music Player for Eastern Wisdom
 ---
 
-<div class="bgm-container minimized" id="bgm-widget">
+<div class="bgm-container minimized" id="bgm-widget" transition:persist>
   <!-- Minimalist Golden Disc Toggle (Trigger) -->
   <button class="bgm-disc-btn" id="bgm-toggle-btn" aria-label="Toggle music player">
     <div class="disc-glow"></div>
@@ -88,7 +88,7 @@
   </div>
 </div>
 
-<audio id="bgm-audio" loop></audio>
+<audio id="bgm-audio" loop transition:persist></audio>
 
 <style>
   /* Container Positioning */
@@ -502,7 +502,8 @@
     { name: 'Tuesday Ignition', file: 'Tuesday_Ignition.mp3' }
   ];
 
-  const BASE_URL = '/ai-eastern-wisdom';
+  // Dynamically get the base URL from Astro config
+  const BASE_URL = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   // State elements
   let playlist: number[] = [];
@@ -598,10 +599,18 @@
   function loadTrack(index: number) {
     if (index < 0 || index >= SONGS.length) return;
     const song = SONGS[index];
-    audio.src = `${BASE_URL}/music/${song.file}`;
+    const audioUrl = `${BASE_URL}/music/${song.file}`;
+    console.log(`[BGM] Loading track: ${song.name} from ${audioUrl}`);
+    audio.src = audioUrl;
     if (trackTitle) trackTitle.textContent = song.name;
     localStorage.setItem('bgm_current_song_idx', currentPlaylistIndex.toString());
   }
+
+  // Add error handling to help debug loading issues
+  audio.onerror = () => {
+    console.error(`[BGM] Failed to load audio from: ${audio.src}`);
+    if (trackTitle) trackTitle.textContent = "載入失敗 (404)";
+  };
 
   // Try to play audio, fallback to paused if autoplay policy blocks it
   function attemptAutoplay() {

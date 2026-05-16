@@ -797,6 +797,51 @@ magical realism, golden protective aura, deep dark background
 ```
 
 ---
+---
+
+## 🦋 莊子・內篇 Done
+
+### 第1篇・逍遙遊 Done
+> 核心意象：鯤鵬化生、展翅九萬里、逍遙境界
+```
+A giant mythical Peng bird with wings like clouds stretching across the dark sky, transforming from a massive Kun fish in a deep jade ocean, traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text
+```
+
+### 第2篇・齊物論 Done
+> 核心意象：莊周夢蝶、萬物齊一
+```
+A philosopher dreaming in a misty bamboo forest, a glowing gold butterfly fluttering above him, reality and dream blurring together, traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text
+```
+
+### 第3篇・養生主 Done
+> 核心意象：庖丁解牛、依乎天理
+```
+An ancient Chinese butcher performing a ritualistic dance with a blade around a ghostly ox outline made of golden energy, effortless mastery, following the natural lines of the Tao, traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text
+```
+
+### 第4篇・人間世 Done
+> 核心意象：不材之木、無用之用
+```
+A gnarled ancient "useless" tree with twisted branches reaching into the mist, standing strong while straight trees are cut down, a sage meditating in its shadow, traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text
+```
+
+### 第5篇・德充符 Done
+> 核心意象：內德充盈、形殘神全
+```
+A group of physically broken ancient Chinese figures with radiant golden souls, inner virtue shining through outer imperfections, spiritual completeness, traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text
+```
+
+### 第6篇・大宗師 Done
+> 核心意象：道為宗師、死生同狀
+```
+The Great Ancestral Teacher as a cosmic entity of mist and light, guiding souls through the cycle of life and death, ancient Chinese cosmology, traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text
+```
+
+### 第7篇・應帝王 Done
+> 核心意象：渾沌無竅、自然之美
+```
+The primordial deity Hundun as a faceless cloud of golden mist, representing the pure state of nature before order, traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text
+```
 
 ### 第56章・知者不言 Done
 
