@@ -64,11 +64,12 @@ export default defineConfig({
 				},
 				{
 					label: '📖 道德經（流傳版）',
+					collapsed: true,
 					items: [
 						{ label: '簡介', slug: 'dao-de-jing' },
 						{
 							label: '道經・第一至三十七章',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: '第一章・道可道', slug: 'dao-de-jing/dao/01' },
 								{ label: '第二章・天下皆知', slug: 'dao-de-jing/dao/02' },
@@ -118,6 +119,7 @@ export default defineConfig({
 				},
 				{
 					label: '📜 帛書德道經',
+					collapsed: true,
 					items: [
 						{ label: '簡介與版本說明', slug: 'boshu' },
 						{
@@ -139,11 +141,12 @@ export default defineConfig({
 				},
 				{
 					label: '🦋 莊子：逍遙遊',
+					collapsed: true,
 					items: [
 						{ label: '簡介與導讀', slug: 'zhuangzi' },
 						{
 							label: '🌿 內篇（莊子核心）',
-							collapsed: false,
+							collapsed: true,
 							autogenerate: { directory: 'zhuangzi/inner' },
 						},
 						{
@@ -160,11 +163,12 @@ export default defineConfig({
 				},
 				{
 					label: '🦢 鬼谷子：縱橫之道',
+					collapsed: true,
 					items: [
 						{ label: '簡介與導讀', slug: 'guiguzi' },
 						{
 							label: '⚔️ 核心十二篇',
-							collapsed: false,
+							collapsed: true,
 							autogenerate: { directory: 'guiguzi/core' },
 						},
 						{
@@ -176,11 +180,12 @@ export default defineConfig({
 				},
 				{
 					label: '⚔️ 孫子兵法：系統決策論',
+					collapsed: true,
 					items: [
 						{ label: '簡介與架構', slug: 'sun-tzu' },
 						{
 							label: '📖 核心十三篇',
-							collapsed: false,
+							collapsed: true,
 							autogenerate: { directory: 'sun-tzu' },
 						},
 					],
