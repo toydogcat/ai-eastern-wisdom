@@ -11,6 +11,7 @@ export default defineConfig({
 			title: '東方智慧｜道法自然',
 			description: '探索道德經、帛書德道經的智慧，附白話文解析，以現代眼光品讀古典哲學。',
 			defaultLocale: 'zh-tw',
+			viewTransitions: true,
 			locales: {
 				root: {
 					label: '繁體中文',

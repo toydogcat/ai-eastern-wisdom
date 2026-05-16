@@ -511,17 +511,30 @@
   let isMuted = false;
   let savedVolume = 0.5;
 
-  // DOM Elements
-  const widget = document.getElementById('bgm-widget');
-  const toggleBtn = document.getElementById('bgm-toggle-btn');
-  const closeBtn = document.getElementById('panel-close-btn');
-  const playPauseBtn = document.getElementById('play-pause-btn');
-  const nextBtn = document.getElementById('next-btn');
-  const volumeBtn = document.getElementById('volume-btn');
-  const volumeSlider = document.getElementById('volume-slider') as HTMLInputElement;
-  const audio = document.getElementById('bgm-audio') as HTMLAudioElement;
-  const trackTitle = document.getElementById('track-title');
-  const volumeIcon = document.getElementById('volume-icon');
+  // DOM Elements - Using let so they can be re-queried if needed
+  let widget: HTMLElement | null;
+  let toggleBtn: HTMLElement | null;
+  let closeBtn: HTMLElement | null;
+  let playPauseBtn: HTMLElement | null;
+  let nextBtn: HTMLElement | null;
+  let volumeBtn: HTMLElement | null;
+  let volumeSlider: HTMLInputElement | null;
+  let audio: HTMLAudioElement;
+  let trackTitle: HTMLElement | null;
+  let volumeIcon: HTMLElement | null;
+
+  function queryElements() {
+    widget = document.getElementById('bgm-widget');
+    toggleBtn = document.getElementById('bgm-toggle-btn');
+    closeBtn = document.getElementById('panel-close-btn');
+    playPauseBtn = document.getElementById('play-pause-btn');
+    nextBtn = document.getElementById('next-btn');
+    volumeBtn = document.getElementById('volume-btn');
+    volumeSlider = document.getElementById('volume-slider') as HTMLInputElement;
+    audio = document.getElementById('bgm-audio') as HTMLAudioElement;
+    trackTitle = document.getElementById('track-title');
+    volumeIcon = document.getElementById('volume-icon');
+  }
 
   // Load and apply persistent settings from storage
   function initSettings() {
@@ -717,36 +730,121 @@
 
   // Volume Slider Drag Action
   volumeSlider?.addEventListener('input', (e) => {
-    const val = parseFloat((e.target as HTMLInputElement).value);
-    audio.volume = val;
-    savedVolume = val;
-    isMuted = val === 0;
-    updateVolumeUI(val);
-    localStorage.setItem('bgm_volume', val.toString());
-    localStorage.setItem('bgm_muted', isMuted ? 'true' : 'false');
-  });
-
-  // Automatically load the next track when current ends
-  audio?.addEventListener('ended', () => {
-    currentPlaylistIndex = (currentPlaylistIndex + 1) % playlist.length;
-    loadTrack(playlist[currentPlaylistIndex]);
-    audio.currentTime = 0;
-    audio.play().then(() => setPlayingState(true)).catch(err => console.error(err));
-  });
-
-  // Track playback time periodic save
-  audio?.addEventListener('timeupdate', () => {
-    localStorage.setItem('bgm_current_time', audio.currentTime.toString());
-  });
-
-  // Initialize playback state on page load
-  initSettings();
-
-  // Handle standard document page-swaps (essential for SPA-like Astro frameworks if view transitions are used)
-  document.addEventListener('astro:after-swap', () => {
-    const freshAudio = document.getElementById('bgm-audio') as HTMLAudioElement;
-    if (freshAudio && !freshAudio.src) {
+  // Main Initialization
+  function setup() {
+    queryElements();
+    
+    // Only init settings if audio src is not already set (meaning it's the first load or persistence failed)
+    if (!audio.src) {
       initSettings();
+    } else {
+      // If persisted, just update the UI to match current state
+      updateUIFromState();
     }
-  });
+    
+    bindEvents();
+  }
+
+  function updateUIFromState() {
+    // Sync UI with playing state
+    setPlayingState(!audio.paused);
+    
+    // Sync volume UI
+    updateVolumeUI(audio.volume);
+    if (volumeSlider) volumeSlider.value = audio.volume.toString();
+    
+    // Sync track title
+    const storedSongIndex = localStorage.getItem('bgm_current_song_idx');
+    if (storedSongIndex !== null) {
+      const idx = parseInt(storedSongIndex);
+      if (SONGS[idx] && trackTitle) {
+        trackTitle.textContent = SONGS[idx].name;
+      }
+    }
+    
+    // Sync minimized state
+    const isMinimized = localStorage.getItem('bgm_minimized') !== 'false';
+    if (isMinimized) {
+      widget?.classList.add('minimized');
+    } else {
+      widget?.classList.remove('minimized');
+    }
+  }
+
+  function bindEvents() {
+    // Remove existing to avoid duplicates if bindEvents is called again
+    toggleBtn?.replaceWith(toggleBtn.cloneNode(true));
+    closeBtn?.replaceWith(closeBtn.cloneNode(true));
+    playPauseBtn?.replaceWith(playPauseBtn.cloneNode(true));
+    nextBtn?.replaceWith(nextBtn.cloneNode(true));
+    volumeBtn?.replaceWith(volumeBtn.cloneNode(true));
+    
+    // Re-query after clone
+    queryElements();
+
+    toggleBtn?.addEventListener('click', () => {
+      widget?.classList.remove('minimized');
+      localStorage.setItem('bgm_minimized', 'false');
+    });
+
+    closeBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      widget?.classList.add('minimized');
+      localStorage.setItem('bgm_minimized', 'true');
+    });
+
+    playPauseBtn?.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play().then(() => setPlayingState(true)).catch(err => console.error(err));
+      } else {
+        audio.pause();
+        setPlayingState(false);
+      }
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      currentPlaylistIndex = (currentPlaylistIndex + 1) % playlist.length;
+      loadTrack(playlist[currentPlaylistIndex]);
+      audio.play().then(() => setPlayingState(true)).catch(err => console.error(err));
+    });
+
+    volumeBtn?.addEventListener('click', () => {
+      isMuted = !isMuted;
+      audio.volume = isMuted ? 0 : savedVolume;
+      updateVolumeUI(audio.volume);
+      localStorage.setItem('bgm_muted', isMuted.toString());
+    });
+
+    volumeSlider?.addEventListener('input', (e) => {
+      const val = parseFloat((e.target as HTMLInputElement).value);
+      audio.volume = val;
+      savedVolume = val;
+      isMuted = val === 0;
+      updateVolumeUI(val);
+      localStorage.setItem('bgm_volume', val.toString());
+      localStorage.setItem('bgm_muted', isMuted ? 'true' : 'false');
+    });
+
+    // Audio lifecycle
+    audio.onended = () => {
+      currentPlaylistIndex = (currentPlaylistIndex + 1) % playlist.length;
+      loadTrack(playlist[currentPlaylistIndex]);
+      audio.play().then(() => setPlayingState(true)).catch(err => console.error(err));
+    };
+
+    audio.ontimeupdate = () => {
+      localStorage.setItem('bgm_current_time', audio.currentTime.toString());
+    };
+    
+    audio.onerror = () => {
+      console.error(`[BGM] Failed to load audio from: ${audio.src}`);
+      if (trackTitle) trackTitle.textContent = "載入失敗 (404)";
+    };
+  }
+
+  // Initial setup
+  setup();
+
+  // Handle SPA navigation
+  document.addEventListener('astro:after-swap', setup);
 </script>
