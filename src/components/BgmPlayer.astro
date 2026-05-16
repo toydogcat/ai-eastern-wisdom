@@ -86,9 +86,8 @@
       </div>
     </div>
   </div>
+  <audio id="bgm-audio" loop transition:persist></audio>
 </div>
-
-<audio id="bgm-audio" loop transition:persist></audio>
 
 <style>
   /* Container Positioning */
@@ -626,11 +625,6 @@
     localStorage.setItem('bgm_current_song_idx', currentPlaylistIndex.toString());
   }
 
-  // Add error handling to help debug loading issues
-  audio.onerror = () => {
-    console.error(`[BGM] Failed to load audio from: ${audio.src}`);
-    if (trackTitle) trackTitle.textContent = "載入失敗 (404)";
-  };
 
   // Try to play audio, fallback to paused if autoplay policy blocks it
   function attemptAutoplay() {
@@ -685,7 +679,6 @@
   }
 
 
-  // --- Initialization & Event Binding ---
 
   // --- Initialization & Event Binding ---
 
