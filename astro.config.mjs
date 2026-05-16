@@ -190,6 +190,18 @@ export default defineConfig({
 						},
 					],
 				},
+				{
+					label: '🌟 八字命理：滴天髓',
+					collapsed: true,
+					items: [
+						{ label: '簡介與導讀', slug: 'bazi/di-tian-sui' },
+						{
+							label: '📜 通神論（總綱）',
+							collapsed: true,
+							autogenerate: { directory: 'bazi/di-tian-sui/01-tong-shen-lun' },
+						},
+					],
+				},
 			],
 		}),
 	],
