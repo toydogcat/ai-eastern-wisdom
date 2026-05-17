@@ -217,6 +217,11 @@ export default defineConfig({
 						},
 					],
 				},
+				{
+					label: '🔮 推背圖：大唐預言奇書',
+					collapsed: true,
+					autogenerate: { directory: 'tui-bei-tu' },
+				},
 			],
 		}),
 	],
