@@ -5,11 +5,10 @@ sidebar:
   order: 0
 ---
 
-import { Image } from 'astro:assets';
 import coverImg from '../../../assets/chapters/tui-bei-tu/01.svg';
 
 <div class="chapter-hero">
-  <Image src={coverImg} alt="推背圖・大唐預言奇書" width={600} loading="eager" />
+  <img src={coverImg.src} alt="推背圖・大唐預言奇書" loading="eager" />
   <p class="chapter-hero-caption">第一象 甲子 乾下乾上 乾（乾坤循環，周而復始）</p>
 </div>
 

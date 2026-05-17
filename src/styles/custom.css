@@ -4,17 +4,85 @@
 :root {
   --sl-font: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
   --sl-font-mono: 'Noto Serif TC', serif;
-  
+}
+
+/* 暗色主題 (預設/Dark Theme) */
+:root,
+:root[data-theme="dark"] {
   /* 主色調：深墨綠 + 古銅金 */
   --sl-color-accent-low: #1a3a2a;
   --sl-color-accent: #2d6a4f;
   --sl-color-accent-high: #c9a84c;
   
-  /* 暗色主題調整 */
+  /* 背景與邊框 */
   --sl-color-bg: #0f1a14;
   --sl-color-bg-nav: #0a1209;
   --sl-color-bg-sidebar: #0d1610;
   --sl-color-hairline: #1e3a28;
+  
+  /* 文字與對比色 */
+  --sl-color-white: #f5ecd5; /* 溫潤淺金色標題 */
+  --sl-color-gray-1: #e2eae5; /* 淺草綠內文 */
+  --sl-color-gray-2: #a2b7aa; /* 鼠尾草綠次要字 */
+  --sl-color-gray-3: #7b9485;
+  --sl-color-gray-4: #234232;
+  --sl-color-gray-5: #162a1f;
+  --sl-color-gray-6: #0a130e;
+
+  /* 組件專屬顏色 */
+  --original-text-color: #e8d5a3;
+  --original-text-bg: linear-gradient(135deg, rgba(45, 106, 79, 0.18), rgba(201, 168, 76, 0.08));
+  --original-text-border: #c9a84c;
+  
+  --boshu-text-color: #d4a97a;
+  --boshu-text-bg: linear-gradient(135deg, rgba(139, 90, 43, 0.18), rgba(201, 168, 76, 0.08));
+  --boshu-text-border: #8b5a2b;
+  
+  --vernacular-bg: rgba(255, 255, 255, 0.04);
+  --vernacular-border: rgba(201, 168, 76, 0.2);
+
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* 淺色主題 (Light Theme) */
+:root[data-theme="light"] {
+  /* 主色調：明雅綠 + 典雅金 */
+  --sl-color-accent-low: #e8f3ec;
+  --sl-color-accent: #2d6a4f;
+  --sl-color-accent-high: #96721b; /* 偏深古典金色，確保足夠對比度 */
+  
+  /* 背景與邊框 */
+  --sl-color-bg: #fdfcf7; /* 高級溫潤宣紙白 */
+  --sl-color-bg-nav: #f6f3e6;
+  --sl-color-bg-sidebar: #f5f1e1;
+  --sl-color-hairline: #e3dcc7;
+  
+  /* 文字與對比色 */
+  --sl-color-white: #0f2c1f; /* 深墨綠標題 */
+  --sl-color-gray-1: #24352b; /* 竹炭深綠內文 */
+  --sl-color-gray-2: #52665b; /* 灰綠次要字 */
+  --sl-color-gray-3: #7c9085;
+  --sl-color-gray-4: #c9c1aa;
+  --sl-color-gray-5: #e8e3d3;
+  --sl-color-gray-6: #fbf9f3;
+
+  /* 組件專屬顏色 */
+  --original-text-color: #826011;
+  --original-text-bg: linear-gradient(135deg, rgba(45, 106, 79, 0.08), rgba(201, 168, 76, 0.12));
+  --original-text-border: #96721b;
+  
+  --boshu-text-color: #7a4b1e;
+  --boshu-text-bg: linear-gradient(135deg, rgba(139, 90, 43, 0.08), rgba(201, 168, 76, 0.12));
+  --boshu-text-border: #8b5a2b;
+  
+  --vernacular-bg: rgba(45, 106, 79, 0.04);
+  --vernacular-border: rgba(45, 106, 79, 0.15);
+
+  --card-bg: rgba(45, 106, 79, 0.03);
+  --card-border: rgba(45, 106, 79, 0.12);
+  --card-shadow: 0 4px 12px rgba(45, 106, 79, 0.05);
 }
 
 /* 標題使用宋體風格 */
@@ -34,8 +102,8 @@ h1, h2, h3, h4 {
 
 /* 道德經原文區塊 */
 .original-text {
-  background: linear-gradient(135deg, rgba(45, 106, 79, 0.15), rgba(201, 168, 76, 0.08));
-  border-left: 4px solid #c9a84c;
+  background: var(--original-text-bg);
+  border-left: 4px solid var(--original-text-border);
   border-radius: 0 8px 8px 0;
   padding: 1.5rem 2rem;
   margin: 1.5rem 0;
@@ -43,13 +111,13 @@ h1, h2, h3, h4 {
   font-size: calc(var(--sl-text-base) * 1.1);
   line-height: 2.2;
   letter-spacing: 0.12em;
-  color: #e8d5a3;
+  color: var(--original-text-color);
 }
 
 /* 帛書文字 */
 .boshu-text {
-  background: linear-gradient(135deg, rgba(139, 90, 43, 0.15), rgba(201, 168, 76, 0.08));
-  border-left: 4px solid #8b5a2b;
+  background: var(--boshu-text-bg);
+  border-left: 4px solid var(--boshu-text-border);
   border-radius: 0 8px 8px 0;
   padding: 1.5rem 2rem;
   margin: 1.5rem 0;
@@ -57,16 +125,16 @@ h1, h2, h3, h4 {
   font-size: calc(var(--sl-text-base) * 1.1);
   line-height: 2.2;
   letter-spacing: 0.12em;
-  color: #d4a97a;
+  color: var(--boshu-text-color);
 }
 
 /* 白話文區塊 */
 .vernacular {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--vernacular-bg);
   border-radius: 8px;
   padding: 1.25rem 1.75rem;
   margin: 1rem 0;
-  border: 1px solid rgba(201, 168, 76, 0.2);
+  border: 1px solid var(--vernacular-border);
   line-height: 1.9;
 }
 
@@ -104,6 +172,7 @@ main {
   border: 1px solid rgba(201, 168, 76, 0.3);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(201, 168, 76, 0.1);
   position: relative;
+  background-color: #0b130e; /* 始終保持深底色框，使金色圖線在任何主題下都極致清晰 */
 }
 
 .chapter-hero img {
@@ -158,11 +227,11 @@ main {
 }
 
 .hexagram-info-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--card-bg);
   padding: 1.25rem;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
 }
 
 .hexagram-info-card h4 {
