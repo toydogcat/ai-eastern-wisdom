@@ -138,6 +138,21 @@ h1, h2, h3, h4 {
   line-height: 1.9;
 }
 
+/* 古籍註釋區塊 */
+.commentary {
+  background: rgba(201, 168, 76, 0.03);
+  border-radius: 8px;
+  padding: 1.25rem 1.75rem;
+  margin: 1rem 0;
+  border: 1px dashed var(--sl-color-accent-high);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.commentary strong {
+  color: var(--sl-color-accent-high);
+}
+
 /* 字詞注解表格 */
 table {
   width: 100%;
