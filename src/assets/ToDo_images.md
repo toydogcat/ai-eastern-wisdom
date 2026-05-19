@@ -487,7 +487,7 @@ king standing on humble foundation
 
 ---
 
-### 帛書德經・第3章（流傳第40章）・反者道之動
+### 帛書德經・第3章（流傳第40章）・反者道之動 Done
 
 > 核心意象：返回、弱用、有生於無
 
@@ -496,6 +496,142 @@ Creation emerging from void, ancient Chinese creation philosophy,
 the return and reversal as cosmic law, ink painting abstract,
 something beautiful arising from absolute nothingness,
 dark void with gold emergence, philosophical birth
+```
+
+---
+
+## 🦋 莊子・雜篇 (Miscellaneous Chapters)
+
+### 第23章・庚桑楚
+
+> 核心意象：畏壘之山、老聃之學、性之修
+
+```
+Ancient mountain 'Wei Lei' shrouded in mist, a humble Taoist retreat,
+sage Geng Sang Chu teaching his disciples in a serene bamboo grove,
+ink wash painting, misty peaks, soft gold light, philosophical tranquility,
+traditional Chinese landscape style
+```
+
+---
+
+### 第24章・徐無鬼
+
+> 核心意象：徐無鬼見魏武侯、相馬之術、遺世獨立
+
+```
+An ancient sage meeting a king in a majestic palace, simple robes vs ornate throne,
+a ghostly horse made of ink and mist galloping through the air,
+ink painting, dramatic lighting, high contrast between court and wilderness,
+gold and jade accents
+```
+
+---
+
+### 第25章・則陽
+
+> 核心意象：蝸牛角之爭、則陽遊楚、萬物化生
+
+```
+Two tiny kingdoms fighting on the horns of a snail, macro perspective,
+ancient Chinese battle flags on a snail's head, surreal and philosophical,
+ink painting style, gold dust, misty background, cosmic irony
+```
+
+---
+
+### 第26章・外物
+
+> 核心意象：涸轍之鮒、得魚忘筌、心之外物
+
+```
+A fish in a dry rut gasping for water, a simple bamboo fish trap (quan) forgotten in a river,
+a sage catching a giant fish from the Eastern Sea, ink wash painting,
+water ripples, deep teal and gold tones, philosophical symbolism
+```
+
+---
+
+### 第27章・寓言
+
+> 核心意象：寓言九分、重言十七、卮言日出
+
+```
+An ancient scroll unfurling into misty forms of mythical creatures and sages,
+shifting shadows of metaphors, ink painting, flowing ink like water,
+constant change, golden sparks of wisdom, abstract philosophical atmosphere
+```
+
+---
+
+### 第28章・讓王
+
+> 核心意象：許由讓天下、大王亶父避狄、輕物重生
+
+```
+An ancient king leaving his jade throne and walking into the mountains,
+shedding royal robes for simple hemp, a golden crown left in the dust,
+ink painting, majestic landscape, path to freedom, solemn yet peaceful
+```
+
+---
+
+### 第29章・盜跖
+
+> 核心意象：盜跖與孔子、大盜之術、虛偽之治
+
+```
+A fierce rebellious leader with wild hair and a sword, confronting a formal sage,
+raw primal energy vs structured ritual, ink painting, dramatic brushstrokes,
+fire and shadow, gold glint on steel, philosophical conflict
+```
+
+---
+
+### 第30章・說劍
+
+> 核心意象：天子之劍、諸侯之劍、庶人之劍
+
+```
+Three mystical swords suspended in the void: one made of mountains and rivers,
+one of talented men, one of simple steel, ink painting style,
+cosmic scale, gold and jade glowing edges, spiritual power, dark background
+```
+
+---
+
+### 第31章・漁父
+
+> 核心意象：澤畔漁父、孔子與隱士、回歸本真
+
+```
+An old fisherman in a small boat on a misty lake, simple reed hut,
+sage bowing to the fisherman's simple wisdom, ink wash painting,
+vast empty water, ethereal white mist, peaceful detachment, gold sunlight
+```
+
+---
+
+### 第32章・列禦寇
+
+> 核心意象：列子御風、屠龍之技、凡心之重
+
+```
+A man riding the wind above clouds, ethereal and light, vs a man fighting
+a giant ink-smoke dragon on the ground, ink painting, dynamic movement,
+vortex of clouds, jade and gold energy, transcendent vs worldly
+```
+
+---
+
+### 第33章・天下
+
+> 核心意象：天下之治、百家爭鳴、道術破碎
+
+```
+A giant ancient map of the world breaking into golden fragments,
+various philosophers chasing different pieces, a central light (the Tao) fading,
+ink painting, epic scale, cosmic sorrow, gold and dark teal, finality
 ```
 
 ---
