@@ -2075,3 +2075,126 @@ Flames dancing across the surface of a frozen misty river at dawn, the ice ready
 the promise of a new cycle and endless potential, ink painting,
 dynamic balance of ice and fire, warm sunrise rays, ultimate potential
 ```
+
+---
+
+## 🦉 鬼谷子・核心12篇
+
+### 第1篇・捭闔 Done
+
+> 核心意象：陰陽開闔、天門地戶、言默之道
+
+```
+Traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text, two massive stone gates of heaven and earth, one opening (yang) with warm gold light, one closing (yin) with cool jade mist, a slow swirling vortex of yin and yang between them
+```
+
+---
+
+### 第2篇・反應 Done
+
+> 核心意象：以聽求響、反觀自照、回音與反饋
+
+```
+Traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text, a sage whispering to a quiet, still lake in a cavern, the water reflecting glowing gold ripples and sound waves, an echo appearing as a soft glowing dragon of light in the mist
+```
+
+---
+
+### 第3篇・內揵 Done
+
+> 核心意象：心意相通、結成內盟、鎖鑰契合
+
+```
+Traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text, an intricate ancient golden padlock and key, floating in a misty bamboo grove, soft green jade light, two souls connecting with a glowing golden thread, strategic partnership
+```
+
+---
+
+### 第4篇・抵巇 Done
+
+> 核心意象：罅隙巇罅、防微杜漸、彌合危機（金繕美學）
+
+```
+Traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text, a magnificent ancient jade cliff side with a glowing golden crack, a wise hand holding a gold tool mending the fracture with liquid light, concept of kintsugi and crisis management
+```
+
+---
+
+### 第5篇・飛箝 Done
+
+> 核心意象：褒獎引誘、箝制人心、無形之絆
+
+```
+Traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text, a majestic golden phoenix flying upwards but gently anchored by glowing jade threads of praise and esteem, beautiful and intricate bonds, philosophical capture
+```
+
+---
+
+### 第6篇・忤合 Done
+
+> 核心意象：忤逆與迎合、背道而馳卻殊途同歸
+
+```
+Traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text, two swirling streams of liquid light, one gold and one jade, flowing in opposite directions but perfectly weaving into a unified Tai Chi pattern, harmony in opposition
+```
+
+---
+
+### 第7篇・揣 Done
+
+> 核心意象：揣測人心、權衡隱秘、無形之秤
+
+```
+Traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text, an ancient bronze scale in a deep mist, one side holds a glowing heart and the other holds a golden feather, a sage measuring the unseen weight of human intentions
+```
+
+---
+
+### 第8篇・摩 Done
+
+> 核心意象：觸動、激發情緒、漣漪共鳴
+
+```
+Traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text, a drop of golden liquid falling onto a calm jade pond, creating concentric glowing rings that slowly illuminate the hidden dark water beneath, emotional resonance
+```
+
+---
+
+### 第9篇・權 Done
+
+> 核心意象：權衡局勢、五行相生相剋、大局評估
+
+```
+Traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text, a celestial alignment of five glowing golden rings representing water, fire, wood, metal, earth, floating above a vast ink wash landscape under a starry night
+```
+
+---
+
+### 第10篇・謀 Done
+
+> 核心意象：奇策大謀、星羅棋布、運籌帷幄
+
+```
+Traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text, an ancient wooden Go board (Weiqi) with glowing gold and jade stones, the stones arranged in a grand constellation pattern, a strategy that commands the heavens
+```
+
+---
+
+### 第11篇・決 Done
+
+> 核心意象：斷然決策、慧劍斬愁、雷霆之勢
+
+```
+Traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text, a brilliant jade sword cutting through a thick dark wall of mist, gold sparks flying from the slash, a clean and powerful decisive action, lightning-like speed
+```
+
+---
+
+### 第12篇・符言 Done
+
+> 核心意象：符合對證、君主之道、虎符契合
+
+```
+Traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text, a split tiger tally (Hu Fu) made of black jade and gold, the two halves coming together and fitting perfectly, radiating a bright golden sigil in the misty night
+```
+
