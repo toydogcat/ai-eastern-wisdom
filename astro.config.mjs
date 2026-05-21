@@ -218,6 +218,28 @@ export default defineConfig({
 					],
 				},
 				{
+					label: '🌟 八字命理：子平真詮',
+					collapsed: true,
+					items: [
+						{ label: '簡介與導讀', slug: 'bazi/zi-ping-zhen-quan' },
+						{
+							label: '🌿 基礎理論',
+							collapsed: true,
+							autogenerate: { directory: 'bazi/zi-ping-zhen-quan/01-foundation' },
+						},
+						{
+							label: '🎯 用神格局',
+							collapsed: true,
+							autogenerate: { directory: 'bazi/zi-ping-zhen-quan/02-yongshen' },
+						},
+						{
+							label: '👑 格局取法與運勢',
+							collapsed: true,
+							autogenerate: { directory: 'bazi/zi-ping-zhen-quan/03-patterns' },
+						},
+					],
+				},
+				{
 					label: '🔮 推背圖：大唐預言奇書',
 					collapsed: true,
 					autogenerate: { directory: 'tui-bei-tu' },

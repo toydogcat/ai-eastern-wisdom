@@ -2198,3 +2198,15 @@ Traditional Chinese ink painting style, digital art, dark background (#0f1a14), 
 Traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text, a split tiger tally (Hu Fu) made of black jade and gold, the two halves coming together and fitting perfectly, radiating a bright golden sigil in the misty night
 ```
 
+---
+
+## 🌟 八字命理・子平真詮
+
+### 主題插圖・子平真詮總綱 Done
+
+> 核心意象：天干地支、五行運轉、命運格局的推演
+
+```
+Traditional Chinese ink painting style, digital art, dark background (#0f1a14), gold and jade color accents, misty atmosphere, ancient philosophy aesthetic, high detail, cinematic lighting, 4K, no text, a glowing celestial armillary sphere with twelve Earthly Branches and ten Heavenly Stems rotating around a central golden Tai Chi symbol, misty ink wash universe with gold dust, sublime cosmic order of destiny
+```
+
